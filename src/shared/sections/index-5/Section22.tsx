@@ -49,7 +49,7 @@ const HERO_LIST_ITEMS = [
 const SKILLS_LIST_ITEMS = [
     "",
 ];
-const GALLERY_IMAGES = [
+const AVATAR_IMGS = [
     "/assets/imgs/pages/IMG_3802.jpg",
     "/assets/imgs/pages/IMG_3803.jpg",
     "/assets/imgs/pages/IMG_3804.jpg",
