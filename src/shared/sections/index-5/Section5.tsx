@@ -6,11 +6,11 @@ import type { Swiper as SwiperInstance } from "swiper";
 import { Autoplay, FreeMode, Thumbs } from "swiper/modules";
 
 const AVATARS = [
-    { src: "public/assets/imgs/pages/Img2/3.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-1" },
-    { src: "public/assets/imgs/pages/Img2/2.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-2" },
-    { src: "public/assets/imgs/pages/Img2/1.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-3" },
-    { src: "public/assets/imgs/pages/Img2/4.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-4" },
-    { src: "public/assets/imgs/pages/Img2/5.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-5" },
+    { src: "/assets/imgs/pages/Img2/3.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-1" },
+    { src: "/assets/imgs/pages/Img2/2.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-2" },
+    { src: "/assets/imgs/pages/Img2/1.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-3" },
+    { src: "/assets/imgs/pages/Img2/4.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-4" },
+    { src: "/assets/imgs/pages/Img2/5.png", alt: "Talha Speaks AI", thumbClass: "thumb-slide-5" },
 ];
 
 const QUOTE_TEXT = (

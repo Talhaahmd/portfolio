@@ -21,10 +21,14 @@ const LOGO_SVG = (
 );
 
 const SOCIAL_LINKS = [
-    { label: "Twitter", href: "#" },
-    { label: "Facebook", href: "#" },
-    { label: "Instagram", href: "#" },
-    { label: "Dribbble", href: "#" },
+    {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/muhammad-talha50/",
+    },
+    {
+        label: "Instagram",
+        href: "https://www.instagram.com/talhaspeaksai/",
+    },
 ];
 
 export default function Section1({ classList }: { classList?: string }) {
@@ -41,7 +45,7 @@ export default function Section1({ classList }: { classList?: string }) {
                             <div className="ripple-image ripples rounded-3 overflow-hidden">
                                 <img
                                     className="img-cover"
-                                    src="/assets/imgs/pages/img-27.webp"
+                                    src="/assets/imgs/pages/webp-images/hero-mobile.svg"
                                     alt="Klarus AI"
                                     width={400}
                                     height={500} loading="lazy" />
@@ -53,8 +57,7 @@ export default function Section1({ classList }: { classList?: string }) {
                                     <li>{LOGO_SVG}</li>
                                     <li>
                                         <span className="fz-font-md fw-500 common-black">
-                                            We collaborate with the world&apos;s leading platforms and partners to deliver
-                                            results that redefine industry standards.
+                                            I build AI software, share automation workflows, and help SaaS companies acquire users and scale.
                                         </span>
                                     </li>
                                 </ul>
@@ -63,7 +66,7 @@ export default function Section1({ classList }: { classList?: string }) {
                         <div className="col-xxl-8 col-12 ps-xxl-5">
                             <div className="at-title-anim overflow-hidden">
                                 <h1 className="fz-160 fw-600 mb-0 at-title-text">
-                                    Klarus AI Studio<sup className="fz-80 fw-400">®</sup>
+                                    Talha Speaks AI<sup className="fz-80 fw-400">®</sup>
                                 </h1>
                             </div>
                             <div className="d-flex flex-wrap align-items-center justify-content-between gap-2">
@@ -75,7 +78,7 @@ export default function Section1({ classList }: { classList?: string }) {
                                         </Link>
                                     ))}
                                 </div>
-                                <p className="fz-font-lg fw-500 mb-0">[ (+01) 555-7398 ]</p>
+                                <p className="fz-font-lg fw-500 mb-0">[+971 588 449 147]</p>
                             </div>
                         </div>
                     </div>

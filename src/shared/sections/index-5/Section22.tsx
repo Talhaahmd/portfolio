@@ -49,12 +49,12 @@ const HERO_LIST_ITEMS = [
 const SKILLS_LIST_ITEMS = [
     "",
 ];
-const AVATAR_IMGS = [
-    "public/assets/imgs/pages/IMG_3802.jpg",
-    "public/assets/imgs/pages/IMG_3803.jpg",
-    "public/assets/imgs/pages/IMG_3804.jpg",
-    "public/assets/imgs/pages/IMG_3805.jpg",
-    "public/assets/imgs/pages/IMG_3806.jpg",
+const GALLERY_IMAGES = [
+    "/assets/imgs/pages/IMG_3802.jpg",
+    "/assets/imgs/pages/IMG_3803.jpg",
+    "/assets/imgs/pages/IMG_3804.jpg",
+    "/assets/imgs/pages/IMG_3805.jpg",
+    "/assets/imgs/pages/IMG_3806.jpg",
 ];
 
 const FOOTER_TAGS = [
@@ -98,12 +98,21 @@ export default function Section2() {
                                 <div className="sec-2-home-5__col p-2 rounded-4 bg-neutral-0">
                                     <div className="sec-2-home-5__card sec-2-home-5__card--hero rounded-4 overflow-hidden rounded-4 p-relative">
                                         <div className="sec-2-home-5__hero-bg" />
-                                        <img
-                                            src="public/assets/imgs/pages/Image for Bento 1 (1).jpg"
-                                            alt="Intelligent Systems"
-                                            width={600}
-                                            height={400}
-                                            className="sec-2-home-5__hero-img" loading="lazy" />
+                                        <picture>
+                                            <source
+                                                media="(max-width: 767px)"
+                                                srcSet="/assets/imgs/pages/webp-images/Bento-mobile.webp"
+                                            />
+
+                                            <img
+                                                src="/assets/imgs/pages/Image for Bento 1 (1).jpg"
+                                                alt="Intelligent Systems"
+                                                width={600}
+                                                height={400}
+                                                className="sec-2-home-5__hero-img"
+                                                loading="lazy"
+                                            />
+                                        </picture>
                                         <div className="sec-2-home-5__hero-overlay p-absolute top-0 left-0 w-100 h-100 d-flex flex-column justify-content-between p-4">
                                             <div className="d-flex justify-content-between align-items-start">
                                                 <h6 className="sec-2-home-5__hero-title text-white fw-bold mb-0">
@@ -151,7 +160,7 @@ export default function Section2() {
                                         <div className="d-flex align-items-center gap-3 mb-3">
                                             <div className="sec-2-home-5__avatar rounded-3 overflow-hidden flex-shrink-0">
                                                 <img
-                                                    src="public/assets/imgs/pages/1784065267489.png"
+                                                    src="/assets/imgs/pages/1784065267489.png"
                                                     alt="MS."
                                                     width={56}
                                                     height={56}

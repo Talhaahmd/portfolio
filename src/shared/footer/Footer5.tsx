@@ -81,7 +81,7 @@ export default function Footer5() {
                                     I&apos;m{" "}
 
                                     <img
-                                        src="public/assets/imgs/pages/footer.png"
+                                        src="/assets/imgs/pages/footer.png"
                                         alt="Klarus AI"
                                         width={205}
                                         height={315}
