@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { OffcanvasMenuMount } from "@/shared/mobile-menu/MobileMenuCloneContext";
 import MenuClone from "@/shared/mobile-menu/MenuClone";
+import Logo from "@/shared/Logo";
 
 interface SideBarProps {
   open: boolean;
@@ -98,15 +99,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
         <div className={`at-offcanvas ${open ? "opened" : ""}`}>
           <div className="at-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="at-offcanvas-logo">
-              <Link to="/" className="text-decoration-none d-inline-flex align-items-center">
-                <img
-                  src="/assets/imgs/template/logo/logo-nav-dark.png"
-                  alt="The AI Folks"
-                  height={36}
-                  style={{ width: "auto", height: "36px" }}
-                  loading="lazy"
-                />
-              </Link>
+              <Logo />
             </div>
             <div className="at-offcanvas-close-btn">
               <button type="button" className="close-btn close-sidebar" aria-label="Close" onClick={onClose}>
@@ -171,15 +164,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
         <div className="at-offcanvas-2-wrapper offcanvas-menu sidebar-left">
           <div className="at-offcanvas-2-left">
             <div className="at-header-logo d-flex justify-content-between align-items-center mb-50">
-              <Link to="/" className="text-decoration-none d-inline-flex align-items-center">
-                <img
-                  src="/assets/imgs/template/logo/logo-nav-dark.png"
-                  alt="The AI Folks"
-                  height={36}
-                  style={{ width: "auto", height: "36px" }}
-                  loading="lazy"
-                />
-              </Link>
+              <Logo />
               <span className="hamburger-close-btn close-sidebar" role="button" tabIndex={0} aria-label="Close" onClick={onClose}>
                 <CloseIconSvg />
               </span>

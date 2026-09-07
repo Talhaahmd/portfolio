@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import SwiperDynamic from "@/shared/components/SwiperDynamic";
+import type { CaseStudy } from "@/lib/supabase";
 
 const ARROW_SVG = (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +12,7 @@ const ARROW_SVG = (
     </svg>
 );
 
-const SLIDER_IMAGES = [
+const DEFAULT_SLIDER_IMAGES = [
     { src: "/assets/imgs/pages/img-177.webp", alt: "Klarus AI" },
     { src: "/assets/imgs/pages/img-176.webp", alt: "Klarus AI" },
     { src: "/assets/imgs/pages/img-178.webp", alt: "Klarus AI" },
@@ -27,35 +29,193 @@ function InfoRow({ label, value }: { label: string; value: string }) {
     );
 }
 
-export default function Section1() {
+function getYouTubeInfo(url?: string | null) {
+    const defaultVideoId = "5Noy3Yt0Q-o";
+    const rawUrl = url || "https://youtu.be/5Noy3Yt0Q-o";
+    const match = rawUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+    const videoId = match && match[1] ? match[1] : defaultVideoId;
+    return {
+        videoId,
+        embedUrl: `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`,
+        defaultThumb: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+    };
+}
+
+function VideoPlayer({
+    videoUrl,
+    coverImage,
+    title,
+}: {
+    videoUrl?: string | null;
+    coverImage?: string | null;
+    title: string;
+}) {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const ytInfo = getYouTubeInfo(videoUrl || coverImage);
+
+    const isCoverAnImageUrl =
+        coverImage && (coverImage.startsWith("/") || coverImage.startsWith("http")) && !coverImage.includes("youtu");
+    const thumbnail = isCoverAnImageUrl ? coverImage : ytInfo.defaultThumb;
+
+    return (
+        <div
+            className="position-relative rounded-4 overflow-hidden shadow-lg w-100 my-4"
+            style={{
+                aspectRatio: "16 / 9",
+                maxHeight: "650px",
+                backgroundColor: "#000",
+            }}
+        >
+            {!isPlaying ? (
+                <div
+                    className="w-100 h-100 position-relative d-flex align-items-center justify-content-center"
+                    onClick={() => setIsPlaying(true)}
+                    style={{ cursor: "pointer" }}
+                >
+                    <img
+                        src={thumbnail}
+                        alt={title}
+                        className="w-100 h-100 rounded-4"
+                        style={{ objectFit: "cover", position: "absolute", top: 0, left: 0 }}
+                        onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = `https://img.youtube.com/vi/${ytInfo.videoId}/hqdefault.jpg`;
+                        }}
+                    />
+                    <div
+                        className="position-absolute w-100 h-100 rounded-4"
+                        style={{ background: "rgba(0, 0, 0, 0.35)", top: 0, left: 0 }}
+                    />
+                    <button
+                        type="button"
+                        className="btn position-relative z-index-2 rounded-circle bg-white text-danger border-0 d-flex align-items-center justify-content-center shadow-lg"
+                        style={{
+                            width: "84px",
+                            height: "84px",
+                            transition: "transform 0.25s ease-in-out",
+                        }}
+                        aria-label="Play Video"
+                    >
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#E50914" style={{ marginLeft: "4px" }}>
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+                </div>
+            ) : (
+                <iframe
+                    src={ytInfo.embedUrl}
+                    title={title}
+                    className="w-100 h-100 rounded-4 border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                />
+            )}
+        </div>
+    );
+}
+
+type Section1Props = {
+    caseStudy?: CaseStudy | null;
+};
+
+export default function Section1({ caseStudy }: Section1Props) {
+    const title = caseStudy?.title || "Smart Automation & AI Systems";
+    const tagline = caseStudy?.tagline || caseStudy?.eyebrow || "AI Architecture & Engineering";
+    const demoUrl = caseStudy?.demo_url || "#";
+
+    const client = caseStudy?.meta_client || caseStudy?.client_name || "Klarus Enterprise Partner";
+    const releaseDate = caseStudy?.meta_year || "2024";
+    const role = caseStudy?.meta_role || "AI & Automation Engineer";
+    const duration = caseStudy?.meta_duration || "6 Weeks";
+
+    const introParagraph =
+        caseStudy?.intro_paragraph ||
+        caseStudy?.featured_description ||
+        "A comprehensive AI architecture and automation deployment designed to streamline complex business workflows, boost operational efficiency, and establish a scalable infrastructure.";
+
+    const sliderImages =
+        caseStudy?.gallery_images && caseStudy.gallery_images.length > 0
+            ? caseStudy.gallery_images.map((g, idx) => ({
+                  src: typeof g === "string" ? g : g.src || DEFAULT_SLIDER_IMAGES[idx % DEFAULT_SLIDER_IMAGES.length].src,
+                  alt: typeof g === "string" ? title : g.alt || title,
+              }))
+            : DEFAULT_SLIDER_IMAGES;
+
+    const processTitle = caseStudy?.process_title || "Challenge & Approach";
+    const challengeIntro =
+        caseStudy?.intro_headline ||
+        "The objective was to transform fragmented operational processes into an automated, high-throughput system—balancing speed, security, and accuracy.";
+
+    const processSteps =
+        caseStudy?.process_steps && caseStudy.process_steps.length > 0
+            ? caseStudy.process_steps
+            : [
+                  { num: "01", title: "Analysis", desc: "Deep analysis of system architecture and business goals" },
+                  { num: "02", title: "Architecture", desc: "Designing modular, resilient workflow pipelines" },
+                  { num: "03", title: "Integration", desc: "Seamless API & LLM integration with error handling" },
+                  { num: "04", title: "Deployment", desc: "Automated testing and cloud-native scaling" },
+              ];
+
+    const videoUrl = caseStudy?.featured_video_url || caseStudy?.hero_portrait_image || "https://youtu.be/5Noy3Yt0Q-o";
+    const coverImage = caseStudy?.closing_image || caseStudy?.card_image || "/assets/imgs/pages/img-181.webp";
+
+    const solutionHeading = caseStudy?.solution_heading || "The Solution";
+    const solutionParagraph =
+        caseStudy?.solution_paragraph ||
+        "We engineered an end-to-end automated pipeline featuring intelligent LLM routing, real-time monitoring, and robust state management. This solution eliminated bottlenecks and significantly reduced operational overhead.";
+
+    const solutionItems =
+        caseStudy?.solution_items && caseStudy.solution_items.length > 0
+            ? caseStudy.solution_items
+            : [
+                  "Custom autonomous AI agents tailored for domain tasks",
+                  "Real-time fallback handling and structured output validation",
+                  "Production-ready deployment with enterprise-grade security",
+                  "Comprehensive analytics dashboard for performance monitoring",
+              ];
+
+    const outcomeHeading = caseStudy?.outcome_heading || "Outcome";
+    const outcomeParagraph =
+        caseStudy?.outcome_paragraph ||
+        "The deployed solution achieved over 40% reduction in manual effort while maintaining 99.9% uptime. It empowers the client team to focus on strategic growth while automated systems handle routine execution smoothly.";
+
+    const quoteText =
+        caseStudy?.quote_text ||
+        "\"Klarus AI completely transformed how we operate. Their strategic engineering and attention to reliability delivered an automated system that drives measurable impact every single day.\"";
+    const quoteAuthor = caseStudy?.quote_author || "Engineering Lead";
+    const quoteRole = caseStudy?.quote_role || "Klarus Enterprise Partner";
+    const quoteAvatar = caseStudy?.quote_image || "/assets/imgs/template/avatar/avatar-20.webp";
+
     return (
         <section className="sec-1-portfolio-details-1 overflow-hidden pt-150 pb-100">
             <div className="container">
                 <div className="row g-3 align-items-end">
                     <div className="col-md-9">
                         <h1 className="fz-ds-1 lh-1 fw-500 d-flex mb-0">
-                            Nebula<sup className="fz-80 fw-400 top-0">®</sup>
+                            {title}
                         </h1>
-                        <h5 className="fw-600 mb-0">Fashion Brand Identity Design</h5>
+                        <h5 className="fw-600 mb-0 mt-2 neutral-600">{tagline}</h5>
                     </div>
-                    <div className="col-md-3 ms-auto text-md-end">
-                        <Link to="#" className="border-bottom-900 d-inline-block">
-                            <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
-                                <span className="text-uppercase">
-                                    <span className="text-1">live demo</span>
-                                    <span className="text-2">live demo</span>
+                    {demoUrl && demoUrl !== "#" && (
+                        <div className="col-md-3 ms-auto text-md-end">
+                            <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="border-bottom-900 d-inline-block">
+                                <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
+                                    <span className="text-uppercase">
+                                        <span className="text-1">live demo</span>
+                                        <span className="text-2">live demo</span>
+                                    </span>
+                                    <i>
+                                        {ARROW_SVG}
+                                        {ARROW_SVG}
+                                    </i>
                                 </span>
-                                <i>
-                                    {ARROW_SVG}
-                                    {ARROW_SVG}
-                                </i>
-                            </span>
-                        </Link>
-                    </div>
+                            </a>
+                        </div>
+                    )}
                     <div className="col-12">
                         <div className="border-bottom-100 pb-30" />
                     </div>
                 </div>
+
                 <div className="row mt-50">
                     <div className="col-lg-5">
                         <div className="sec-2-home-5__card sec-2-home-5__card--list d-flex align-items-center">
@@ -67,19 +227,17 @@ export default function Section1() {
                         </div>
                     </div>
                     <div className="col-lg-7">
-                        <InfoRow label="Client" value="Nebula Labs" />
-                        <InfoRow label="Release Date" value="2024" />
-                        <InfoRow label="Role" value="UI/UX Designer" />
-                        <InfoRow label="Duration" value="6 Weeks" />
+                        <InfoRow label="Client" value={client} />
+                        <InfoRow label="Release Date" value={releaseDate} />
+                        <InfoRow label="Role" value={role} />
+                        <InfoRow label="Duration" value={duration} />
                         <p className="fz-font-2xl fw-400 neutral-900 mt-40">
-                            Nebula is a comprehensive fashion brand identity project dedicated to sculpting a
-                            distinctive, modern, and highly expressive visual language. While many brands settle for
-                            being seen, Nebula aims to be felt—bridging the gap between avant-garde artistry and
-                            wearable design.
+                            {introParagraph}
                         </p>
                     </div>
                 </div>
             </div>
+
             <SwiperDynamic
                 className="swiper about-me-slider-active pt-60 mb-60 at-item-anime-area"
                 slidesPerView={2}
@@ -91,146 +249,138 @@ export default function Section1() {
                     992: { slidesPerView: 2, spaceBetween: 30 },
                 }}
             >
-                {SLIDER_IMAGES.map((slide, index) => (
+                {sliderImages.map((slide, index) => (
                     <div key={index} className="about-me-slider-thumb at-item-anime marque">
                         <img
                             src={slide.src}
                             alt={slide.alt}
                             width={770}
                             height={560}
-                            className="w-100 rounded-4" loading="lazy" />
+                            className="w-100 rounded-4"
+                            loading="lazy"
+                        />
                     </div>
                 ))}
             </SwiperDynamic>
+
             <div className="container">
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="sec-2-home-5__card sec-2-home-5__card--list d-flex align-items-center">
                             <ul className="sec-2-home-5__list list-unstyled mb-0">
                                 <li className="sec-2-home-5__list-item">
-                                    <h6 className="mb-0 fw-600">Challenge & Approach</h6>
+                                    <h6 className="mb-0 fw-600">{processTitle}</h6>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-lg-7">
                         <p className="fz-font-xl neutral-900 mt-40">
-                            The challenge was to create a brand identity that feels refined yet bold—balancing
-                            elegance with individuality. The approach centered on defining a clear brand personality,
-                            developing a cohesive visual system, and ensuring flexibility across both physical and
-                            digital fashion touchpoints.
+                            {challengeIntro}
                         </p>
-                        <p className="fz-font-xl neutral-900 mt-40">
-                            We had to ensure that Nebula didn&apos;t feel like &quot;just another luxury
-                            label&quot;—it needed to resonate with a sense of mystery and power without losing the
-                            accessibility required for contemporary commercial success.
-                        </p>
-                        <ul className="ps-4">
-                            <li className="neutral-950">Deep analysis of user behavior and product goals</li>
-                            <li className="neutral-950">Clear information architecture and user flows</li>
-                            <li className="neutral-950">Modular UI components for consistency and scalability</li>
-                            <li className="neutral-950">Visual hierarchy focused on usability and focus</li>
+                        <ul className="ps-4 mt-3">
+                            {processSteps.map((step, idx) => (
+                                <li key={idx} className="neutral-950 mb-2">
+                                    <strong>{step.title || `Step ${step.num}`}:</strong> {step.desc}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
             </div>
+
             <div className="container">
                 <div className="row">
-                    <div className="col-12 py-5">
-                        <img
-                            src="/assets/imgs/pages/img-181.webp"
-                            alt="Klarus AI"
-                            width={1200}
-                            height={700}
-                            className="w-100" loading="lazy" />
+                    <div className="col-12 py-4">
+                        <VideoPlayer
+                            videoUrl={videoUrl}
+                            coverImage={coverImage}
+                            title={title}
+                        />
                     </div>
                     <div className="col-lg-5">
                         <div className="sec-2-home-5__card sec-2-home-5__card--list d-flex align-items-center">
                             <ul className="sec-2-home-5__list list-unstyled mb-0">
                                 <li className="sec-2-home-5__list-item">
-                                    <h6 className="mb-0 fw-600">The Solution</h6>
+                                    <h6 className="mb-0 fw-600">{solutionHeading}</h6>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-lg-7">
                         <p className="fz-font-xl neutral-900 mt-40">
-                            The final identity system features a clean logotype, a balanced color palette, and
-                            carefully selected typography. Each element works together to create a cohesive and
-                            recognizable fashion brand, adaptable across packaging, lookbooks, retail materials, and
-                            digital platforms.
+                            {solutionParagraph}
                         </p>
-                        <h6 className="py-3">Key Features</h6>
+                        <h6 className="py-3">Key Solution Features</h6>
                         <ul className="ps-4">
-                            <li className="neutral-950">
-                                Distinctive logotype with a modern, fashion-forward aesthetic
-                            </li>
-                            <li className="neutral-950">Curated color palette reflecting the brand&apos;s identity and mood</li>
-                            <li className="neutral-950">Custom typography system for editorial and commercial use</li>
-                            <li className="neutral-950">
-                                Cohesive visual language across print, packaging, and digital assets
-                            </li>
+                            {solutionItems.map((item, idx) => (
+                                <li key={idx} className="neutral-950 mb-2">
+                                    {item}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
             </div>
+
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 py-5">
                         <img
-                            src="/assets/imgs/pages/img-182.webp"
-                            alt="Klarus AI"
+                            src={sliderImages[0]?.src || "/assets/imgs/pages/img-182.webp"}
+                            alt={title}
                             width={600}
                             height={400}
-                            className="w-100" loading="lazy" />
+                            className="w-100 rounded-4"
+                            loading="lazy"
+                        />
                     </div>
                     <div className="col-md-6 py-5">
                         <img
-                            src="/assets/imgs/pages/img-183.webp"
-                            alt="Klarus AI"
+                            src={sliderImages[1]?.src || "/assets/imgs/pages/img-183.webp"}
+                            alt={title}
                             width={600}
                             height={400}
-                            className="w-100" loading="lazy" />
+                            className="w-100 rounded-4"
+                            loading="lazy"
+                        />
                     </div>
                     <div className="col-lg-5">
                         <div className="sec-2-home-5__card sec-2-home-5__card--list d-flex align-items-center">
                             <ul className="sec-2-home-5__list list-unstyled mb-0">
                                 <li className="sec-2-home-5__list-item">
-                                    <h6 className="mb-0 fw-600">Outcome</h6>
+                                    <h6 className="mb-0 fw-600">{outcomeHeading}</h6>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-lg-7">
                         <p className="fz-font-xl fw-500 neutral-900 mt-40">
-                            Nebula successfully emerges as a confident fashion brand with a timeless yet contemporary
-                            identity. The project demonstrates how thoughtful brand design can elevate perception,
-                            strengthen recognition, and create emotional connection within a competitive fashion
-                            landscape.
+                            {outcomeParagraph}
                         </p>
                         <div className="py-3 border-bottom-100" />
-                        <div className="testimonial-author d-flex align-items-start mb-0 gap-4 pt-60 w-75">
+                        <div className="testimonial-author d-flex align-items-start mb-0 gap-4 pt-60 w-100">
                             <div>
                                 <div className="testimonial-left-img size-50 rounded-3 overflow-hidden">
                                     <img
-                                        src="/assets/imgs/template/avatar/avatar-20.webp"
-                                        alt="Klarus AI"
+                                        src={quoteAvatar}
+                                        alt={quoteAuthor}
                                         width={50}
                                         height={50}
-                                        className="img-cover" loading="lazy" />
+                                        className="img-cover"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                             <div className="testimonial-content">
                                 <p className="fz-3xl neutral-900 fw-400">
-                                    &quot;Klarus AI completely transformed how we present our brand online. Their strategic
-                                    mindset and attention to detail resulted in a digital experience that feels both
-                                    refined and high-performing.&quot;
+                                    {quoteText}
                                 </p>
                                 <h6 className="testimonial-content-author-name fw-600 mb-0 fz-font-md">
-                                    Elena Morrison
+                                    {quoteAuthor}
                                 </h6>
                                 <p className="testimonial-content-author-position m-0 fz-font-label">
-                                    Creative Director, Nebula Labs
+                                    {quoteRole}
                                 </p>
                             </div>
                         </div>

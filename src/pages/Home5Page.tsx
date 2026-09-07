@@ -11,14 +11,13 @@ import Section8 from "@/shared/sections/index-5/Section8";
 export default function Home5Page() {
   return (
     <>
-      <PageMeta title="Klarus AI - Home5" />
+      <PageMeta title="Talha Speaks AI" description="AI Automations, N8n, Claude, OpenAI integrations, and MVP Development for founders and operators." />
       <Section1 />
       <Section2 />
-      <Section3 />
       <Section4 />
+      <Section3 />
       <Section5 />
       <Section6 />
-      <Section7 />
       <Section8 />
 
     </>

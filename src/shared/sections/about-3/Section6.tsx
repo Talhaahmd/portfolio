@@ -96,7 +96,7 @@ export default function Section6() {
                     </div>
                     <div className="col-xxl-5 col-lg-7 text-lg-end ms-auto">
                         <h6 className="fw-600 fz-font-lg">
-                            We leverage modern AI tools, automation platforms, and full-stack development expertise to build reliable systems that scale with your business.
+                            I leverage modern AI tools, automation platforms, and full-stack development expertise to build reliable systems that scale with your business.
                         </h6>
                     </div>
                 </div>

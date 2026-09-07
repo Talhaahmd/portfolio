@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import RevealText from "@/shared/effects/RevealText";
 import PortfolioCard4 from "@/shared/cards/PortfolioCard4";
+import { getCaseStudies, type CaseStudy } from "@/lib/supabase";
 
 // Home 5 Section 4 - Deployed systems / Selected work
 
@@ -22,7 +24,7 @@ const ARROW_CIRCLE_SVG = (
     </svg>
 );
 
-const CARDS = [
+const FALLBACK_CARDS = [
     {
         img: "/assets/imgs/pages/img-107.webp",
         alt: "Smart Automation",
@@ -32,7 +34,7 @@ const CARDS = [
         tags: ["AI Models", "Deployment", "Scalability", "Engineering"],
         title: "Smart Automation",
         linkText: "VIEW ARCHITECTURE",
-        href: "/portfolio-details-1",
+        href: "/portfolio-details-1/smart-automation",
     },
     {
         img: "/assets/imgs/pages/img-108.webp",
@@ -43,18 +45,18 @@ const CARDS = [
         tags: ["Decision Systems", "Analytics", "Systems", "Engineering"],
         title: "Data Intelligence",
         linkText: "VIEW SYSTEM DESIGN",
-        href: "/portfolio-details-1",
+        href: "/portfolio-details-1/data-intelligence",
     },
     {
         img: "/assets/imgs/pages/img-109.webp",
-        alt: "Smart Automation",
+        alt: "AI Workflows",
         metricPrefix: "+",
-        metricValue: 30,
-        metricLabel: "Operational Speed",
-        tags: ["AI Models", "Deployment", "Scalability", "Engineering"],
-        title: "Smart Automation",
+        metricValue: 45,
+        metricLabel: "Efficiency Boost",
+        tags: ["AI Models", "LLMs", "Automation", "Agents"],
+        title: "AI Workflows",
         linkText: "VIEW CASE STUDY",
-        href: "/portfolio-details-1",
+        href: "/portfolio-details-1/ai-workflows",
     },
     {
         img: "/assets/imgs/pages/img-110.webp",
@@ -65,7 +67,7 @@ const CARDS = [
         tags: ["SCALABLE ARCHITECTURE", "CLOUD-NATIVE", "KUBERNETES", "AUTO-SCALING"],
         title: "Distributed ML Pipeline",
         linkText: "VIEW INFRASTRUCTURE",
-        href: "/portfolio-details-1",
+        href: "/portfolio-details-1/distributed-ml-pipeline",
     },
 ];
 
@@ -78,6 +80,35 @@ const FOOTER_TAGS = [
 ];
 
 export default function Section4() {
+    const [caseStudies, setCaseStudies] = useState<CaseStudy[]>([]);
+
+    useEffect(() => {
+        getCaseStudies()
+            .then((data) => {
+                if (data && data.length > 0) {
+                    setCaseStudies(data);
+                }
+            })
+            .catch((err) => {
+                console.warn("Failed to fetch case studies from Supabase:", err);
+            });
+    }, []);
+
+    const cardsToDisplay =
+        caseStudies.length > 0
+            ? caseStudies.map((cs) => ({
+                img: cs.card_image || cs.featured_image || "/assets/imgs/pages/img-107.webp",
+                alt: cs.title,
+                metricPrefix: cs.metric_prefix || "+",
+                metricValue: cs.metric_value ? parseInt(cs.metric_value, 10) || 30 : 30,
+                metricLabel: cs.metric_label || "Operational Speed",
+                tags: cs.tags && cs.tags.length > 0 ? cs.tags : ["AI Models", "Deployment", "Scalability"],
+                title: cs.title,
+                linkText: "VIEW ARCHITECTURE",
+                href: `/portfolio-details-1/${cs.slug}`,
+            }))
+            : FALLBACK_CARDS;
+
     return (
         <div className="bg-neutral-50">
             <div className="container-2200">
@@ -106,13 +137,13 @@ export default function Section4() {
                                     data-fade-from="bottom"
                                     data-ease="bounce"
                                 >
-                                    <Link className="at-btn-circle" to="/portfolio-5">
+                                    <Link className="at-btn-circle" to="https://github.com/Talhaahmd">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
-                                    <Link className="at-btn z-index-1" to="/portfolio-5">
+                                    <Link className="at-btn z-index-1" to="https://github.com/Talhaahmd">
                                         Explore Github Repos
                                     </Link>
-                                    <Link className="at-btn-circle" to="/portfolio-5">
+                                    <Link className="at-btn-circle" to="https://github.com/Talhaahmd">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
                                 </div>
@@ -122,7 +153,7 @@ export default function Section4() {
 
                     <div className="container pt-70">
                         <div className="row g-4">
-                            {CARDS.map((card, i) => (
+                            {cardsToDisplay.map((card, i) => (
                                 <div key={i} className="col-lg-6">
                                     <PortfolioCard4 {...card} />
                                 </div>

@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 const QUICK_LINKS_1 = [
     { label: "Home", href: "/index-9", delay: ".1" },
-    { label: "About", href: "/about-1", delay: ".2" },
     { label: "Works", href: "/portfolio-1", delay: ".3" },
-    { label: "Blog", href: "/archive-1", delay: ".4" },
     { label: "Contact", href: "/contact-1", delay: ".5" },
 ];
 

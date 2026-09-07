@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect as useEff } from "react";
 import RevealText from "@/shared/effects/RevealText";
 
 // About 1 Section 4 - Contact Us / Get in touch
@@ -41,7 +42,7 @@ const OFFICE_ICON_2 = (
 const SOCIAL_ITEMS = [
     {
         label: "Instagram",
-        href: "https://www.instagram.com/klarus.ai/",
+        href: "https://www.instagram.com/talhaspeaksai/",
         ariaLabel: "Instagram",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
@@ -54,47 +55,64 @@ const SOCIAL_ITEMS = [
             </svg>
         ),
     },
-    {
-        label: "Upwork",
-        href: "https://www.upwork.com/freelancers/~017655f3515038fc66",
-        ariaLabel: "Upwork",
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none" aria-hidden>
-                <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M12.731 7.649c-.849 2.183-2.062 3.838-3.21 3.838-1.227 0-1.956-1.17-1.956-3.108 0-3.063 1.551-5.217 3.757-5.217 1.354 0 2.469.918 3.104 2.426l-1.695 2.061zm1.885-7.649C11.954 0 9.773 1.98 8.74 4.908 8.12 3.254 7.073 2.156 5.67 2.156c-.374 0-.76.066-1.155.197C5.263.93 5.91.344 6.83.163L6.495 0C3.204.386 1.075 3.254 1.075 7.38c0 2.829 1.383 4.647 3.604 4.647 1.66 0 3.026-1.065 3.887-3.02.425 1.93 1.555 3.02 3.109 3.02 1.82 0 3.327-1.386 4.325-3.964V16h2V0h-3.384z"
-                    fill="currentColor"
-                />
-            </svg>
-        ),
-    },
 ];
 
 const OFFICES = [
     {
         icon: OFFICE_ICON_1,
-        title: "General Inquiries",
-        address: "Toronto, Ontario",
-        city: "Canada",
-        phone: "+1 (212) 555-7398",
-        phoneHref: "tel:+12125557398",
-        email: "info@klarus.io",
-        emailHref: "mailto:info@klarus.io",
-    },
-    {
-        icon: OFFICE_ICON_2,
-        title: "Sales & Partnerships",
-        address: "Toronto, Ontario",
-        city: "Canada",
-        phone: "+1 (212) 555-7398",
-        phoneHref: "tel:+12125557398",
-        email: "info@klarus.io",
-        emailHref: "mailto:info@klarus.io",
+        title: "Get in Touch",
+        address: "Lahore, Pakistan",
+        city: "",
+        phone: "+971 588 44 9147",
+        phoneHref: "tel:+971588449147",
+        email: "talha@talhaspeaksai.com",
+        emailHref: "mailto:talha@talhaspeaksai.com",
     },
 ];
 
 export default function Section4({ classList = "" }: { classList?: string }) {
+
+    useEff(() => {
+        // Inject Google Calendar stylesheet
+        if (!document.getElementById('gcal-css')) {
+            const link = document.createElement('link');
+            link.id = 'gcal-css';
+            link.rel = 'stylesheet';
+            link.href = 'https://calendar.google.com/calendar/scheduling-button-script.css';
+            document.head.appendChild(link);
+        }
+
+        // Inject Google Calendar script and init button on load
+        if (!document.getElementById('gcal-js')) {
+            const script = document.createElement('script');
+            script.id = 'gcal-js';
+            script.src = 'https://calendar.google.com/calendar/scheduling-button-script.js';
+            script.async = true;
+            script.onload = () => {
+                const target = document.getElementById('gcal-btn-target');
+                if (target && (window as any).calendar?.schedulingButton) {
+                    (window as any).calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2qDvwRTaK2JAy9rVIQImaORQHDLWSAGMSmSAyMUo6ebDMFQmBd880K-kX1P2VQfzvHxq2q7Iie?gv=true',
+                        color: '#039BE5',
+                        label: 'Book an appointment',
+                        target,
+                    });
+                }
+            };
+            document.body.appendChild(script);
+        } else {
+            // Script already loaded — init immediately
+            const target = document.getElementById('gcal-btn-target');
+            if (target && (window as any).calendar?.schedulingButton) {
+                (window as any).calendar.schedulingButton.load({
+                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2qDvwRTaK2JAy9rVIQImaORQHDLWSAGMSmSAyMUo6ebDMFQmBd880K-kX1P2VQfzvHxq2q7Iie?gv=true',
+                    color: '#039BE5',
+                    label: 'Book an appointment',
+                    target,
+                });
+            }
+        }
+    }, []);
     return (
         <section className={`sec-4-about pt-120 pb-120 ${classList}`.trim()}>
             <div className="container">
@@ -102,8 +120,8 @@ export default function Section4({ classList = "" }: { classList?: string }) {
                     <div className="col-lg-6">
                         <span className="at-btn common-black bg-transparent mb-10 rounded-0 p-0">
                             <span className="text-uppercase">
-                                <span className="text-1">cONTACT US</span>
-                                <span className="text-2">cONTACT US</span>
+                                <span className="text-1">CONTACT ME</span>
+                                <span className="text-2">CONTACT ME</span>
                             </span>
                             <i>
                                 {ARROW_SVG}
@@ -118,25 +136,30 @@ export default function Section4({ classList = "" }: { classList?: string }) {
                         <div className="scroll-rotate d-lg-inline-block d-none">{SCROLL_ROTATE_SVG}</div>
                         <p className="fz-font-lg pt-lg-4 mb-0">
                             Start the conversation by sharing your vision. <br />
-                            Our team will respond within 1–2 business days.
+                            I will respond within 1–2 business days.
                         </p>
                     </div>
                 </div>
 
                 <div className="row">
+                    {/* Contact Info Column */}
                     <div className="col-xxl-4 col-lg-5">
                         <div className="row g-4">
                             {OFFICES.map((office, i) => (
                                 <div key={i} className="col-lg-12 col-md-6">
-                                    <div className={`d-flex gap-4 ${i === 1 ? "pt-lg-5" : ""}`}>
+                                    <div className="d-flex gap-4">
                                         <div className="icon">{office.icon}</div>
                                         <div>
                                             <h6 className="fw-600">{office.title}</h6>
                                             <div className="d-flex flex-wrap gap-md-5 gap-4">
                                                 <span className="fz-font-md neutral-500">
                                                     {office.address}
-                                                    <br className="d-block" />
-                                                    {office.city}
+                                                    {office.city && (
+                                                        <>
+                                                            <br className="d-block" />
+                                                            {office.city}
+                                                        </>
+                                                    )}
                                                     <br className="d-block" />
                                                     Phone:{" "}
                                                     <span className="neutral-900">
@@ -155,7 +178,7 @@ export default function Section4({ classList = "" }: { classList?: string }) {
                             ))}
                         </div>
                         <div className="row">
-                            <div className="col-xxl-6 col-lg-8 mx-auto">
+                            <div className="col-12">
                                 <ul className="at-social-list list-unstyled d-flex flex-wrap gap-md-4 gap-3 pt-50">
                                     {SOCIAL_ITEMS.map((item, i) => (
                                         <li key={i}>
@@ -171,75 +194,18 @@ export default function Section4({ classList = "" }: { classList?: string }) {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="col-lg-3 col-md-4" />
                         </div>
                     </div>
+
+                    {/* Google Calendar Booking Column */}
                     <div className="col-xxl-8 col-lg-7 ms-auto pt-lg-0 pt-30">
-                        <form className="sec-4-about-form" action="#" method="post">
-                            <div className="sec-4-about-form__field">
-                                <input
-                                    type="text"
-                                    className="sec-4-about-form__input"
-                                    name="name"
-                                    placeholder="Your name *"
-                                    required
-                                    aria-label="Your name"
-                                />
-                            </div>
-                            <div className="sec-4-about-form__field">
-                                <input
-                                    type="email"
-                                    className="sec-4-about-form__input"
-                                    name="email"
-                                    placeholder="Your email *"
-                                    required
-                                    aria-label="Your email"
-                                />
-                            </div>
-                            <div className="sec-4-about-form__field">
-                                <input
-                                    type="tel"
-                                    className="sec-4-about-form__input"
-                                    name="phone"
-                                    placeholder="Your phone *"
-                                    required
-                                    aria-label="Your phone"
-                                />
-                            </div>
-                            <div className="sec-4-about-form__field">
-                                <textarea
-                                    className="sec-4-about-form__input sec-4-about-form__textarea"
-                                    name="message"
-                                    placeholder="Your message *"
-                                    rows={5}
-                                    required
-                                    aria-label="Your message"
-                                />
-                            </div>
-                            <div className="sec-4-about-form__actions">
-                                <button type="submit" className="sec-4-about-form__btn at-btn">
-                                    <span>
-                                        <span className="text-1 text-capitalize">Send Message</span>
-                                        <span className="text-2 text-capitalize">Send Message</span>
-                                    </span>
-                                    <i>
-                                        {ARROW_SVG}
-                                        {ARROW_SVG}
-                                    </i>
-                                </button>
-                            </div>
-                            <p className="sec-4-about-form__disclaimer">
-                                By submitting, you agree to our{" "}
-                                <Link to="#" className="sec-4-about-form__link">
-                                    Terms
-                                </Link>{" "}
-                                and{" "}
-                                <Link to="#" className="sec-4-about-form__link">
-                                    Privacy Policy
-                                </Link>
-                                .
-                            </p>
-                        </form>
+                        <div className="sec-4-about-calendar">
+                            <div
+                                id="gcal-btn-target"
+                                className="sec-4-about-calendar__btn-wrap"
+                                aria-label="Book an appointment with Google Calendar"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

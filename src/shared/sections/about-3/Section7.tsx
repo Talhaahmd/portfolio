@@ -10,37 +10,7 @@ const ARROW_SVG = (
         />
     </svg>
 );
-
-const FAQ_ITEMS = [
-    {
-        id: "collapseOne",
-        num: "1",
-        question: "What does Klarus AI actually build?",
-        answer: "We build AI automation systems, MVPs, CRM integrations, workflow tools, and scalable digital products. Everything we deliver is designed to reduce manual work and help your business grow faster.",
-        open: true,
-    },
-    {
-        id: "collapseTwo",
-        num: "2",
-        question: "How long does a typical project take?",
-        answer: "Timelines vary by scope. A workflow automation can be live in 1–2 weeks, while a full MVP typically takes 4–10 weeks — with clear milestones throughout.",
-        open: false,
-    },
-    {
-        id: "collapseThree",
-        num: "3",
-        question: "Do you work with startups or established businesses?",
-        answer: "Both. We work with early-stage startups building their first product and established companies looking to automate operations or integrate AI into existing systems.",
-        open: false,
-    },
-    {
-        id: "collapseFour",
-        num: "4",
-        question: "What tools and platforms do you work with?",
-        answer: "We work across a wide range including OpenAI, Make.com, Zapier, HubSpot, Airtable, React, Node.js, Next.js, AWS, Supabase, PostgreSQL, and more — choosing the right stack for each project.",
-        open: false,
-    },
-];
+const FAQ_ITEMS = [{ id: "collapseOne", num: "1", question: "What do you actually build?", answer: "I build AI automation systems, MVPs, CRM integrations, workflow tools, and scalable digital products. Everything I build is focused on reducing manual work, improving efficiency, and helping businesses grow faster.", open: true, }, { id: "collapseTwo", num: "2", question: "How long does a typical project take?", answer: "Timelines vary depending on the scope. A workflow automation can be live in 1–2 weeks, while a full MVP typically takes 4–10 weeks, with clear milestones throughout the process.", open: false, }, { id: "collapseThree", num: "3", question: "Do you work with startups or established businesses?", answer: "Both. I work with early-stage startups building their first product and established businesses looking to automate operations, improve their workflows, or integrate AI into their existing systems.", open: false, }, { id: "collapseFour", num: "4", question: "What tools and platforms do you work with?", answer: "I work across platforms and technologies including OpenAI, Make.com, Zapier, HubSpot, Airtable, React, Node.js, Next.js, AWS, Supabase, PostgreSQL, and more. I choose the right tools based on the project's requirements and goals.", open: false, },];
 
 export default function Section7({ classList = "" }: { classList?: string }) {
     return (
@@ -64,7 +34,7 @@ export default function Section7({ classList = "" }: { classList?: string }) {
                             </RevealText>
                         </h3>
                         <h6 className="fz-font-lg fw-500">
-                            Your questions about our process, services, <br className="d-none d-xxl-block" />and workflow—answered.
+                            Your questions about my process, services, <br className="d-none d-xxl-block" />and workflow—answered.
                         </h6>
                     </div>
                     <div className="col-lg-7 ms-lg-auto">

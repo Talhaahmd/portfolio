@@ -122,7 +122,6 @@ export default function Footer3() {
                     <li className="mb-15"><Link to="/">Home</Link></li>
                     <li className="mb-15"><Link to="/about-1">About</Link></li>
                     <li className="mb-15"><Link to="/portfolio-1">Works</Link></li>
-                    <li className="mb-15"><Link to="/archive-1">Blog</Link></li>
                     <li className="mb-15"><Link to="/contact-1">Contact</Link></li>
                   </ul>
                 </div>

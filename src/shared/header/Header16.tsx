@@ -1,6 +1,7 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { MainMenuRootList } from "@/shared/mobile-menu/MobileMenuCloneContext";
+import Logo from "@/shared/Logo";
 
 interface Header16Props {
   onOpenSearch?: () => void;
@@ -26,20 +27,11 @@ function Home16Menu() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/about-3" className={({ isActive }) => (isActive ? "active" : undefined)}>
-          <LinkSwap label="Page" />
-        </NavLink>
-      </li>
-      <li>
         <NavLink to="/portfolio-3" className={({ isActive }) => (isActive ? "active" : undefined)}>
           <LinkSwap label="Portfolio" />
         </NavLink>
       </li>
-      <li>
-        <NavLink to="/archive-4" className={({ isActive }) => (isActive ? "active" : undefined)}>
-          <LinkSwap label="Blogs" />
-        </NavLink>
-      </li>
+
       <li>
         <NavLink to="/contact-2" className={({ isActive }) => (isActive ? "active" : undefined)}>
           <LinkSwap label="Contact" />
@@ -68,17 +60,9 @@ export default function Header16({ onOpenSearch, onToggleSidebar, onOpenHamburge
       <div className="at-header-area at-header-spacing header-transparent">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-xl-2 col-6">
+            <div className="col-xl-3 col-6">
               <div className="at-header-logo">
-                <Link to="/index-16" className="d-inline-flex align-items-center gap-2 text-decoration-none">
-                  <img
-                    width={40}
-                    height={40}
-                    src="/assets/imgs/template/logo/ai-folks-logo.png"
-                    alt="The AI Folks"
-                    style={{ borderRadius: "6px", objectFit: "contain" }}
-                  />
-                </Link>
+                <Logo />
               </div>
             </div>
             <div className="col-xl-8 mx-auto d-none d-xl-flex justify-content-center">

@@ -37,7 +37,7 @@ const TESTIMONIALS: TestimonialItem[] = [
         roleLine: "CTO\nNexusTech",
         avatar: "/assets/imgs/template/avatar/avatar-10.webp",
         quote:
-            '"Klarus AI doesn\'t just build models; he builds engines for growth. His ability to deploy complex architectures with 99.9% reliability is what sets his work apart."',
+            '"Talha Speaks AI doesn\'t just build models; he builds engines for growth. His ability to deploy complex architectures with 99.9% reliability is what sets his work apart."',
         headerFirst: true,
         orderClass: "order-1",
     },
@@ -55,7 +55,7 @@ const TESTIMONIALS: TestimonialItem[] = [
         roleLine: "Head of AI\nSynthetix Systems",
         avatar: "/assets/imgs/template/avatar/avatar-16.webp",
         quote:
-            '"Klarus AI possesses a rare architectural intuition. He successfully optimized our legacy neural networks, reducing latency by 40% without compromising on model accuracy."',
+            '"Talha Speaks AI possesses a rare architectural intuition. He successfully optimized our legacy neural networks, reducing latency by 40% without compromising on model accuracy."',
         headerFirst: true,
         orderClass: "order-md-3 order-2",
     },
@@ -84,7 +84,7 @@ function TestimonialCard({ item }: { item: TestimonialItem }) {
                 <div className="sec-2-home-5__avatar-sm">
                     <img
                         src={item.avatar}
-                        alt="Klarus AI"
+                        alt="Talha Speaks AI"
                         width={65}
                         height={65}
                         className="img-cover" loading="lazy" />
@@ -124,7 +124,7 @@ function TestimonialCard({ item }: { item: TestimonialItem }) {
                             <div className="sec-2-home-5__avatar-sm">
                                 <img
                                     src={item.avatar}
-                                    alt="Klarus AI"
+                                    alt="Talha Speaks AI"
                                     width={65}
                                     height={65}
                                     className="img-cover" loading="lazy" />
@@ -204,7 +204,7 @@ export default function Section7() {
                                     <div className="anim-zoomin">
                                         <img
                                             src="/assets/imgs/pages/img-112.webp"
-                                            alt="Klarus AI"
+                                            alt="Talha Speaks AI"
                                             width={450}
                                             height={500}
                                             className="img-cover" loading="lazy" />

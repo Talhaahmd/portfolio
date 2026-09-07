@@ -23,30 +23,26 @@ const ARROW_CIRCLE_SVG = (
 
 const JOURNEY_ITEMS = [
     {
-        date: "2024 — Present",
-        title: "AI Automation Studio [ Klarus AI ]",
+        date: "2025 — Present",
+        title: "AI Automations and Agents [ Klarus AI ]",
         desc: "Building end-to-end AI automation systems, CRM integrations, and scalable MVPs for clients across multiple industries.",
     },
     {
-        date: "2022 — 2024",
+        date: "2023— 2024",
         title: "Workflow Automation Consultant [ Independent ]",
         desc: "Designed and deployed no-code/low-code automation workflows and AI-powered tools that cut operational overhead for growing teams.",
     },
     {
-        date: "2020 — 2022",
-        title: "Backend & Integration Engineer [ TechScale Solutions ]",
+        date: "2022",
+        title: "Software Engineer [ UX Huts ]",
         desc: "Built API integrations, cloud infrastructure pipelines, and internal automation tooling for SaaS and e-commerce platforms.",
     },
     {
-        date: "2018 — 2020",
-        title: "Full-Stack Developer [ LaunchPad Studio ]",
-        desc: "Developed MVP products and custom web applications from concept to deployment, supporting early-stage startup clients.",
+        date: "2021 — 2025",
+        title: "Bachelor's in Computer Sciences",
+        desc: "4 Year Bachelor's degree program",
     },
-    {
-        date: "2016 — 2018",
-        title: "Software Developer [ Digital Ventures ]",
-        desc: "Delivered web and mobile applications with a focus on clean code, performance, and scalable architecture.",
-    },
+
 ];
 
 export default function Section1() {
@@ -57,8 +53,8 @@ export default function Section1() {
                     <div className="col-xxl-6 col-lg-7 h-100">
                         <span className="at-btn common-black bg-transparent mb-10 rounded-0 p-0">
                             <span className="text-uppercase">
-                                <span className="text-1">hi, we&apos;re Klarus AI</span>
-                                <span className="text-2">hi, we&apos;re Klarus AI</span>
+                                <span className="text-1">hi, I&apos;m Talha</span>
+                                <span className="text-2">hi, I&apos;m Talha</span>
                             </span>
                             <i>
                                 {ARROW_SVG}
@@ -66,10 +62,10 @@ export default function Section1() {
                             </i>
                         </span>
                         <h1 className="section-title fw-600 fz-ds-1 lh-1 reveal-text">
-                            <RevealText>About Us</RevealText>
+                            <RevealText>About Me</RevealText>
                         </h1>
                         <p className="mb-0 fz-font-lg fw-600 neutral-900">
-                            We build AI automations, MVPs, and integrated systems <br /> —
+                            I build AI automations, MVPs, and integrated systems <br /> —
                             helping businesses operate faster, scale smarter, and grow with confidence.
                         </p>
                     </div>
@@ -85,7 +81,7 @@ export default function Section1() {
                                     {ARROW_CIRCLE_SVG}
                                 </Link>
                                 <Link className="at-btn z-index-1" to="/portfolio-3">
-                                    See our work
+                                    See my work
                                 </Link>
                                 <Link className="at-btn-circle" to="/portfolio-3">
                                     {ARROW_CIRCLE_SVG}
@@ -122,8 +118,8 @@ export default function Section1() {
                     <div className="col-lg-3">
                         <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
                             <span className="text-uppercase">
-                                <span className="text-1">Our journey</span>
-                                <span className="text-2">Our journey</span>
+                                <span className="text-1">My journey</span>
+                                <span className="text-2">My journey</span>
                             </span>
                             <i>
                                 {ARROW_SVG}

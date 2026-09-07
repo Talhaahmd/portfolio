@@ -35,7 +35,7 @@ const PORTFOLIO_ITEMS = [
         link: "/portfolio-details-1",
         img: "/assets/imgs/pages/img-12.webp",
         title: "Nebula",
-        description: "UI/UX & product design for digital platforms",
+        description: "Click to download my resumè",
         tags: [
             { label: "Branding", href: "#" },
             { label: "Web Design", href: "#" },

@@ -2,11 +2,10 @@ import React from "react";
 import RevealText from "@/shared/effects/RevealText";
 import OdometerCounter from "@/shared/elements/OdometerCounter";
 
-// About 3 Section 4 - Stats (Years of Practice, Deployments, Partners)
 
 const STATS = [
     { count: 50, prefix: undefined as React.ReactNode, suffix: "+", label: "Projects Delivered" },
-    { count: 30, prefix: undefined as React.ReactNode, suffix: "+", label: "Automations Built" },
+    { count: 100, prefix: undefined as React.ReactNode, suffix: "+", label: "Automations Built" },
     { count: 20, prefix: undefined as React.ReactNode, suffix: "+", label: "Hours Saved Per Client / Week" },
     { count: 15, prefix: undefined as React.ReactNode, suffix: "+", label: "MVPs Launched" },
     { count: 5, prefix: undefined as React.ReactNode, suffix: "★", label: "Average Client Rating" },
@@ -20,8 +19,7 @@ export default function Section4() {
                     <div className="col-lg-8">
                         <h3 className="reveal-text">
                             <RevealText>
-                                Real Results, Delivered Projects, and Satisfied Clients
-                            </RevealText>
+                                Numbers That Reflect Experience                            </RevealText>
                         </h3>
                     </div>
                     <div className="pt-100">

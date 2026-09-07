@@ -3501,10 +3501,21 @@ input[type=color] {
 .at-main-menu.menu-light nav ul li.has-dropdown > a::after {
   filter: invert(1);
 }
+.at-main-menu nav > ul {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  margin: 0;
+  padding: 0;
+}
 .at-main-menu nav ul li {
   list-style: none;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .at-main-menu nav ul li.has-dropdown > a {
   color: var(--at-common-black);
@@ -3538,9 +3549,15 @@ input[type=color] {
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--at-common-black);
-  padding: 10px 24px;
+  padding: 10px 16px;
   display: inline-block;
   line-height: 1;
+  white-space: nowrap;
+}
+@media (min-width: 1400px) {
+  .at-main-menu nav ul li a {
+    padding: 10px 20px;
+  }
 }
 .at-main-menu nav ul li a:hover {
   color: var(--at-common-black);

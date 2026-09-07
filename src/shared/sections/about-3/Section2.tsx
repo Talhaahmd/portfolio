@@ -24,35 +24,35 @@ const PLUS_ICON = (
 const PROCESS_ITEMS = [
     {
         img: "/assets/imgs/pages/img-138.webp",
-        alt: "Discover & Diagnose",
-        title: "01. Discover & Diagnose",
+        alt: "Discover & Understand",
+        title: "01. Discover & Understand",
         metaText: "1-2 Weeks",
-        metaLabel: "Understanding your operations",
-        desc: "We start by deeply understanding your business — your workflows, tools, pain points, and goals. This discovery phase gives us the clarity needed to build systems that actually solve real problems.",
+        metaLabel: "Understanding the business",
+        desc: "I start by understanding the business, product, audience, workflows, existing tools, and growth challenges. I identify the biggest opportunities where AI, automation, sales, or marketing can create meaningful impact.",
     },
     {
         img: "/assets/imgs/pages/img-139.webp",
-        alt: "Strategy & Plan",
-        title: "02. Strategy & Plan",
+        alt: "Strategy & Roadmap",
+        title: "02. Strategy & Roadmap",
         metaText: "1-2 Weeks",
-        metaLabel: "Designing the solution",
-        desc: "We craft a tailored roadmap that outlines the automation architecture, integrations, and development plan. Every decision is backed by data and aligned to your specific growth objectives.",
+        metaLabel: "Planning the right approach",
+        desc: "I turn the findings into a clear roadmap with defined priorities, tools, workflows, automation opportunities, and measurable goals. Every action is aligned with the bigger business objective.",
     },
     {
         img: "/assets/imgs/pages/img-140.webp",
-        alt: "Execute & Optimize",
-        title: "03. Execute & Optimize",
+        alt: "Build & Execute",
+        title: "03. Build & Execute",
         metaText: "4-10 Weeks",
-        metaLabel: "Building and refining",
-        desc: "We build, test, and deploy your AI systems, MVPs, or integrations in focused sprints. We continuously refine based on real-world performance to maximize impact and reliability.",
+        metaLabel: "Turning strategy into action",
+        desc: "I execute the plan across AI, SaaS, automation, sales, and marketing — building systems, launching campaigns, improving processes, and connecting the tools needed to move the business forward.",
     },
     {
         img: "/assets/imgs/pages/img-141.webp",
-        alt: "Scale & Sustain",
-        title: "04. Scale & Sustain",
+        alt: "Measure & Optimize",
+        title: "04. Measure & Optimize",
         metaText: "Ongoing",
-        metaLabel: "Growing with your business",
-        desc: "Once live, we help you scale what works — adding new automations, expanding integrations, and evolving the system as your business grows and requirements change.",
+        metaLabel: "Improving what works",
+        desc: "I track performance, analyze results, identify bottlenecks, and continuously optimize systems, campaigns, and workflows using real data, customer feedback, and business outcomes.",
     },
 ];
 
@@ -98,12 +98,12 @@ export default function Section2() {
                             </i>
                         </span>
                         <h3 className="reveal-text">
-                            <RevealText>Our Process</RevealText>
+                            <RevealText>My Process</RevealText>
                         </h3>
                     </div>
                     <div className="col-xxl-5 col-lg-8 text-lg-end ms-auto">
                         <h6 className="fw-600 fz-font-lg">
-                            We combine deep discovery, strategic planning, and precision execution
+                            I combine deep discovery, strategic planning, and precision execution
                             to deliver AI systems and digital products that drive real business results.
                         </h6>
                     </div>

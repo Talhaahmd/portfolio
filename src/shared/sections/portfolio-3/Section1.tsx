@@ -5,12 +5,6 @@ import OdometerCounter from "@/shared/elements/OdometerCounter";
 import PortfolioFilterSort, { type FilterValue } from "@/shared/sections/portfolio-1/PortfolioFilterSort";
 import { getCaseStudies, type CaseStudy } from "@/lib/supabase";
 
-const AVATARS = [
-    "/assets/imgs/template/avatar/avatar-10.webp",
-    "/assets/imgs/template/avatar/avatar-11.webp",
-    "/assets/imgs/template/avatar/avatar-12.webp",
-    "/assets/imgs/template/avatar/avatar-13.webp",
-];
 
 const ARROW_SVG = (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,21 +54,15 @@ export default function Section1() {
             <div className="container pb-60">
                 <div className="row g-4 align-items-end">
                     <div className="col-xxl-8 col-lg-7">
-                        <h1 className="fz-ds-1 fw-500">What We&apos;ve Built</h1>
+                        <h1 className="fz-ds-1 fw-500">What I've Built</h1>
                         <p className="fz-font-lg neutral-900 mb-0">
                             A thoughtful selection of work shaped by simplicity and meaningful outcomes.
                         </p>
                     </div>
                     <div className="col-xxl-3 col-lg-5 ms-lg-auto">
-                        <div className="sec-2-home-5__avatars-row d-flex justify-content-lg-end gap-2">
-                            {AVATARS.map((src, i) => (
-                                <div key={i} className="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                                    <img className="img-cover" src={src} alt="" width={48} height={48} loading="lazy" />
-                                </div>
-                            ))}
-                        </div>
+
                         <h6 className="fw-500 fz-font-lg text-lg-end mt-3 mb-0">
-                            info@klarus.io / (212) 555-7398
+                            talha@talhaspeaksai.com / +971 588 44 9147
                         </h6>
                     </div>
                     <div className="col-12">

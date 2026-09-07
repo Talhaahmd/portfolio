@@ -35,9 +35,7 @@ export default function Footer15() {
                     <nav className="footer-15__nav-wrap" aria-label="Footer primary">
                         <ul className="footer-15__nav list-unstyled mb-0">
                             <li><Link to="/index-15">Home</Link></li>
-                            <li><Link className="is-current" to="/about-1">About<span className="footer-15__nav-icon" aria-hidden="true">{SERVICE_ICON}</span></Link></li>
                             <li><Link to="/portfolio-1">Works</Link></li>
-                            <li><Link to="/archive-1">Blog</Link></li>
                             <li><Link to="/contact-2">Contact</Link></li>
                         </ul>
                         <ul className="footer-15__nav list-unstyled mb-0">

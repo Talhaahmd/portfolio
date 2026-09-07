@@ -49,9 +49,6 @@ export default function Footer13() {
                         <div className="footer-13__col at_fade_anim" data-fade-from="bottom" data-delay=".2">
                             <p className="footer-13__col-title mb-0">PRACTICE</p>
                             <ul className="footer-13__col-list list-unstyled mb-0">
-                                <li><Link to="/about-1">About</Link></li>
-                                <li><Link to="/services-1">Process</Link></li>
-                                <li><Link to="/about-1">Awards</Link></li>
                                 <li><Link to="/archive-1">Press</Link></li>
                                 <li><Link to="/team">Careers</Link></li>
                             </ul>

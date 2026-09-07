@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import RevealText from "@/shared/effects/RevealText";
 
-// Home 5 Section 2 - Why Klarus AI / Portfolio area
+// Home 5 Section 2 - Portfolio area
 
 const ARROW_SVG = (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,27 +40,21 @@ const QUOTE_ICON_SVG = (
 );
 
 const HERO_LIST_ITEMS = [
-    "AI Automation Systems",
-    "n8n Workflow Engineering",
-    "Custom AI Agents",
-    "MVP & Product Development",
-    "System Integrations",
-    "Operations Automation",
+    "Built 10+ AI products across 4 Targeted Niches",
+    "3 AI products funded at Global AI Show, 2025",
+    "Worked with both venture-backed startups and bootstrapped agencies",
+    "Built trust with international teams",
 ];
 
 const SKILLS_LIST_ITEMS = [
-    "n8n, Make.com, Zapier",
-    "React, Next.js, Node.js",
-    "OpenAI APIs, Claude, LangChain",
-    "Supabase, PostgreSQL, Firebase",
-    "AWS, Docker, REST APIs",
+    "",
 ];
 const AVATAR_IMGS = [
-    "/assets/imgs/template/avatar/avatar-10.webp",
-    "/assets/imgs/template/avatar/avatar-11.webp",
-    "/assets/imgs/template/avatar/avatar-12.webp",
-    "/assets/imgs/template/avatar/avatar-13.webp",
-    "/assets/imgs/template/avatar/avatar-14.webp",
+    "public/assets/imgs/pages/IMG_3802.jpg",
+    "public/assets/imgs/pages/IMG_3803.jpg",
+    "public/assets/imgs/pages/IMG_3804.jpg",
+    "public/assets/imgs/pages/IMG_3805.jpg",
+    "public/assets/imgs/pages/IMG_3806.jpg",
 ];
 
 const FOOTER_TAGS = [
@@ -81,8 +75,8 @@ export default function Section2() {
                             <div className="col-xxl-1 col-lg-2">
                                 <span className="at-btn common-black bg-transparent mb-10 rounded-0 p-0">
                                     <span className="text-uppercase">
-                                        <span className="text-1">why klarus ai</span>
-                                        <span className="text-2">why klarus ai</span>
+                                        <span className="text-1">why Talha</span>
+                                        <span className="text-2">why Talha</span>
                                     </span>
                                     <i>
                                         {ARROW_SVG}
@@ -93,9 +87,7 @@ export default function Section2() {
                             <div className="col-xxl-9 col-lg-10">
                                 <h3 className="reveal-text lh-1">
                                     <RevealText>
-                                        I bridge the gap between complex data and intelligent action through robust,
-                                        scalable, and production-ready AI.
-                                    </RevealText>
+                                        I help businesses acquire and retain customers through AI automation, sales, and growth strategies.                                </RevealText>
                                 </h3>
                             </div>
                         </div>
@@ -107,7 +99,7 @@ export default function Section2() {
                                     <div className="sec-2-home-5__card sec-2-home-5__card--hero rounded-4 overflow-hidden rounded-4 p-relative">
                                         <div className="sec-2-home-5__hero-bg" />
                                         <img
-                                            src="/assets/imgs/pages/img-103.webp"
+                                            src="public/assets/imgs/pages/Image for Bento 1 (1).jpg"
                                             alt="Intelligent Systems"
                                             width={600}
                                             height={400}
@@ -115,17 +107,18 @@ export default function Section2() {
                                         <div className="sec-2-home-5__hero-overlay p-absolute top-0 left-0 w-100 h-100 d-flex flex-column justify-content-between p-4">
                                             <div className="d-flex justify-content-between align-items-start">
                                                 <h6 className="sec-2-home-5__hero-title text-white fw-bold mb-0">
-                                                    Intelligent Systems <br /> for Modern Problems.
+                                                    Representative At The <br />Global AI Show.
                                                 </h6>
                                                 <span className="text-white opacity-75 text-nowrap">© 2026</span>
                                             </div>
                                             <div className="d-flex justify-content-between align-items-end flex-wrap gap-2">
                                                 <span className="text-white fz-font-body">
-                                                    +5 Years <br /> of Experience
+                                                    +2 years <br /> International SaaS Experience
+
                                                 </span>
                                                 <Link
                                                     className="at-btn bg-neutral-0 changeless text-dark py-2 px-3 fz-font-body"
-                                                    to="#"
+                                                    to="contact-2"
                                                 >
                                                     <span>
                                                         <span className="text-1">Let&apos;s build</span>
@@ -158,15 +151,15 @@ export default function Section2() {
                                         <div className="d-flex align-items-center gap-3 mb-3">
                                             <div className="sec-2-home-5__avatar rounded-3 overflow-hidden flex-shrink-0">
                                                 <img
-                                                    src="/assets/imgs/template/avatar/avatar-10.webp"
-                                                    alt="Jeff Nippard"
+                                                    src="public/assets/imgs/pages/1784065267489.png"
+                                                    alt="MS."
                                                     width={56}
                                                     height={56}
                                                     className="img-cover" loading="lazy" />
                                             </div>
                                             <div>
-                                                <h6 className="fw-600 neutral-900 fz-font-md mb-0">Jeffena Nippard</h6>
-                                                <span className="neutral-500 small fz-font-label">CTO, NCP API</span>
+                                                <h6 className="fw-600 neutral-900 fz-font-md mb-0">Mavlyanov S.</h6>
+                                                <span className="neutral-500 small fz-font-label">CEO & Founder, Moneff</span>
                                             </div>
                                         </div>
                                         <div className="sec-2-home-5__stars mb-3">
@@ -180,33 +173,22 @@ export default function Section2() {
                                             ))}
                                         </div>
                                         <blockquote className="neutral-900 fz-font-lg fw-500 mb-4">
-                                            &quot;Klarus has a rare ability to bridge the gap between theoretical mathematics
-                                            and production-grade code. He doesn&apos;t just build models; he builds engines
-                                            for real-world growth.&quot;
+                                            &quot;Working with Talha felt like adding both a technical product manager and a SaaS growth strategist to our team..&quot;
                                         </blockquote>
                                         <div className="sec-2-home-5__avatars-row d-flex gap-2">
                                             {AVATAR_IMGS.map((src, i) => (
                                                 <div key={i} className="sec-2-home-5__avatar-sm">
                                                     <img
                                                         src={src}
-                                                        alt="Klarus AI"
+                                                        alt="Talha Speaks AI"
                                                         width={65}
                                                         height={65}
                                                         className="img-cover" loading="lazy" />
                                                 </div>
                                             ))}
                                         </div>
-                                        <span className="neutral-500 small d-block mt-60 pb-145">[Since 2012]</span>
-                                        <div className="sec-2-home-5__product-img-wrap p-absolute bottom-0 end-0">
-                                            <img
-                                                src="/assets/imgs/pages/img-104.webp"
-                                                alt="Product"
-                                                width={365}
-                                                height={210}
-                                                className="sec-2-home-5__product-img at_fade_anim"
-                                                data-delay=".5"
-                                                style={{ width: "auto", height: "auto" }} loading="lazy" />
-                                        </div>
+                                        <span className="neutral-500 small d-block mt-60 pb-145">[Since 2024]</span>
+                                        <div className="sec-2-home-5__product-img-wrap p-absolute bottom-0 end-0 d-none d-md-block"> <img src="/assets/imgs/pages/Bento.svg" alt="Product" className="sec-2-home-5__product-img at_fade_anim" data-delay=".5" style={{ width: "365px", height: "250px", display: "block", }} /> </div>
                                     </div>
                                 </div>
                             </div>
@@ -216,12 +198,46 @@ export default function Section2() {
                                 <div className="sec-2-home-5__col sec-2-home-5__col--three">
                                     <div className="sec-2-home-5__card sec-2-home-5__card--small rounded-4 bg-neutral-0 p-4 p-md-5 p-relative fix mb-20">
                                         <div className="pb-80 d-flex justify-content-between flex-md-row flex-column">
+
                                             <div>
-                                                <div className="sec-2-home-5__stat mb-2">200+</div>
-                                                <p className="neutral-900 fw-semibold mb-4">
-                                                    Production-grade <br /> models deployed
+                                                <div className="sec-2-home-5__stat mb-2">40+</div>
+
+                                                <p className="neutral-900 fw-semibold mb-3">
+                                                    AI automation templates built <br />
+                                                    across SaaS, AI, and Shopify ecosystems
                                                 </p>
+
+                                                <a
+                                                    href="https://github.com/Talhaahmd"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    style={{
+                                                        display: "inline-block",
+                                                        padding: "0",
+                                                        background: "transparent",
+                                                        color: "#000000",
+                                                        border: "none",
+                                                        borderRadius: "0",
+                                                        fontSize: "11px",
+                                                        fontWeight: 400,
+                                                        lineHeight: 1.4,
+                                                        textDecoration: "underline",
+                                                        textUnderlineOffset: "3px",
+                                                        transition: "color 0.3s ease, transform 0.3s ease",
+                                                    }}
+                                                    onMouseEnter={(e) => {
+                                                        e.currentTarget.style.color = "#555555";
+                                                        e.currentTarget.style.transform = "translateY(-1px)";
+                                                    }}
+                                                    onMouseLeave={(e) => {
+                                                        e.currentTarget.style.color = "#000000";
+                                                        e.currentTarget.style.transform = "translateY(0)";
+                                                    }}
+                                                >
+                                                    Click to download templates
+                                                </a>
                                             </div>
+
                                             <ul className="sec-2-home-5__list sec-2-home-5__list--sm list-unstyled mb-0">
                                                 {SKILLS_LIST_ITEMS.map((item, i) => (
                                                     <li key={i} className="sec-2-home-5__list-item">
@@ -229,38 +245,57 @@ export default function Section2() {
                                                     </li>
                                                 ))}
                                             </ul>
+
                                         </div>
-                                        <div className="p-absolute bottom-0 end-0">
+                                        <div
+                                            className="p-absolute bottom-0 end-0"
+                                            style={{
+                                                transform: "translate(140px, 5px)",
+                                                zIndex: 10,
+                                            }}
+                                        >
                                             <img
-                                                src="/assets/imgs/pages/img-105.webp"
-                                                alt="Klarus AI"
-                                                width={447}
-                                                height={103}
-                                                className="at_fade_anim"
-                                                style={{ width: "auto", height: "auto" }} loading="lazy" />
+                                                src="/assets/imgs/pages/github.svg"
+                                                alt="Talha Speaks AI"
+                                                width={894}
+                                                height={206}
+                                                style={{
+                                                    width: "894px",
+                                                    height: "206px",
+                                                    display: "block",
+                                                    opacity: 1,
+                                                }}
+                                            />
                                         </div>
+
                                     </div>
-                                    <div className="row g-2">
+
+                                    <div className="row g-2 d-none d-md-flex">
                                         <div className="col-md-6">
                                             <div className="sec-2-home-5__card sec-2-home-5__card--small sec-2-home-5__card--img rounded-4 h-100 fix">
                                                 <div className="img">
                                                     <img
-                                                        src="/assets/imgs/pages/img-106.webp"
+                                                        src="/assets/imgs/pages/We audit everything (242 x 248 px) (2).png"
                                                         alt="Product"
                                                         width={242}
                                                         height={248}
                                                         className="sec-2-home-5__thumb-img at_fade_anim"
                                                         data-delay=".5"
-                                                        style={{ width: "auto", height: "auto" }} loading="lazy" />
+                                                        style={{ width: "auto", height: "auto" }}
+                                                        loading="lazy"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div className="col-md-6">
                                             <div className="sec-2-home-5__card sec-2-home-5__card--small sec-2-home-5__card--quote bg-neutral-0 overflow-hidden h-100">
-                                                <div className="sec-2-home-5__quote-icon mb-20">{QUOTE_ICON_SVG}</div>
+                                                <div className="sec-2-home-5__quote-icon mb-20">
+                                                    {QUOTE_ICON_SVG}
+                                                </div>
+
                                                 <blockquote className="neutral-900 fz-font-md fw-500 mb-0">
-                                                    &quot;High performance starts with clean data. I prioritize rigorous
-                                                    preprocessing and feature engineering to ensure model reliability.&quot;
+                                                    &quot;I’m particularly interested in AI automations that eliminate repetitive work, streamline workflows, and help SaaS teams scale more efficiently.&quot;
                                                 </blockquote>
                                             </div>
                                         </div>

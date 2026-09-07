@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 
 const NAV_LINKS_1 = [
     { label: "Home", href: "/index-11" },
-    { label: "About", href: "/about-1" },
     { label: "Works", href: "/portfolio-1" },
-    { label: "Services", href: "/services-details-1" },
-    { label: "Blog", href: "/archive-1" },
 ];
 
 const NAV_LINKS_2 = [

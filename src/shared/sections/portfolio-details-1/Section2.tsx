@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getCaseStudies, getRelatedCaseStudies, type CaseStudy } from "@/lib/supabase";
+
 const ARROW_SVG = (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -14,8 +17,6 @@ const PLUS_SVG = (
     </svg>
 );
 
-const DETAIL_LINK = "/portfolio-details-1";
-
 type RelatedCard = {
     img: string;
     alt: string;
@@ -23,45 +24,48 @@ type RelatedCard = {
     title: string;
     description: string;
     projectName: string;
-    /** When true, content has mt-15; when false, thumb has mb-15 */
+    href: string;
     contentMt15: boolean;
 };
 
-const RELATED_PROJECTS: RelatedCard[] = [
+const FALLBACK_RELATED_PROJECTS: RelatedCard[] = [
     {
         img: "/assets/imgs/pages/img-184.webp",
-        alt: "Noirform",
-        tag: "Creative",
-        title: "Brand art direction & visual identity",
-        description: "We always provide people a complete solution upon focused of any business",
-        projectName: "Noirform",
+        alt: "Data Intelligence",
+        tag: "Analytics",
+        title: "Decision Systems & Analytics",
+        description: "Intelligent data pipelines and real-time decision metrics for scale.",
+        projectName: "Data Intelligence",
+        href: "/portfolio-details-1/data-intelligence",
         contentMt15: true,
     },
     {
         img: "/assets/imgs/pages/img-185.webp",
-        alt: "Nexora",
-        tag: "e-commerce",
-        title: "Campaigns & focused content",
-        description: "We always provide people a complete solution upon focused of any business",
-        projectName: "Nexora",
+        alt: "AI Workflows",
+        tag: "LLMs & Automation",
+        title: "Autonomous Agent Integration",
+        description: "Custom agentic workflows built to handle automated task routing.",
+        projectName: "AI Workflows",
+        href: "/portfolio-details-1/ai-workflows",
         contentMt15: true,
     },
     {
         img: "/assets/imgs/pages/img-186.webp",
-        alt: "Nebula",
-        tag: "ui design",
-        title: "UI/UX & product design for digital platforms",
-        description: "We always provide people a complete solution upon focused of any business",
-        projectName: "Nebula",
+        alt: "Distributed ML Pipeline",
+        tag: "Cloud-Native",
+        title: "Scalable Infrastructure & Kubernetes",
+        description: "Auto-scaling ML model serving with low-latency execution.",
+        projectName: "Distributed ML Pipeline",
+        href: "/portfolio-details-1/distributed-ml-pipeline",
         contentMt15: false,
     },
 ];
 
-function RelatedCardItem({ img, alt, tag, title, description, projectName, contentMt15 }: RelatedCard) {
+function RelatedCardItem({ img, alt, tag, title, description, projectName, href, contentMt15 }: RelatedCard) {
     return (
         <div className="alt-portfolio-item at-hover-item mb-30">
             <Link
-                to={DETAIL_LINK}
+                to={href}
                 className={`alt-portfolio-thumb p-relative fix d-block ${contentMt15 ? "" : "mb-15"}`.trim()}
             >
                 <span className="w-100 d-block scale-img-from-to" data-value-1="1.5" data-value-2="1">
@@ -70,7 +74,9 @@ function RelatedCardItem({ img, alt, tag, title, description, projectName, conte
                         src={img}
                         alt={alt}
                         width={400}
-                        height={500} loading="lazy" />
+                        height={500}
+                        loading="lazy"
+                    />
                 </span>
                 <div className="alt-portfolio-btn">
                     <div className="content">
@@ -84,7 +90,7 @@ function RelatedCardItem({ img, alt, tag, title, description, projectName, conte
             </Link>
             <div className={`alt-portfolio-content d-flex justify-content-between align-items-center ${contentMt15 ? "mt-15" : ""}`.trim()}>
                 <h5 className="alt-portfolio-title mb-0">
-                    <Link to={DETAIL_LINK} className="common-underline">
+                    <Link to={href} className="common-underline">
                         {projectName}
                     </Link>
                 </h5>
@@ -94,7 +100,46 @@ function RelatedCardItem({ img, alt, tag, title, description, projectName, conte
     );
 }
 
-export default function Section2() {
+type Section2Props = {
+    currentSlug?: string;
+    relatedSlugs?: string[];
+};
+
+export default function Section2({ currentSlug, relatedSlugs }: Section2Props) {
+    const [relatedCards, setRelatedCards] = useState<RelatedCard[]>(FALLBACK_RELATED_PROJECTS);
+
+    useEffect(() => {
+        if (relatedSlugs && relatedSlugs.length > 0) {
+            getRelatedCaseStudies(relatedSlugs).then((data) => {
+                if (data && data.length > 0) {
+                    setRelatedCards(mapCaseStudiesToCards(data));
+                }
+            });
+        } else {
+            getCaseStudies().then((data) => {
+                if (data && data.length > 0) {
+                    const filtered = data.filter((cs) => cs.slug !== currentSlug).slice(0, 3);
+                    if (filtered.length > 0) {
+                        setRelatedCards(mapCaseStudiesToCards(filtered));
+                    }
+                }
+            });
+        }
+    }, [currentSlug, relatedSlugs]);
+
+    function mapCaseStudiesToCards(list: CaseStudy[]): RelatedCard[] {
+        return list.map((cs, idx) => ({
+            img: cs.card_image || cs.featured_image || `/assets/imgs/pages/img-18${4 + (idx % 3)}.webp`,
+            alt: cs.title,
+            tag: cs.category || (cs.tags && cs.tags[0]) || "Case Study",
+            title: cs.tagline || cs.title,
+            description: cs.featured_description || cs.intro_paragraph || "Explore our latest system architecture and engineering work.",
+            projectName: cs.title,
+            href: `/portfolio-details-1/${cs.slug}`,
+            contentMt15: idx % 2 === 0,
+        }));
+    }
+
     return (
         <section className="sec-2-portfolio-details-1 overflow-hidden pt-100 pb-100 bg-neutral-50">
             <div className="container">
@@ -113,7 +158,7 @@ export default function Section2() {
                     </div>
                 </div>
                 <div className="row mt-30">
-                    {RELATED_PROJECTS.map((card, idx) => (
+                    {relatedCards.map((card, idx) => (
                         <div key={`${card.projectName}-${idx}`} className="col-lg-4 col-md-6">
                             <RelatedCardItem {...card} />
                         </div>

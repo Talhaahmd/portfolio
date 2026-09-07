@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// Home 5 Section 1 - Hero (AI Engineer / Klarus AI Nova)
+// Home 5 Section 1 - Hero (Talha Speaks AI)
 
 const ARROW_CIRCLE_SVG = (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
@@ -54,17 +54,12 @@ export default function Section1() {
                             <div className="col-lg-3 mx-lg-auto col-md-6 pb-100 z-index-2">
                                 <span className="category-tag mb-20">
                                     <span className="dot" />
-                                    Available for freelance work
+                                    Tested & Compared for Founders
                                 </span>
                                 <p className="fz-18 neutral-900 fw-600 mb-40">
-                                    I develop AI Automations <br /> and build intelligent systems that scale
+                                    AI Automations, Agents <br />& SaaS Growth Strategies
                                 </p>
-                                <img
-                                    src="/assets/imgs/pages/img-102.webp"
-                                    alt="Klarus AI"
-                                    width={214}
-                                    height={138}
-                                    style={{ width: "auto", height: "auto" }} loading="lazy" />
+
                             </div>
 
                             <div className="col-lg-4 mx-lg-auto d-none d-lg-block z-index-1">
@@ -75,23 +70,22 @@ export default function Section1() {
                                     data-ease="bounce"
                                 >
                                     <img
-                                        src="/assets/imgs/pages/img-101.webp"
-                                        alt="Klarus AI"
+                                        src="/assets/imgs/pages/Hero image.png"
+                                        alt="Talha Speaks AI"
                                         width={560}
                                         height={860}
                                         className="d-none d-lg-block" loading="lazy" />
                                     <div className="p-absolute bottom-0 start-50 translate-middle-x z-n1 d-lg-none d-xxl-block">
-                                        <h1 className="fz-290 fw-600 text-nowrap lh-1">Klarus AI Nova</h1>
+                                        <h1 className="fz-290 fw-600 text-nowrap lh-1">Talha Speaks AI</h1>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="col-lg-3 col-md-6 mx-lg-auto z-index-2">
                                 <div className="icon mb-30">{DIAMOND_ICON}</div>
-                                <h4>I&apos;m Klarus AI Nova</h4>
+                                <h4>I'm Talha</h4>
                                 <p className="fz-lg neutral-900 fw-600">
-                                    I design and build AI automations, MVPs, and scalable AI architectures that help businesses turn ideas into real-world products and intelligent workflows.
-
+                                    I build AI software, share automation workflows, and help SaaS companies acquire users and scale.
                                 </p>
                                 <div
                                     className="at-btn-group at-btn-group-transparent at_fade_anim"
@@ -99,13 +93,13 @@ export default function Section1() {
                                     data-fade-from="bottom"
                                     data-ease="bounce"
                                 >
-                                    <Link className="at-btn-circle" to="/portfolio-5">
+                                    <Link className="at-btn-circle" to="/portfolio-3">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
-                                    <Link className="at-btn z-index-1" to="/portfolio-5">
-                                        View All Projects
+                                    <Link className="at-btn z-index-1" to="/portfolio-3">
+                                        Discover My Work
                                     </Link>
-                                    <Link className="at-btn-circle" to="/portfolio-5">
+                                    <Link className="at-btn-circle" to="/portfolio-3">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
                                 </div>

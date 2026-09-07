@@ -63,10 +63,7 @@ import NotFoundPage from "@/pages/NotFoundPage";
 export default function App() {
   return (
     <Routes>
-      <Route element={<MainLayout headerStyle={1} footerStyle={1} />}>
-        <Route path="/" element={<Home16Page />} />
-        <Route path="/index-dark" element={<Home16Page />} />
-      </Route>
+
       <Route element={<MainLayout headerStyle={1} footerStyle={1} noFooter />}>
         <Route path="/portfolio-curtain" element={<PortfolioCurtainPage />} />
         <Route path="/portfolio-vista" element={<PortfolioVistaPage />} />
@@ -104,6 +101,7 @@ export default function App() {
         <Route path="/portfolio-5" element={<Portfolio5Page />} />
         <Route path="/portfolio-6" element={<Portfolio6Page />} />
         <Route path="/portfolio-details-1" element={<PortfolioDetails1Page />} />
+        <Route path="/portfolio-details-1/:slug" element={<PortfolioDetails1Page />} />
         <Route path="/portfolio-details-2" element={<PortfolioDetails2Page />} />
         <Route path="/portfolio-details-3" element={<PortfolioDetails3Page />} />
         <Route path="/portfolio-details-3/:slug" element={<PortfolioDetails3Page />} />
@@ -130,6 +128,8 @@ export default function App() {
         <Route path="/index-4-dark" element={<Home4Page />} />
       </Route>
       <Route element={<MainLayout headerStyle={5} footerStyle={5} />}>
+        <Route path="/" element={<Home5Page />} />
+        <Route path="/index-dark" element={<Home5Page />} />
         <Route path="/index-5" element={<Home5Page />} />
         <Route path="/index-5-dark" element={<Home5Page />} />
       </Route>

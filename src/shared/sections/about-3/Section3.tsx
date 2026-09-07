@@ -74,45 +74,7 @@ const STARS_SVG = (
         />
     </svg>
 );
-
-const TESTIMONIALS = [
-    {
-        avatar: "/assets/imgs/template/avatar/avatar-6.webp",
-        text: "What stood out most was their commitment to quality. They were responsive, professional, and willing to refine the work until it met the required standard. I would be happy to work with them again.",
-        name: "Jeff Nippard",
-        position: "CEO",
-        company: "ACN NPI",
-    },
-    {
-        avatar: "/assets/imgs/template/avatar/avatar-7.webp",
-        text: "Klarus AI transformed our operations completely. The automation system they built saved our team over 20 hours a week — it paid for itself within the first month.",
-        name: "Sarah Mitchell",
-        position: "Operations Director",
-        company: "GrowthBase Inc.",
-    },
-    {
-        avatar: "/assets/imgs/template/avatar/avatar-8.webp",
-        text: "They built our MVP in record time and it was exactly what we envisioned. Clean architecture, great communication, and a team that genuinely cares about outcomes.",
-        name: "Daniel Torres",
-        position: "Founder & CEO",
-        company: "Launchpad Ventures",
-    },
-    {
-        avatar: "/assets/imgs/template/avatar/avatar-6.webp",
-        text: "The CRM integration Klarus AI delivered unified our entire sales pipeline. We now have full visibility and our conversion rate has improved significantly.",
-        name: "Rachel Pham",
-        position: "Head of Sales",
-        company: "ScaleUp Solutions",
-    },
-    {
-        avatar: "/assets/imgs/template/avatar/avatar-7.webp",
-        text: "Professional, reliable, and technically excellent. Klarus AI delivered a scalable system that our team could actually use and maintain — not just an impressive demo.",
-        name: "Marcus Osei",
-        position: "CTO",
-        company: "Digital Edge Group",
-    },
-];
-
+const TESTIMONIALS = [{ avatar: "/assets/imgs/template/avatar/avatar-6.webp", text: "What stood out most was Talha's commitment to quality. He was responsive, professional, and willing to refine the work until it met the required standard. I would be happy to work with him again.", name: "Jeff Nippard", position: "CEO", company: "ACN NPI", }, { avatar: "/assets/imgs/template/avatar/avatar-7.webp", text: "Talha transformed our operations completely. The automation system he built saved our team over 20 hours a week — it paid for itself within the first month.", name: "Sarah Mitchell", position: "Operations Director", company: "GrowthBase Inc.", }, { avatar: "/assets/imgs/template/avatar/avatar-8.webp", text: "Talha built our MVP in record time and it was exactly what we envisioned. Clean architecture, great communication, and someone who genuinely cares about outcomes.", name: "Daniel Torres", position: "Founder & CEO", company: "Launchpad Ventures", }, { avatar: "/assets/imgs/template/avatar/avatar-6.webp", text: "The CRM integration Talha delivered unified our entire sales pipeline. We now have full visibility and our conversion rate has improved significantly.", name: "Rachel Pham", position: "Head of Sales", company: "ScaleUp Solutions", }, { avatar: "/assets/imgs/template/avatar/avatar-7.webp", text: "Professional, reliable, and technically excellent. Talha delivered a scalable system that our team could actually use and maintain — not just an impressive demo.", name: "Marcus Osei", position: "CTO", company: "Digital Edge Group", },];
 const SECTION_ID = "sec-3-about-testimonials";
 
 export default function Section3() {
@@ -132,7 +94,7 @@ export default function Section3() {
                             </i>
                         </span>
                         <h3 className="reveal-text">
-                            <RevealText>Hear From Our Happy Clients</RevealText>
+                            <RevealText>Hear From My Happy Clients</RevealText>
                         </h3>
                     </div>
                     <div className="col-lg-2 ms-auto">

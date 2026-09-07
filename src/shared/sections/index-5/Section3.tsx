@@ -1,120 +1,451 @@
 import { Link } from "react-router-dom";
 import RevealText from "@/shared/effects/RevealText";
+import OdometerCounter from "@/shared/elements/OdometerCounter";
 
-// Home 5 Section 3 - Trusted by / Brand scroll
-
-const ARROW_SVG = (
-    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-            d="M0.21967 9.40717C-0.0732232 9.70006 -0.0732232 10.1749 0.21967 10.4678C0.512563 10.7607 0.987437 10.7607 1.28033 10.4678L0.21967 9.40717ZM10.6875 0.75C10.6875 0.335786 10.3517 2.97145e-09 9.9375 1.50485e-07L3.1875 -2.70983e-07C2.77329 -2.70983e-07 2.4375 0.335786 2.4375 0.75C2.4375 1.16421 2.77329 1.5 3.1875 1.5H9.1875V7.5C9.1875 7.91421 9.52329 8.25 9.9375 8.25C10.3517 8.25 10.6875 7.91421 10.6875 7.5L10.6875 0.75ZM0.75 9.9375L1.28033 10.4678L10.4678 1.28033L9.9375 0.75L9.40717 0.21967L0.21967 9.40717L0.75 9.9375Z"
-            fill="currentColor"
-        />
-    </svg>
-);
-
-const STAR_SVG = (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
-        <path
-            d="M8.55696 13.6975L12.707 16.2075C13.467 16.6675 14.397 15.9875 14.197 15.1275L13.097 10.4075L16.767 7.2275C17.437 6.6475 17.077 5.5475 16.197 5.4775L11.367 5.0675L9.47696 0.6075C9.13696 -0.2025 7.97696 -0.2025 7.63696 0.6075L5.74696 5.0575L0.916957 5.4675C0.0369575 5.5375 -0.323043 6.6375 0.346957 7.2175L4.01696 10.3975L2.91696 15.1175C2.71696 15.9775 3.64696 16.6575 4.40696 16.1975L8.55696 13.6975Z"
-            fill="currentColor"
-        />
-    </svg>
-);
-
-const BRAND_ROWS: { logos: string[]; delay: string }[] = [
-    { logos: ["01", "02", "03"], delay: ".4" },
-    { logos: ["07", "08", "09"], delay: ".6" },
-    { logos: ["03", "04", "05"], delay: ".6" },
-    { logos: ["04", "05", "06"], delay: ".7" },
-    { logos: ["05", "06", "07"], delay: ".4" },
-    { logos: ["06", "07", "08"], delay: ".5" },
-    { logos: ["02", "03", "04"], delay: ".5" },
-    { logos: ["08", "09", "10"], delay: ".7" },
-    { logos: ["09", "10", "01"], delay: ".6" },
-    { logos: ["10", "01", "02"], delay: ".7" },
+{/* Home 7 Section 2 (We Power the World's Fastest Growing Startups) */ }
+const FEATURE_DATA = [
+    {
+        icon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+            >
+                <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M40 20V0H20H0V20V40H20L40 20Z"
+                    fill="currentColor"
+                />
+            </svg>
+        ),
+        title: "Ustahub",
+        desc: "Helping businesses build better digital experiences and reach the right audience.",
+    },
+    {
+        icon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+            >
+                <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M40 20V0H20H0V20V40H20L40 20Z"
+                    fill="currentColor"
+                />
+            </svg>
+        ),
+        title: "Nordic ERP",
+        desc: "Streamlining business operations with smarter systems, automation, and data.",
+    },
+    {
+        icon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+            >
+                <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M40 20V0H20H0V20V40H20L40 20Z"
+                    fill="currentColor"
+                />
+            </svg>
+        ),
+        title: "Manychat",
+        desc: "Creating automated customer journeys that turn conversations into opportunities.",
+    },
 ];
 
-function logoSrc(num: string) {
-    return `/assets/imgs/template/logo/logo-brand-${num}.webp`;
-}
+const STAT_DATA = [
+    {
+        value: 3,
+        suffix: "+",
+        label: "countries where clients expanded their business",
+    },
+    {
+        value: 10,
+        suffix: "k+",
+        label: "verified personnel registered on ERP",
+    },
+    {
+        value: 98,
+        suffix: "%",
+        label: "client retention gained over the last year",
+    },
+];
 
-export default function Section3() {
+const IMG_DATA = [
+    {
+        src: "/assets/imgs/pages/1%202.png",
+        mobileSrc: "/assets/imgs/pages/1%203.png",
+        alt: "Talha Speaks AI",
+    },
+    {
+        src: "/assets/imgs/pages/2%202.png",
+        mobileSrc: "/assets/imgs/pages/2%203.png",
+        alt: "Talha Speaks AI",
+    },
+    {
+        src: "/assets/imgs/pages/3%202.png",
+        mobileSrc: "/assets/imgs/pages/3%203.png",
+        alt: "Talha Speaks AI",
+    },
+];
+
+const EYEBROW_ARROW_SVG = (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+    >
+        <path
+            d="M3.33325 12.6667L12.6666 3.33337"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M4 3.33337H12.6667V12"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+export default function Section2() {
     return (
-        <div className="bg-neutral-50">
-            <section className="sec-3-home-5 pt-130 pb-110">
-                <div className="container">
-                    <div className="row g-4">
-                        <div className="col-xxl-4 col-lg-8 col-12">
-                            <h6 className="fz-font-md text-uppercase neutral-500 fw-600 mb-30">
-                                Trusted by 100+ businesses
-                            </h6>
-                            <h5 className="fw-600 reveal-text pe-xxl-5">
-                                <RevealText>
-                                    Klarus AI builds scalable AI systems                                    research-driven precision.
-                                </RevealText>
-                            </h5>
-                        </div>
-                        <div className="col-xxl-8 col-12">
-                            <div className="d-inline-flex">
-                                <div className="at-brand-scroll">
-                                    <div className="at-brand-scroll-wrap d-flex flex-wrap gap-2">
-                                        {BRAND_ROWS.map((row, i) => (
-                                            <div
-                                                key={i}
-                                                className="at-brand-item at_fade_anim"
-                                                data-delay={row.delay}
-                                                data-fade-from="bottom"
-                                                data-ease="bounce"
-                                            >
-                                                <div className="brand">
-                                                    {row.logos.map((logo) => (
-                                                        <span
-                                                            key={logo}
-                                                            className="brand-logo-slide"
-                                                            data-logo={logo}
-                                                        >
-                                                            <img
-                                                                src={logoSrc(logo)}
-                                                                alt="Klarus AI"
-                                                                width={120}
-                                                                height={48}
-                                                                className="dark-mode-invert" loading="lazy" />
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        ))}
-                                        <div className="flex-grow-1 text-center d-flex flex-column justify-content-center ml-100 py-5">
-                                            <div className="d-flex mb-2">
-                                                {[true, true, true, false, false].map((filled, i) => (
-                                                    <span key={i} className={filled ? "star" : ""}>
-                                                        {STAR_SVG}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                            <div className="d-flex">
-                                                <Link
-                                                    to="#"
-                                                    className="at-btn common-black bg-transparent mb-10 rounded-0 p-0"
-                                                >
-                                                    <span className="text-uppercase">
-                                                        <span className="text-1">Customer reviews</span>
-                                                        <span className="text-2">Customer reviews</span>
-                                                    </span>
-                                                    <i>
-                                                        {ARROW_SVG}
-                                                        {ARROW_SVG}
-                                                    </i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        <section className="sec-2-home-7">
+
+            <div className="container">
+
+                {/* Section Header */}
+                <div className="sec-2-home-7__header">
+
+                    <div className="row">
+
+                        <div className="col-xl-5 col-lg-5">
+
+                            <div className="sec-2-home-7__eyebrow at_fade_anim">
+                                <span>
+                                    {EYEBROW_ARROW_SVG}
+                                </span>
+
+                                <span>
+                                    Selected work
+                                </span>
                             </div>
+
                         </div>
+
+                        <div className="col-xl-7 col-lg-7">
+
+                            <div className="sec-2-home-7__title-wrap">
+
+                                <h2 className="sec-2-home-7__title">
+                                    <RevealText>
+                                        We Power the World's Fastest Growing Startups
+                                    </RevealText>
+                                </h2>
+
+                            </div>
+
+                        </div>
+
                     </div>
+
                 </div>
-            </section>
-        </div>
+
+
+                {/* Main Grid */}
+                <div className="sec-2-home-7__grid">
+
+
+                    {/* =========================================
+                        ROW 1
+                    ========================================== */}
+
+                    <div className="sec-2-home-7__row">
+
+
+                        {/* IMAGE 1 */}
+
+                        <div className="sec-2-home-7__cell sec-2-home-7__cell--img sec-2-home-7__col-1">
+
+                            <div className="sec-2-home-7__img-wrap">
+
+                                <div className="thumb fix anim-zoomin">
+
+                                    <picture>
+
+                                        {/* MOBILE IMAGE */}
+                                        <source
+                                            media="(max-width: 767px)"
+                                            srcSet={IMG_DATA[0].mobileSrc}
+                                        />
+
+                                        {/* DESKTOP IMAGE */}
+                                        <img
+                                            data-speed=".8"
+                                            src={IMG_DATA[0].src}
+                                            alt={IMG_DATA[0].alt}
+                                            width={640}
+                                            height={480}
+                                            loading="lazy"
+                                        />
+
+                                    </picture>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        {/* FEATURE 1 */}
+
+                        <div className="sec-2-home-7__cell sec-2-home-7__cell--feature sec-2-home-7__col-2">
+
+                            <div className="ps-4">
+
+                                <div className="sec-2-home-7__feature-icon mb-3 at_fade_anim">
+                                    {FEATURE_DATA[0].icon}
+                                </div>
+
+                                <h3 className="sec-2-home-7__feature-title at-char-animation">
+                                    {FEATURE_DATA[0].title}
+                                </h3>
+
+                                <p className="sec-2-home-7__feature-desc mb-0 at_fade_anim">
+                                    {FEATURE_DATA[0].desc}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        {/* STAT 1 */}
+
+                        <div className="sec-2-home-7__cell sec-2-home-7__cell--stat sec-2-home-7__col-4">
+
+                            <h3 className="sec-2-home-7__stat-value mb-3">
+
+                                <OdometerCounter
+                                    count={STAT_DATA[0].value}
+                                />
+
+                                {STAT_DATA[0].suffix}
+
+                            </h3>
+
+                            <p className="sec-2-home-7__stat-label mb-0 at_fade_anim">
+                                {STAT_DATA[0].label}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    {/* =========================================
+                        ROW 2
+                    ========================================== */}
+
+                    <div className="sec-2-home-7__row">
+
+
+                        {/* IMAGE 2 */}
+
+                        <div className="sec-2-home-7__cell sec-2-home-7__cell--img sec-2-home-7__col-2">
+
+                            <div className="sec-2-home-7__img-wrap ms-2">
+
+                                <div className="thumb fix anim-zoomin">
+
+                                    <picture>
+
+                                        {/* MOBILE IMAGE */}
+                                        <source
+                                            media="(max-width: 767px)"
+                                            srcSet={IMG_DATA[1].mobileSrc}
+                                        />
+
+                                        {/* DESKTOP IMAGE */}
+                                        <img
+                                            data-speed=".8"
+                                            src={IMG_DATA[1].src}
+                                            alt={IMG_DATA[1].alt}
+                                            width={640}
+                                            height={480}
+                                            loading="lazy"
+                                        />
+
+                                    </picture>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        {/* FEATURE 2 */}
+
+                        <div className="sec-2-home-7__cell sec-2-home-7__cell--feature sec-2-home-7__col-3">
+
+                            <div className="ps-4">
+
+                                <div className="sec-2-home-7__feature-icon mb-3 at_fade_anim">
+                                    {FEATURE_DATA[1].icon}
+                                </div>
+
+                                <h3 className="sec-2-home-7__feature-title at-char-animation">
+                                    {FEATURE_DATA[1].title}
+                                </h3>
+
+                                <p className="sec-2-home-7__feature-desc mb-0 at_fade_anim">
+                                    {FEATURE_DATA[1].desc}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        {/* STAT 2 */}
+
+                        <div className="sec-2-home-7__cell sec-2-home-7__cell--stat sec-2-home-7__col-5">
+
+                            <h3 className="sec-2-home-7__stat-value mb-3">
+
+                                <OdometerCounter
+                                    count={STAT_DATA[1].value}
+                                />
+
+                                {STAT_DATA[1].suffix}
+
+                            </h3>
+
+                            <p className="sec-2-home-7__stat-label mb-0 at_fade_anim">
+                                {STAT_DATA[1].label}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    {/* =========================================
+                        ROW 3
+                    ========================================== */}
+
+                    <div className="sec-2-home-7__row">
+
+
+                        {/* STAT 3 */}
+
+                        <div className="sec-2-home-7__cell sec-2-home-7__cell--stat sec-2-home-7__col-1">
+
+                            <h3 className="sec-2-home-7__stat-value mb-3">
+
+                                <OdometerCounter
+                                    count={STAT_DATA[2].value}
+                                />
+
+                                {STAT_DATA[2].suffix}
+
+                            </h3>
+
+                            <p className="sec-2-home-7__stat-label mb-0 at_fade_anim">
+                                {STAT_DATA[2].label}
+                            </p>
+
+                        </div>
+
+
+
+                        {/* IMAGE 3 */}
+
+                        <div className="sec-2-home-7__cell sec-2-home-7__cell--img sec-2-home-7__col-3">
+
+                            <div className="sec-2-home-7__img-wrap ms-2">
+
+                                <div className="thumb fix anim-zoomin">
+
+                                    <picture>
+
+                                        {/* MOBILE IMAGE */}
+                                        <source
+                                            media="(max-width: 767px)"
+                                            srcSet={IMG_DATA[2].mobileSrc}
+                                        />
+
+                                        {/* DESKTOP IMAGE */}
+                                        <img
+                                            data-speed=".8"
+                                            src={IMG_DATA[2].src}
+                                            alt={IMG_DATA[2].alt}
+                                            width={640}
+                                            height={480}
+                                            loading="lazy"
+                                        />
+
+                                    </picture>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        {/* FEATURE 3 */}
+
+                        <div className="sec-2-home-7__cell sec-2-home-7__cell--feature sec-2-home-7__col-4">
+
+                            <div className="ps-4">
+
+                                <div className="sec-2-home-7__feature-icon mb-3 at_fade_anim">
+                                    {FEATURE_DATA[2].icon}
+                                </div>
+
+                                <h3 className="sec-2-home-7__feature-title at-char-animation">
+                                    {FEATURE_DATA[2].title}
+                                </h3>
+
+                                <p className="sec-2-home-7__feature-desc mb-0 at_fade_anim">
+                                    {FEATURE_DATA[2].desc}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
     );
 }
