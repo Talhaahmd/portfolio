@@ -62,7 +62,7 @@ export default function Section1() {
 
                             </div>
 
-                            <div className="col-lg-4 mx-lg-auto d-none d-lg-block z-index-1">
+                            <div className="col-lg-4 mx-lg-auto z-index-1">
                                 <div
                                     className="p-relative at_fade_anim"
                                     data-delay=".5"
@@ -70,11 +70,11 @@ export default function Section1() {
                                     data-ease="bounce"
                                 >
                                     <img
-                                        src="/assets/imgs/pages/Hero image.png"
+                                        src="/assets/imgs/pages/webp-images/Hero image.webp"
                                         alt="Talha Speaks AI"
                                         width={560}
                                         height={860}
-                                        className="d-none d-lg-block" loading="lazy" />
+                                        className="img-fluid w-100 h-auto" loading="lazy" />
                                     <div className="p-absolute bottom-0 start-50 translate-middle-x z-n1 d-lg-none d-xxl-block">
                                         <h1 className="fz-290 fw-600 text-nowrap lh-1">Talha Speaks AI</h1>
                                     </div>

@@ -55,6 +55,8 @@ const JOURNEY_ITEMS = [
     },
 ];
 
+import { createPortal } from "react-dom";
+
 function CVEmailModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);
@@ -79,7 +81,7 @@ function CVEmailModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 
     if (!isOpen) return null;
 
-    return (
+    const modalContent = (
         <>
             <div id="cv-modal-overlay" onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9998, background: "rgba(0,0,0,0.72)", backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)", animation: "cvFadeIn .25s ease" }} />
             <div id="cv-modal-card" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title" style={{ position: "fixed", inset: 0, zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: "16px", pointerEvents: "none" }}>
@@ -113,6 +115,8 @@ function CVEmailModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
             `}</style>
         </>
     );
+
+    return createPortal(modalContent, document.body);
 }
 
 export default function Section6() {
@@ -148,7 +152,7 @@ export default function Section6() {
                         <div className="col-xxl-4 col-lg-5">
                             <div className="alt-portfolio-item mb-30 at-hover-item">
                                 <a href="#" id="cv-download-card" onClick={openModal} className="alt-portfolio-thumb mb-15 p-relative fix d-block">
-                                    <img className="w-100 scale-img-from-to" data-value-1="1.5" data-value-2="1" src="public/assets/imgs/pages/Untitled design.svg" alt="Talha Speaks AI" width={550} height={540} loading="lazy" />
+                                    <img className="w-100 scale-img-from-to" data-value-1="1.5" data-value-2="1" src="/assets/imgs/pages/webp-images/Untitled design.webp" alt="Talha Speaks AI" width={550} height={540} loading="lazy" />
                                     <div className="alt-portfolio-btn">
                                         <div className="content">
                                             <h2 className="fw-400 fz-font-3xl text-white mb-0 mt-20">Click to download my Résumé.</h2>
