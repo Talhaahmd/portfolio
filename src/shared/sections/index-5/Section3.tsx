@@ -86,18 +86,18 @@ const STAT_DATA = [
 
 const IMG_DATA = [
     {
-        src: "/assets/imgs/pages/webp-images/1 2.webp",
-        mobileSrc: "/assets/imgs/pages/webp-images/1 3.webp",
+        src: "/assets/imgs/pages/webp-images/1%202.webp",
+        mobileSrc: "/assets/imgs/pages/webp-images/1%203.webp",
         alt: "Talha Speaks AI",
     },
     {
-        src: "/assets/imgs/pages/webp-images/2 2.webp",
-        mobileSrc: "/assets/imgs/pages/webp-images/2 3.webp",
+        src: "/assets/imgs/pages/webp-images/2%202.webp",
+        mobileSrc: "/assets/imgs/pages/webp-images/2%203.webp",
         alt: "Talha Speaks AI",
     },
     {
-        src: "/assets/imgs/pages/webp-images/3 2.webp",
-        mobileSrc: "/assets/imgs/pages/webp-images/3 3.webp",
+        src: "/assets/imgs/pages/webp-images/3%202.webp",
+        mobileSrc: "/assets/imgs/pages/webp-images/3%203.webp",
         alt: "Talha Speaks AI",
     },
 ];
