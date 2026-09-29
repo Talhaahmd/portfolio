@@ -47,7 +47,6 @@ export interface CaseStudy {
   id: string;
   slug: string;
   category: string;
-  card_image: string;
   title: string;
   metric_prefix: string;
   metric_value: string;
@@ -55,7 +54,6 @@ export interface CaseStudy {
   tags: string[];
   is_featured: boolean;
   featured_description: string | null;
-  featured_image: string | null;
   featured_video_url: string | null;
   featured_metric_2_prefix: string | null;
   featured_metric_2_value: string | null;
@@ -65,7 +63,6 @@ export interface CaseStudy {
   client_name: string | null;
   tagline: string | null;
   demo_url: string | null;
-  hero_portrait_image: string | null;
   meta_client: string | null;
   meta_year: string | null;
   meta_role: string | null;
@@ -78,10 +75,8 @@ export interface CaseStudy {
   stat_2_label: string | null;
   stat_3_num: string | null;
   stat_3_label: string | null;
-  gallery_images: GalleryCell[];
   process_title: string | null;
   process_steps: ProcessStep[];
-  quote_image: string | null;
   quote_text: string | null;
   quote_author: string | null;
   quote_role: string | null;
@@ -91,7 +86,6 @@ export interface CaseStudy {
   outcome_heading: string | null;
   outcome_paragraph: string | null;
   outcome_items: string[];
-  closing_image: string | null;
   related_slugs: string[];
   sort_order: number;
 }

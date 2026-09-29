@@ -61,39 +61,19 @@ const FALLBACK_RELATED_PROJECTS: RelatedCard[] = [
     },
 ];
 
-function RelatedCardItem({ img, alt, tag, title, description, projectName, href, contentMt15 }: RelatedCard) {
+function RelatedCardItem({ alt, tag, title, description, projectName, href, contentMt15 }: RelatedCard) {
     return (
         <div className="alt-portfolio-item at-hover-item mb-30">
-            <Link
-                to={href}
-                className={`alt-portfolio-thumb p-relative fix d-block ${contentMt15 ? "" : "mb-15"}`.trim()}
-            >
-                <span className="w-100 d-block scale-img-from-to" data-value-1="1.5" data-value-2="1">
-                    <img
-                        className="w-100 img-cover"
-                        src={img}
-                        alt={alt}
-                        width={400}
-                        height={500}
-                        loading="lazy"
-                    />
-                </span>
-                <div className="alt-portfolio-btn">
-                    <div className="content">
-                        <span className="bg-transparent text-uppercase border px-3 py-1 rounded-pill text-white fz-font-label">
-                            {tag}
-                        </span>
-                        <h2 className="fw-400 fz-font-3xl text-white mb-0 mt-20">{title}</h2>
-                        <p className="text-white fz-font-md mb-0 mt-10 text-truncate-2 des">{description}</p>
-                    </div>
+            <div className={`alt-portfolio-content d-flex justify-content-between align-items-start ${contentMt15 ? "mt-15" : ""}`.trim()}>
+                <div>
+                    <span className="fz-font-label text-uppercase fw-600 neutral-500 d-block mb-2">{tag}</span>
+                    <h5 className="alt-portfolio-title mb-10">
+                        <Link to={href} className="common-underline">
+                            {projectName}
+                        </Link>
+                    </h5>
+                    <p className="fz-font-md neutral-500 mb-0">{description}</p>
                 </div>
-            </Link>
-            <div className={`alt-portfolio-content d-flex justify-content-between align-items-center ${contentMt15 ? "mt-15" : ""}`.trim()}>
-                <h5 className="alt-portfolio-title mb-0">
-                    <Link to={href} className="common-underline">
-                        {projectName}
-                    </Link>
-                </h5>
                 <span className="alt-portfolio-plus neutral-950">{PLUS_SVG}</span>
             </div>
         </div>
@@ -129,7 +109,7 @@ export default function Section2({ currentSlug, relatedSlugs }: Section2Props) {
 
     function mapCaseStudiesToCards(list: CaseStudy[]): RelatedCard[] {
         return list.map((cs, idx) => ({
-            img: cs.card_image || cs.featured_image || `/assets/imgs/pages/img-18${4 + (idx % 3)}.webp`,
+            img: cs.card_image,
             alt: cs.title,
             tag: cs.category || (cs.tags && cs.tags[0]) || "Case Study",
             title: cs.tagline || cs.title,

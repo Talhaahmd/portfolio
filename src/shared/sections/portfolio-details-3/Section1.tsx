@@ -15,8 +15,8 @@ export default function Section1() {
     return (
         <section className="sec-1-portfolio-details-3 overflow-hidden pt-150 pb-100">
             <div className="container">
-                <div className="row align-items-center g-4 g-lg-5 sec-1-portfolio-details-3__row">
-                    <div className="col-lg-7">
+                <div className="row align-items-center g-4 g-lg-5">
+                    <div className="col-12">
                         <span className="sec-1-portfolio-details-3__eyebrow d-block fz-font-label text-uppercase fw-600 neutral-500 mb-30 at_fade_anim" data-fade-from="left" data-delay=".05">
                             {cs.eyebrow}
                         </span>
@@ -34,11 +34,6 @@ export default function Section1() {
                                 </svg>
                             </a>
                         )}
-                    </div>
-                    <div className="col-lg-5">
-                        <div className="sec-1-portfolio-details-3__portrait">
-                            <img className="anim-zoomin" src={cs.hero_portrait_image ?? cs.card_image} alt={cs.title} loading="lazy" />
-                        </div>
                     </div>
                 </div>
                 <div className="sec-1-portfolio-details-3__meta border-top-100 mt-60 pt-50">

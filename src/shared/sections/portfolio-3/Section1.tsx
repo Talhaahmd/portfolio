@@ -124,7 +124,7 @@ export default function Section1() {
                                                 <div className="card_case__studies-right">
                                                     <div className="card_case__studies-thumb anim-zoomin">
                                                         <Link to={`/portfolio-details-3/${featured.slug}`}>
-                                                            <img src={featured.featured_image ?? featured.card_image} alt={featured.title} width={800} height={500} className="img-cover" loading="lazy" />
+                                                            <img src={featured.card_image} alt={featured.title} width={800} height={500} className="img-cover" loading="lazy" />
                                                         </Link>
                                                         {featured.featured_video_url && (
                                                             <div className="card_case__studies-play p-relative postbox-play-btn">

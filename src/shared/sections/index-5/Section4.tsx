@@ -97,7 +97,7 @@ export default function Section4() {
     const cardsToDisplay =
         caseStudies.length > 0
             ? caseStudies.map((cs) => ({
-                img: cs.card_image || cs.featured_image || "/assets/imgs/pages/img-107.webp",
+                img: cs.card_image,
                 alt: cs.title,
                 metricPrefix: cs.metric_prefix || "+",
                 metricValue: cs.metric_value ? parseInt(cs.metric_value, 10) || 30 : 30,
