@@ -1,0 +1,29 @@
+.vs-section { padding: 10px 0 70px; }
+.vs-wrap { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.vs-player { position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,.15); }
+.vs-player iframe, .vs-thumb { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vs-thumb { padding: 0; cursor: pointer; background: #000; display: block; }
+.vs-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s, opacity .3s; }
+.vs-thumb:hover img { transform: scale(1.03); opacity: .9; }
+.vs-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 84px; height: 60px; border-radius: 16px; background: #ff0000; display: grid; place-items: center; color: #fff; transition: transform .2s; box-shadow: 0 8px 24px rgba(255,0,0,.4); }
+.vs-thumb:hover .vs-play { transform: translate(-50%, -50%) scale(1.08); }
+.vs-tag { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #ff0000; margin-bottom: 12px; }
+.vs-title { font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 16px; }
+.vs-text { font-size: 17px; line-height: 1.6; opacity: .8; margin: 0 0 18px; }
+.vs-list { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 10px; font-weight: 500; }
+.vs-list li { display: flex; gap: 10px; align-items: flex-start; }
+.vs-list li::before { content: ""; flex: none; width: 8px; height: 8px; margin-top: 9px; border-radius: 50%; background: #ff0000; }
+.vs-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.vs-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 600; border-radius: 999px; padding: 13px 24px; border: 1px solid #ff0000; text-decoration: none; transition: .2s; }
+.vs-btn.red { background: #ff0000; color: #fff; }
+.vs-btn.red:hover { background: #fff; color: #ff0000; }
+.vs-btn.white { background: #fff; color: #ff0000; }
+.vs-btn.white:hover { background: #ff0000; color: #fff; }
+@media (max-width: 991px) { .vs-wrap { grid-template-columns: 1fr; gap: 28px; } .vs-section { padding-bottom: 50px; } }
+@media (max-width: 575px) {
+  .vs-player { border-radius: 14px; }
+  .vs-play { width: 64px; height: 46px; border-radius: 12px; }
+  .vs-text { font-size: 16px; }
+  .vs-ctas { flex-direction: column; }
+  .vs-btn { width: 100%; }
+}
