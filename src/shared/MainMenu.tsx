@@ -1,12 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import "@/shared/MainMenu.css";
 import { MainMenuRootList } from "@/shared/mobile-menu/MobileMenuCloneContext";
 
 type Item = { to: string; label: string };
 
+const RESOURCE_LINKS: Item[] = [
+  { to: "/resources", label: "Motion Graphics" },
+  { to: "/claude-skills", label: "Claude Skills" },
+];
+
 const MENU_LINKS: Item[] = [
   { to: "/", label: "Home" },
   { to: "/portfolio-3", label: "Portfolio" },
-  { to: "/resources", label: "Resources" },
   { to: "/contact-2", label: "Contact" },
 ];
 
@@ -28,9 +33,32 @@ function MenuLink({ to, label }: Item) {
 }
 
 export default function MainMenu() {
+  const { pathname } = useLocation();
+  const resourcesActive = RESOURCE_LINKS.some((l) => pathname === l.to);
+
   return (
     <MainMenuRootList>
-      {MENU_LINKS.map((item) => (
+      {MENU_LINKS.slice(0, 2).map((item) => (
+        <li key={item.label}>
+          <MenuLink to={item.to} label={item.label} />
+        </li>
+      ))}
+      {/* Dropdown: opens on hover (desktop) and on tap via MenuClone (mobile offcanvas) */}
+      <li className="has-dropdown">
+        <a href="#" className={resourcesActive ? "active" : undefined} onClick={(e) => e.preventDefault()}>
+          <LinkSwap label="Resources" />
+        </a>
+        <ul className="submenu at-submenu">
+          {RESOURCE_LINKS.map((item) => (
+            <li key={item.to}>
+              <NavLink to={item.to} className={({ isActive }) => (isActive ? "active" : undefined)}>
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </li>
+      {MENU_LINKS.slice(2).map((item) => (
         <li key={item.label}>
           <MenuLink to={item.to} label={item.label} />
         </li>

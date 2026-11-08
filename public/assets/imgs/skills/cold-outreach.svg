@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Helvetica, Arial, sans-serif">
+<rect width="600" height="400" fill="#E6F7EE"/>
+<circle cx="530" cy="350" r="110" fill="#C4EBD6" opacity=".7"/>
+<g transform="translate(40 60)">
+<circle cx="110" cy="110" r="105" fill="#fff" stroke="#111" stroke-width="3"/>
+<circle cx="110" cy="110" r="72" fill="#CBEFDB" stroke="#111" stroke-width="3"/>
+<circle cx="110" cy="110" r="38" fill="#1DB36B" stroke="#111" stroke-width="3"/>
+<circle cx="110" cy="110" r="10" fill="#111"/>
+<path d="M110 110L222 -2" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+<path d="M200 -6l24 2-2 24" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="110" y="248" font-size="15" font-weight="700" fill="#111" text-anchor="middle">Ideal customer profile</text>
+</g>
+<g transform="translate(300 52)">
+<rect x="0" y="0" width="260" height="190" rx="16" fill="#fff" stroke="#111" stroke-width="3"/>
+<path d="M0 20l130 90 130-90" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+<rect x="24" y="118" width="130" height="10" rx="5" fill="#BEEBD3"/>
+<rect x="24" y="140" width="190" height="9" rx="4.5" fill="#E9E9E9"/>
+<rect x="24" y="158" width="160" height="9" rx="4.5" fill="#E9E9E9"/>
+<circle cx="236" cy="20" r="16" fill="#1DB36B" stroke="#111" stroke-width="3"/><text x="236" y="26" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+</g>
+<g transform="translate(300 262)">
+<rect x="0" y="0" width="260" height="104" rx="16" fill="#fff" stroke="#111" stroke-width="3"/>
+<g stroke="#111" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="30" cy="26" r="11" fill="#CBEFDB"/><path d="M52 26h110" stroke="#DDD"/><path d="M200 26l8 8 16-16" stroke="#1DB36B"/>
+<circle cx="30" cy="52" r="11" fill="#FFD9B3"/><path d="M52 52h90" stroke="#DDD"/><path d="M200 52l8 8 16-16" stroke="#1DB36B"/>
+<circle cx="30" cy="78" r="11" fill="#D6E1FF"/><path d="M52 78h120" stroke="#DDD"/><path d="M200 78l8 8 16-16" stroke="#1DB36B"/>
+</g></g>
+</svg>

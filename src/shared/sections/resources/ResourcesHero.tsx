@@ -9,7 +9,17 @@ const DIAMOND_ICON = (
     </svg>
 );
 
-export default function ResourcesHero() {
+type ResourcesHeroProps = {
+    title?: string;
+    subtitle?: string;
+    description?: string;
+};
+
+export default function ResourcesHero({
+    title = "Claude Motion Graphics",
+    subtitle = "",
+    description = "The best AI motion graphics made with Claude Opus 5.5, 83 videos in all, each with the creator's exact prompt and a link to their post on X. Copy a Claude motion prompt, or remix the idea in Fliki and get a narrated motion graphics video without writing code.",
+}: ResourcesHeroProps) {
     const gridColumns = 7;
 
     return (
@@ -40,15 +50,13 @@ export default function ResourcesHero() {
                                 className="fw-600 lh-1 mb-30"
                                 style={{ fontSize: "clamp(2.75rem, 8vw, 9rem)", letterSpacing: "-0.04em" }}
                             >
-                                Claude Motion Graphics
+                                {title}
                             </h1>
                             <p className="fz-18 neutral-900 fw-600 mb-30" style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}>
-                                Free prompts to most viral videos
+                                {subtitle}
                             </p>
                             <p className="fz-lg neutral-900 mx-auto mb-40" style={{ maxWidth: 760, opacity: 0.8 }}>
-                                The best AI motion graphics made with Claude Opus 5.5, 83 videos in all, each with the
-                                creator's exact prompt and a link to their post on X. Copy a Claude motion prompt, or remix
-                                the idea in Fliki and get a narrated motion graphics video without writing code.
+                                {description}
                             </p>
                             <a
                                 className="d-inline-flex align-items-center gap-2 fw-600 neutral-900"

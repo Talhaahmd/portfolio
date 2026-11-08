@@ -8,7 +8,6 @@ export default function ResourcesPage() {
     <>
       <PageMeta
         title="Claude Motion Graphics"
-        description="Free prompts to most viral videos. 83 AI motion graphics made with Claude Opus 5.5."
       />
       <ResourcesHero />
       <VideoSection />

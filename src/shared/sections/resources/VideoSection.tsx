@@ -1,13 +1,31 @@
 import { useState } from "react";
 import "./VideoSection.css";
 
-const VIDEO_ID = "I1t-e21brR8";
 const CHANNEL_URL = "https://www.youtube.com/@Talhaspeaksai";
 // Both buttons use ?sub_confirmation=1 so YouTube opens its "Subscribe?" prompt on arrival.
 const SUBSCRIBE_URL = `${CHANNEL_URL}?sub_confirmation=1`;
-const TITLE = "Make Money Creating Motion Graphics With Claude Code";
 
-export default function VideoSection() {
+type VideoSectionProps = {
+    videoId?: string;
+    tag?: string;
+    title?: string;
+    text?: string;
+    bullets?: string[];
+};
+
+export default function VideoSection({
+    videoId = "I1t-e21brR8",
+    tag = "Full YouTube Guide",
+    title = "Make Money Creating Motion Graphics With Claude Code",
+    text = "Watch the complete step-by-step guide to turning Claude motion graphics into income: how to set up your tools, write prompts that work, and deliver videos clients will pay for.",
+    bullets = [
+        "Complete setup, from zero to your first render",
+        "How to prompt Claude for viral-quality motion graphics",
+        "How to turn the videos into a paid service",
+    ],
+}: VideoSectionProps) {
+    const VIDEO_ID = videoId;
+    const TITLE = title;
     const [playing, setPlaying] = useState(false);
 
     return (
@@ -41,16 +59,13 @@ export default function VideoSection() {
                     </div>
 
                     <div>
-                        <span className="vs-tag">Full YouTube Guide</span>
+                        <span className="vs-tag">{tag}</span>
                         <h2 className="vs-title">{TITLE}</h2>
-                        <p className="vs-text">
-                            Watch the complete step-by-step guide to turning Claude motion graphics into income: how to set up
-                            your tools, write prompts that work, and deliver videos clients will pay for.
-                        </p>
+                        <p className="vs-text">{text}</p>
                         <ul className="vs-list">
-                            <li>Complete setup, from zero to your first render</li>
-                            <li>How to prompt Claude for viral-quality motion graphics</li>
-                            <li>How to turn the videos into a paid service</li>
+                            {bullets.map((b) => (
+                                <li key={b}>{b}</li>
+                            ))}
                         </ul>
                         <div className="vs-ctas">
                             <a className="vs-btn red" href={SUBSCRIBE_URL} target="_blank" rel="noreferrer">

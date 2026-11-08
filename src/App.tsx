@@ -6,13 +6,13 @@ import Portfolio3Page from "@/pages/Portfolio3Page";
 import PortfolioDetails1Page from "@/pages/PortfolioDetails1Page";
 import PortfolioDetails3Page from "@/pages/PortfolioDetails3Page";
 import ResourcesPage from "@/pages/ResourcesPage";
+import ClaudeSkillsPage from "@/pages/ClaudeSkillsPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 
 export default function App() {
   return (
     <Routes>
       <Route element={<MainLayout headerStyle={2} footerStyle={2} />}>
-        <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/contact-2" element={<Contact2Page />} />
         <Route path="/portfolio-3" element={<Portfolio3Page />} />
         <Route path="/portfolio-details-1/:slug" element={<PortfolioDetails1Page />} />
@@ -20,6 +20,12 @@ export default function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Route>
       
+      {/* Resources pages: same header as before, home page footer (Footer5) */}
+      <Route element={<MainLayout headerStyle={2} footerStyle={5} />}>
+        <Route path="/resources" element={<ResourcesPage />} />
+        <Route path="/claude-skills" element={<ClaudeSkillsPage />} />
+      </Route>
+
       <Route element={<MainLayout headerStyle={5} footerStyle={5} />}>
         <Route path="/" element={<Home5Page />} />
         <Route path="/index-dark" element={<Home5Page />} />
