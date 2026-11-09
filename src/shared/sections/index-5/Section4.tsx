@@ -27,11 +27,11 @@ const PLUS_ICON = (
     </svg>
 );
 
-const thumb = (id: string) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+const thumb = (id: string) => `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
 
 const RESOURCES = [
     {
-        img: thumb("V9xPG7KTbbI"),
+        img: thumb("z9LbYi_YeOU"),
         alt: "90 Days Roadmap",
         tags: ["Roadmap", "Remote Jobs", "CV & LinkedIn"],
         title: "Your 90 Days Roadmap",
