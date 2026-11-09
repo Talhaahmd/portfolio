@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Helvetica, Arial, sans-serif">
+<rect width="600" height="400" fill="#FFEDE2"/><circle cx="540" cy="60" r="90" fill="#FFD2B8" opacity=".7"/>
+<g transform="translate(300 190)"><circle r="78" fill="#D97757" stroke="#111" stroke-width="3"/>
+<g stroke="#fff" stroke-width="9" stroke-linecap="round"><path d="M0-48V48M-48 0H48M-34-34L34 34M34-34L-34 34"/></g></g>
+<rect x="60" y="60" width="140" height="70" rx="14" fill="#fff" stroke="#111" stroke-width="3"/><text x="130" y="102" font-size="16" font-weight="700" text-anchor="middle">Marketing</text>
+<rect x="400" y="60" width="140" height="70" rx="14" fill="#fff" stroke="#111" stroke-width="3"/><text x="470" y="102" font-size="16" font-weight="700" text-anchor="middle">SEO</text>
+<rect x="50" y="270" width="140" height="70" rx="14" fill="#fff" stroke="#111" stroke-width="3"/><text x="120" y="312" font-size="16" font-weight="700" text-anchor="middle">Outreach</text>
+<rect x="410" y="270" width="140" height="70" rx="14" fill="#fff" stroke="#111" stroke-width="3"/><text x="480" y="312" font-size="16" font-weight="700" text-anchor="middle">Sales</text>
+<path d="M200 110 L250 150M400 110L350 150M190 280L245 235M410 280L355 235" stroke="#111" stroke-width="3" stroke-dasharray="4 7" stroke-linecap="round"/>
+</svg>

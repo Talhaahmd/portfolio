@@ -7,11 +7,11 @@ type Item = { to: string; label: string };
 const RESOURCE_LINKS: Item[] = [
   { to: "/resources", label: "Motion Graphics" },
   { to: "/claude-skills", label: "Claude Skills" },
+  { to: "/90-days-roadmap", label: "90 Days Roadmap" },
 ];
 
 const MENU_LINKS: Item[] = [
   { to: "/", label: "Home" },
-  { to: "/portfolio-3", label: "Portfolio" },
   { to: "/contact-2", label: "Contact" },
 ];
 
@@ -38,7 +38,7 @@ export default function MainMenu() {
 
   return (
     <MainMenuRootList>
-      {MENU_LINKS.slice(0, 2).map((item) => (
+      {MENU_LINKS.slice(0, 1).map((item) => (
         <li key={item.label}>
           <MenuLink to={item.to} label={item.label} />
         </li>
@@ -58,7 +58,7 @@ export default function MainMenu() {
           ))}
         </ul>
       </li>
-      {MENU_LINKS.slice(2).map((item) => (
+      {MENU_LINKS.slice(1).map((item) => (
         <li key={item.label}>
           <MenuLink to={item.to} label={item.label} />
         </li>

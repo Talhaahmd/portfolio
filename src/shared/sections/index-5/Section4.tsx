@@ -1,10 +1,7 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import RevealText from "@/shared/effects/RevealText";
-import PortfolioCard4 from "@/shared/cards/PortfolioCard4";
-import { getCaseStudies, type CaseStudy } from "@/lib/supabase";
 
-// Home 5 Section 4 - Deployed systems / Selected work
+// Home 5 Section 4 - Resources showcase
 
 const ARROW_SVG = (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,91 +21,48 @@ const ARROW_CIRCLE_SVG = (
     </svg>
 );
 
-const FALLBACK_CARDS = [
-    {
-        img: "/assets/imgs/pages/img-107.webp",
-        alt: "Smart Automation",
-        metricPrefix: "+",
-        metricValue: 30,
-        metricLabel: "Operational Speed",
-        tags: ["AI Models", "Deployment", "Scalability", "Engineering"],
-        title: "Smart Automation",
-        linkText: "VIEW ARCHITECTURE",
-        href: "/portfolio-details-1/smart-automation",
-    },
-    {
-        img: "/assets/imgs/pages/img-108.webp",
-        alt: "Data Intelligence",
-        metricPrefix: "-",
-        metricValue: 20,
-        metricLabel: "Planning Risk",
-        tags: ["Decision Systems", "Analytics", "Systems", "Engineering"],
-        title: "Data Intelligence",
-        linkText: "VIEW SYSTEM DESIGN",
-        href: "/portfolio-details-1/data-intelligence",
-    },
-    {
-        img: "/assets/imgs/pages/img-109.webp",
-        alt: "AI Workflows",
-        metricPrefix: "+",
-        metricValue: 45,
-        metricLabel: "Efficiency Boost",
-        tags: ["AI Models", "LLMs", "Automation", "Agents"],
-        title: "AI Workflows",
-        linkText: "VIEW CASE STUDY",
-        href: "/portfolio-details-1/ai-workflows",
-    },
-    {
-        img: "/assets/imgs/pages/img-110.webp",
-        alt: "Distributed ML Pipeline",
-        metricPrefix: "-",
-        metricValue: 20,
-        metricLabel: "Planning Risk",
-        tags: ["SCALABLE ARCHITECTURE", "CLOUD-NATIVE", "KUBERNETES", "AUTO-SCALING"],
-        title: "Distributed ML Pipeline",
-        linkText: "VIEW INFRASTRUCTURE",
-        href: "/portfolio-details-1/distributed-ml-pipeline",
-    },
-];
+const PLUS_ICON = (
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <path d="M6 1v10M1 6h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+);
 
-const FOOTER_TAGS = [
-    "[ Conversion-focused ]",
-    "[ Data-driven ]",
-    "[ Built for scale ]",
-    "[ User-centric ]",
-    "[Future-proof]",
+const thumb = (id: string) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+
+const RESOURCES = [
+    {
+        img: thumb("V9xPG7KTbbI"),
+        alt: "90 Days Roadmap",
+        tags: ["Roadmap", "Remote Jobs", "CV & LinkedIn"],
+        title: "Your 90 Days Roadmap",
+        description:
+            "A step-by-step plan to build in-demand skills, create real projects, polish your CV and LinkedIn, and land international remote jobs from Pakistan.",
+        linkText: "START THE ROADMAP",
+        href: "/90-days-roadmap",
+    },
+    {
+        img: thumb("I1t-e21brR8"),
+        alt: "Claude Motion Graphics",
+        tags: ["Motion Graphics", "Claude Code", "Prompts"],
+        title: "Claude Motion Graphics",
+        description:
+            "83 AI motion graphics made with Claude, each with the exact prompt. Copy a prompt or remix the idea into a paid service.",
+        linkText: "BROWSE THE GALLERY",
+        href: "/resources",
+    },
+    {
+        img: thumb("V9xPG7KTbbI"),
+        alt: "Claude Skills",
+        tags: ["Claude Skills", "Marketing", "Sales"],
+        title: "Claude Skills for Freelancers",
+        description:
+            "Six Claude skills for marketing, sales and client work, with setup steps and a full video walkthrough.",
+        linkText: "SEE THE SKILLS",
+        href: "/claude-skills",
+    },
 ];
 
 export default function Section4() {
-    const [caseStudies, setCaseStudies] = useState<CaseStudy[]>([]);
-
-    useEffect(() => {
-        getCaseStudies()
-            .then((data) => {
-                if (data && data.length > 0) {
-                    setCaseStudies(data);
-                }
-            })
-            .catch((err) => {
-                console.warn("Failed to fetch case studies from Supabase:", err);
-            });
-    }, []);
-
-    const cardsToDisplay =
-        caseStudies.length > 0
-            ? caseStudies.map((cs) => ({
-                img: cs.card_image,
-                alt: cs.title,
-                metricPrefix: cs.metric_prefix || "+",
-                metricValue: cs.metric_value ? parseInt(cs.metric_value, 10) || 30 : 30,
-                metricLabel: cs.metric_label || "Operational Speed",
-                tags: cs.tags && cs.tags.length > 0 ? cs.tags : ["AI Models", "Deployment", "Scalability"],
-                title: cs.title,
-                linkText: "VIEW ARCHITECTURE",
-                href: `/portfolio-details-1/${cs.slug}`,
-            }))
-            : FALLBACK_CARDS;
-
     return (
         <div className="bg-neutral-50">
             <div className="container-2200">
@@ -118,8 +72,8 @@ export default function Section4() {
                             <div className="col-lg-7">
                                 <span className="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
                                     <span className="text-uppercase">
-                                        <span className="text-1">DEPLOYED SYSTEMS</span>
-                                        <span className="text-2">DEPLOYED SYSTEMS</span>
+                                        <span className="text-1">LEARN &amp; BUILD</span>
+                                        <span className="text-2">LEARN &amp; BUILD</span>
                                     </span>
                                     <i>
                                         {ARROW_SVG}
@@ -127,7 +81,7 @@ export default function Section4() {
                                     </i>
                                 </span>
                                 <h2 className="reveal-text mb-0">
-                                    <RevealText>Selected work</RevealText>
+                                    <RevealText>My resources</RevealText>
                                 </h2>
                             </div>
                             <div className="col-lg-3 ms-auto d-flex justify-content-lg-end">
@@ -137,13 +91,13 @@ export default function Section4() {
                                     data-fade-from="bottom"
                                     data-ease="bounce"
                                 >
-                                    <Link className="at-btn-circle" to="https://github.com/Talhaahmd">
+                                    <Link className="at-btn-circle" to="/90-days-roadmap">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
-                                    <Link className="at-btn z-index-1" to="https://github.com/Talhaahmd">
-                                        Explore Github Repos
+                                    <Link className="at-btn z-index-1" to="/90-days-roadmap">
+                                        Get Free Resources
                                     </Link>
-                                    <Link className="at-btn-circle" to="https://github.com/Talhaahmd">
+                                    <Link className="at-btn-circle" to="/90-days-roadmap">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
                                 </div>
@@ -153,27 +107,43 @@ export default function Section4() {
 
                     <div className="container pt-70">
                         <div className="row g-4">
-                            {cardsToDisplay.map((card, i) => (
-                                <div key={i} className="col-lg-6">
-                                    <PortfolioCard4 {...card} />
+                            {RESOURCES.map((r) => (
+                                <div key={r.href} className="col-lg-4 col-md-6">
+                                    <div className="card_case__studies-list card_case__studies-list--row">
+                                        <div className="card_case__studies-card card_case__studies-card--overlay bg-neutral-100">
+                                            <div className="card_case__studies-visual anim-zoomin">
+                                                <Link to={r.href}>
+                                                    <img
+                                                        src={r.img}
+                                                        alt={r.alt}
+                                                        width={600}
+                                                        height={338}
+                                                        loading="lazy"
+                                                        style={{ aspectRatio: "16 / 9", objectFit: "cover" }}
+                                                    />
+                                                </Link>
+                                                <div className="card_case__studies-tags-overlay">
+                                                    {r.tags.map((tag) => (
+                                                        <Link key={tag} to={r.href} className="card_case__studies-tag">
+                                                            {tag}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            <div className="card_case__studies-footer mt-10 bg-neutral-0 flex-column align-items-start gap-2">
+                                                <h5 className="card_case__studies-footer-title neutral-900 mb-0">
+                                                    <Link to={r.href}>{r.title}</Link>
+                                                </h5>
+                                                <p className="neutral-900 mb-0 fz-sm">{r.description}</p>
+                                                <Link to={r.href} className="card_case__studies-link neutral-900">
+                                                    <span className="neutral-900"> {r.linkText}</span>
+                                                    {PLUS_ICON}
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
-                        </div>
-
-                        <div className="row pt-100">
-                            <div className="col-12 order-5">
-                                <div
-                                    className="d-flex flex-wrap align-items-center justify-content-lg-between justify-content-center pb-30 gap-md-4 gap-2 at_fade_anim"
-                                    data-fade-from="bottom"
-                                    data-duration="2"
-                                >
-                                    {FOOTER_TAGS.map((tag, i) => (
-                                        <p key={i} className="neutral-900 mb-0">
-                                            {tag}
-                                        </p>
-                                    ))}
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>

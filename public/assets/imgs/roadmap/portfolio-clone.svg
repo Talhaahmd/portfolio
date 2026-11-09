@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Helvetica, Arial, sans-serif">
+<rect width="600" height="400" fill="#EAF1FF"/><circle cx="530" cy="60" r="90" fill="#CFE0FF" opacity=".7"/>
+<rect x="50" y="60" width="300" height="230" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
+<path d="M50 96h300" stroke="#111" stroke-width="3"/>
+<circle cx="74" cy="78" r="6" fill="#FF6B4A"/><circle cx="94" cy="78" r="6" fill="#FFC145"/><circle cx="114" cy="78" r="6" fill="#4CC38A"/>
+<rect x="74" y="116" width="150" height="16" rx="8" fill="#111"/><rect x="74" y="142" width="110" height="10" rx="5" fill="#DDD"/>
+<rect x="74" y="172" width="80" height="90" rx="10" fill="#9DBEFF"/><rect x="164" y="172" width="80" height="90" rx="10" fill="#5B8CFF"/><rect x="254" y="172" width="80" height="90" rx="10" fill="#2F5FE0"/>
+<path d="M350 175 H410" stroke="#111" stroke-width="4" stroke-dasharray="8 8" stroke-linecap="round"/><path d="M400 160 l16 15 -16 15" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="420" y="120" width="140" height="170" rx="18" fill="#111"/>
+<circle cx="490" cy="185" r="34" fill="#fff"/><circle cx="478" cy="180" r="5" fill="#111"/><circle cx="502" cy="180" r="5" fill="#111"/><path d="M472 198q18 14 36 0" stroke="#111" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="490" y="255" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">git clone</text>
+<rect x="60" y="310" width="480" height="46" rx="12" fill="#111"/><text x="80" y="340" font-size="16" fill="#4CC38A" font-family="monospace">$ git clone GSAP_Portfolio.git</text>
+</svg>

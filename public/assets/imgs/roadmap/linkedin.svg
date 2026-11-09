@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Helvetica, Arial, sans-serif">
+<rect width="600" height="400" fill="#E6F4FF"/><circle cx="540" cy="340" r="100" fill="#BFE3FF" opacity=".7"/>
+<rect x="70" y="50" width="330" height="300" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
+<rect x="70" y="50" width="330" height="90" rx="18" fill="#0A66C2"/><rect x="70" y="110" width="330" height="30" fill="#0A66C2"/>
+<circle cx="130" cy="150" r="40" fill="#9DD0FF" stroke="#111" stroke-width="3"/><circle cx="130" cy="140" r="12" fill="#111"/><path d="M106 175q24-30 48 0" fill="#111"/>
+<rect x="190" y="160" width="160" height="14" rx="7" fill="#111"/><rect x="190" y="184" width="120" height="9" rx="4" fill="#AAA"/>
+<rect x="95" y="215" width="280" height="9" rx="4" fill="#DDD"/><rect x="95" y="235" width="240" height="9" rx="4" fill="#DDD"/>
+<rect x="95" y="265" width="90" height="34" rx="17" fill="#0A66C2"/><rect x="195" y="265" width="90" height="34" rx="17" fill="#fff" stroke="#0A66C2" stroke-width="3"/>
+<rect x="95" y="315" width="60" height="8" rx="4" fill="#4CC38A"/>
+<rect x="430" y="90" width="120" height="70" rx="14" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="458" cy="125" r="16" fill="#FFC145" stroke="#111" stroke-width="2"/><rect x="482" y="112" width="56" height="8" rx="4" fill="#111"/><rect x="482" y="130" width="40" height="7" rx="3" fill="#BBB"/>
+<rect x="430" y="180" width="120" height="70" rx="14" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="458" cy="215" r="16" fill="#FF8A8A" stroke="#111" stroke-width="2"/><rect x="482" y="202" width="56" height="8" rx="4" fill="#111"/><rect x="482" y="220" width="40" height="7" rx="3" fill="#BBB"/>
+<path d="M410 125 L400 160 M410 215 L400 190" stroke="#111" stroke-width="3" stroke-dasharray="4 6"/>
+<text x="490" y="295" font-size="15" font-weight="700" text-anchor="middle">Recruiters viewing</text>
+</svg>
