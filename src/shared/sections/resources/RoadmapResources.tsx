@@ -37,7 +37,7 @@ type Resource = {
     imgLg: string;
 };
 
-const RESOURCES: Resource[] = [
+export const RESOURCES: Resource[] = [
     {
         number: "01",
         title: "Portfolio Template",
@@ -201,7 +201,7 @@ function ResourceList({ items }: { items: Resource[] }) {
                                         <div className="card-award-image">
                                             <img
                                                 src={r.img}
-                                                alt=""
+                                                alt={`${r.title} resource`}
                                                 width={120}
                                                 height={80}
                                                 className="w-100 h-100"

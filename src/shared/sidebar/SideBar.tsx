@@ -11,7 +11,6 @@ interface SideBarProps {
   onClose: () => void;
 }
 
-const AVATARS = ["avatar-10", "avatar-11", "avatar-12", "avatar-13", "avatar-14"] as const;
 
 function CloseIconSvg() {
   return (
@@ -111,22 +110,12 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
           <div className="at-offcanvas-content d-none d-xl-block">
             <h3 className="at-offcanvas-title">Hey there!</h3>
             <p className="fz-font-lg">
-              We build AI automations, MVPs, and integrated systems — helping businesses operate faster, scale smarter, and grow with confidence.
+              I'm Talha, an AI creator. I teach Claude and AI automation on YouTube, build AI software, and share free resources to help you land remote work.
             </p>
           </div>
 
           <div className="at-offcanvas-menu d-xl-none pb-50">
             <nav />
-          </div>
-
-          <div className="at-offcanvas-gallery d-none d-xl-block">
-            <div className="sec-2-home-5__avatars-row d-flex gap-2">
-              {AVATARS.map((name) => (
-                <div key={name} className="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                  <img className="img-cover" src={`/assets/imgs/template/avatar/${name}.webp`} alt="" width={80} height={80} />
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="at-offcanvas-contact">

@@ -73,11 +73,11 @@ export default function Section1() {
                                     <picture className="d-none d-md-block">
                                         <img
                                             src="/assets/imgs/pages/webp-images/Hero image.webp"
-                                            alt="Talha Speaks AI"
+                                            alt="Talha, AI creator behind Talha Speaks AI"
                                             width={560}
                                             height={860}
                                             className="img-fluid w-100 h-auto"
-                                            loading="lazy"
+                                            loading="eager" fetchPriority="high"
                                         />
                                     </picture>
                                     <div className="p-absolute bottom-0 start-50 translate-middle-x z-n1 d-lg-none d-xxl-block">

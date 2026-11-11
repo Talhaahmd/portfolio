@@ -1,4 +1,5 @@
 import PageMeta from "@/seo/PageMeta";
+import AboutFaq, { FAQS } from "@/shared/sections/index-5/AboutFaq";
 import Section1 from "@/shared/sections/index-5/Section1";
 import MobileHero from "@/shared/sections/index-5/MobileHero";
 import Section2 from "@/shared/sections/index-5/Section22";
@@ -12,7 +13,17 @@ import Section8 from "@/shared/sections/index-5/Section8";
 export default function Home5Page() {
   return (
     <>
-      <PageMeta title="Talha Speaks AI | AI Creator, Automations & Claude" description="Talha (Talha Speaks AI) is an AI creator teaching Claude, n8n automations and AI skills. Free resources, Claude skills and a 90 day roadmap to remote work." />
+      <PageMeta
+        title="Talha Speaks AI | AI Creator, Automations & Claude"
+        description="Talha (Talha Speaks AI) is an AI creator teaching Claude, n8n automations and AI skills. Free resources, Claude skills and a 90 day roadmap to remote work."
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+          },
+        ]}
+      />
       <div className="d-none d-lg-block">
         <Section1 />
       </div>
@@ -24,6 +35,7 @@ export default function Home5Page() {
       <Section3 />
       <Section5 />
       <Section6 />
+      <AboutFaq />
       <Section8 />
 
     </>

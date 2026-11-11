@@ -4,12 +4,17 @@ import { BrowserRouter } from "react-router-dom";
 import App from "@/App";
 import Analytics from "@/seo/Analytics";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const root = document.getElementById("root")!;
+const app = (
   <React.StrictMode>
     <BrowserRouter>
       <Analytics />
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
+// Production HTML is prerendered (scripts/prerender.mjs) for crawlers and first paint.
+// The client re-renders from scratch (createRoot replaces it): several sections build their DOM
+// with browser-only effects, so strict hydration would report mismatches.
+ReactDOM.createRoot(root).render(app);

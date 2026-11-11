@@ -1,7 +1,8 @@
 import PageMeta from "@/seo/PageMeta";
+import { itemListSchema } from "@/seo/site";
 import ResourcesHero from "@/shared/sections/resources/ResourcesHero";
 import VideoSection from "@/shared/sections/resources/VideoSection";
-import RoadmapResources from "@/shared/sections/resources/RoadmapResources";
+import RoadmapResources, { RESOURCES } from "@/shared/sections/resources/RoadmapResources";
 
 export default function RoadmapPage() {
   return (
@@ -9,6 +10,7 @@ export default function RoadmapPage() {
       <PageMeta
         title="Your 90 Days Roadmap"
         description="A step-by-step action plan to build in-demand skills, create projects, and land international remote jobs from Pakistan."
+        jsonLd={[itemListSchema("90 day roadmap resources", RESOURCES.map((r) => ({ name: r.title, description: r.description })))]}
       />
       <ResourcesHero
         title="Your 90 Days Roadmap"

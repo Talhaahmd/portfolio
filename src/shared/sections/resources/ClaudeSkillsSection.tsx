@@ -27,7 +27,7 @@ const PLAY_ICON = (
     </svg>
 );
 
-const SKILLS = [
+export const SKILLS = [
     {
         number: "01",
         title: "Marketing & SEO",

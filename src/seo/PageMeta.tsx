@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { canonicalPath, DEFAULT_DESCRIPTION, OG_IMAGE, SITE_NAME, SITE_URL } from "@/seo/site";
+import { buildMeta } from "@/seo/site";
 
 type Props = {
   title: string;
@@ -8,6 +8,8 @@ type Props = {
   favicon?: string;
   image?: string;
   noindex?: boolean;
+  /** Extra schema.org nodes for this page (breadcrumbs + WebPage are added automatically) */
+  jsonLd?: object[];
 };
 
 function upsert(selector: string, create: () => HTMLElement, attr: string, value: string) {
@@ -30,36 +32,45 @@ const meta = (key: "name" | "property", name: string, content: string) =>
     content,
   );
 
-export default function PageMeta({ title, description, favicon, image, noindex }: Props) {
+export default function PageMeta({ title, description, favicon, image, noindex, jsonLd }: Props) {
   const { pathname } = useLocation();
+  const m = buildMeta({ title, description, image, noindex }, pathname, jsonLd);
 
+  // Build-time prerender (scripts/prerender.mjs) reads this after renderToString
+  if (typeof window === "undefined") {
+    (globalThis as unknown as { __SEO__?: unknown }).__SEO__ = m;
+  }
+
+  const ld = JSON.stringify(m.jsonLd);
   useEffect(() => {
-    const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-    const desc = description || DEFAULT_DESCRIPTION;
-    const url = SITE_URL + canonicalPath(pathname);
-    const img = image || OG_IMAGE;
-    const isHome = canonicalPath(pathname) === "/";
-    // Template pages still using the "Talha Speaks AI" placeholder, 404s and alias routes stay out of search
-    const hide = noindex;
+    document.title = m.fullTitle;
+    meta("name", "description", m.description);
+    meta("name", "robots", m.noindex ? "noindex, follow" : "index, follow, max-image-preview:large");
+    upsert('link[rel="canonical"]', () => Object.assign(document.createElement("link"), { rel: "canonical" }), "href", m.url);
 
-    document.title = fullTitle;
-    meta("name", "description", desc);
-    meta("name", "robots", hide ? "noindex, follow" : "index, follow, max-image-preview:large");
-    upsert('link[rel="canonical"]', () => Object.assign(document.createElement("link"), { rel: "canonical" }), "href", url);
-
-    meta("property", "og:type", isHome ? "website" : "article");
-    meta("property", "og:site_name", SITE_NAME);
-    meta("property", "og:title", fullTitle);
-    meta("property", "og:description", desc);
-    meta("property", "og:url", url);
-    meta("property", "og:image", img);
+    meta("property", "og:type", m.isHome ? "website" : "article");
+    meta("property", "og:site_name", "Talha Speaks AI");
+    meta("property", "og:title", m.fullTitle);
+    meta("property", "og:description", m.description);
+    meta("property", "og:url", m.url);
+    meta("property", "og:image", m.image);
     meta("name", "twitter:card", "summary_large_image");
     meta("name", "twitter:site", "@talhaspeaksai");
     meta("name", "twitter:creator", "@talhaspeaksai");
-    meta("name", "twitter:title", fullTitle);
-    meta("name", "twitter:description", desc);
-    meta("name", "twitter:image", img);
-  }, [title, description, image, noindex, pathname]);
+    meta("name", "twitter:title", m.fullTitle);
+    meta("name", "twitter:description", m.description);
+    meta("name", "twitter:image", m.image);
+
+    let s = document.head.querySelector<HTMLScriptElement>('script[data-page-jsonld]');
+    if (!s) {
+      s = document.createElement("script");
+      s.type = "application/ld+json";
+      s.setAttribute("data-page-jsonld", "");
+      document.head.appendChild(s);
+    }
+    s.textContent = ld;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [m.fullTitle, m.description, m.url, m.image, m.noindex, ld]);
 
   useEffect(() => {
     if (!favicon) return;

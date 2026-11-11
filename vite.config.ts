@@ -11,10 +11,21 @@ const SITEMAP_PATHS = [
   { path: "/contact", priority: "0.6" },
 ];
 
-function seoFiles(siteUrl: string): Plugin {
+function seoFiles(siteUrl: string, env: Record<string, string>): Plugin {
   return {
     name: "seo-files",
-    transformIndexHtml: { order: "pre", handler: (html) => html.replaceAll("__SITE_URL__", siteUrl) },
+    transformIndexHtml: {
+      order: "pre",
+      handler: (html) => {
+        const verify = [
+          env.VITE_GSC_VERIFICATION && `<meta name="google-site-verification" content="${env.VITE_GSC_VERIFICATION}" />`,
+          env.VITE_BING_VERIFICATION && `<meta name="msvalidate.01" content="${env.VITE_BING_VERIFICATION}" />`,
+        ]
+          .filter(Boolean)
+          .join("\n    ");
+        return html.replaceAll("__SITE_URL__", siteUrl).replace("<!--SEO_VERIFY-->", verify);
+      },
+    },
     generateBundle() {
       const today = new Date().toISOString().slice(0, 10);
       const urls = SITEMAP_PATHS.map(
@@ -26,10 +37,16 @@ function seoFiles(siteUrl: string): Plugin {
         fileName: "sitemap.xml",
         source: `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`,
       });
+      const bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "Applebot-Extended", "CCBot"];
       this.emitFile({
         type: "asset",
         fileName: "robots.txt",
-        source: `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`,
+        source: `User-agent: *\nAllow: /\n\n# AI search and assistant crawlers are welcome\n${bots.map((b) => `User-agent: ${b}\nAllow: /\n`).join("\n")}\nSitemap: ${siteUrl}/sitemap.xml\n`,
+      });
+      this.emitFile({
+        type: "asset",
+        fileName: "llms.txt",
+        source: `# Talha Speaks AI\n\n> Talha (Talha Speaks AI, @talhaspeaksai) is an AI creator based in Lahore, Pakistan. He teaches Claude, AI automation (n8n) and practical AI skills on YouTube and builds AI software.\n\n## Key pages\n- [Home](${siteUrl}/): Who Talha Speaks AI is, what he teaches, and FAQs\n- [Claude Motion Graphics](${siteUrl}/resources): 83 AI motion graphics made with Claude, each with the exact prompt\n- [Claude Skills for Freelancers](${siteUrl}/claude-skills): Six Claude skills for marketing, sales and client work\n- [90 Days Roadmap](${siteUrl}/90-days-roadmap): Action plan and free downloads to land international remote jobs\n- [Contact](${siteUrl}/contact): Book a call or send a message\n\n## Official profiles\n- YouTube: https://www.youtube.com/@Talhaspeaksai\n- X: https://x.com/talhaspeaksai\n- Instagram: https://www.instagram.com/talhaspeaksai/\n- LinkedIn: https://www.linkedin.com/in/muhammad-talha50/\n- GitHub: https://github.com/Talhaahmd\n`,
       });
     },
   };
@@ -39,7 +56,18 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const siteUrl = (env.VITE_SITE_URL || "https://www.klarus.io").replace(/\/$/, "");
   return {
-    plugins: [react(), seoFiles(siteUrl)],
+    plugins: [react(), seoFiles(siteUrl, env)],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            react: ["react", "react-dom", "react-router-dom"],
+            gsap: ["gsap"],
+            swiper: ["swiper"],
+          },
+        },
+      },
+    },
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),

@@ -19,3 +19,63 @@ export function canonicalPath(pathname: string) {
   if (HOME_ALIASES.has(pathname)) return "/";
   return pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname;
 }
+
+export function absUrl(path: string) {
+  return SITE_URL + (path === "/" ? "/" : path);
+}
+
+type PageMetaInput = { title: string; description?: string; image?: string; noindex?: boolean };
+
+/** Shared by the client (PageMeta effect) and the build-time prerenderer. */
+export function buildMeta(input: PageMetaInput, pathname: string, extra: object[] = []) {
+  const path = canonicalPath(pathname);
+  const url = absUrl(path);
+  const isHome = path === "/";
+  const fullTitle = input.title.includes(SITE_NAME) ? input.title : `${input.title} | ${SITE_NAME}`;
+  const description = input.description || DEFAULT_DESCRIPTION;
+  const image = input.image || OG_IMAGE;
+  const noindex = !!input.noindex;
+
+  const crumbs = isHome
+    ? []
+    : [
+        { "@type": "ListItem", position: 1, name: "Home", item: absUrl("/") },
+        { "@type": "ListItem", position: 2, name: input.title.replace(` | ${SITE_NAME}`, ""), item: url },
+      ];
+  const jsonLd: object[] = noindex
+    ? []
+    : [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": `${url}#webpage`,
+          url,
+          name: fullTitle,
+          description,
+          inLanguage: "en",
+          isPartOf: { "@id": `${SITE_URL}/#website` },
+          about: { "@id": `${SITE_URL}/#person` },
+          primaryImageOfPage: { "@type": "ImageObject", url: image },
+        },
+        ...(crumbs.length ? [{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: crumbs }] : []),
+        ...extra,
+      ];
+
+  return { path, url, isHome, fullTitle, description, image, noindex, jsonLd };
+}
+
+export function itemListSchema(name: string, items: { name: string; url?: string; description?: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      ...(it.url ? { url: it.url } : {}),
+      ...(it.description ? { description: it.description } : {}),
+    })),
+  };
+}

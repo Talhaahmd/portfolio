@@ -1,6 +1,6 @@
 import MainMenu from "@/shared/MainMenu";
 import Logo from "@/shared/Logo";
-export default function Header5() {
+export default function Header5({ onOpenHamburgerMenu }: { onOpenHamburgerMenu?: () => void }) {
     return (
         <>
             <header>
@@ -33,6 +33,7 @@ export default function Header5() {
                     type="button"
                     className="hamburger-open-btn hamburger-sticky-menu"
                     aria-label="Menu"
+                    onClick={onOpenHamburgerMenu}
                 >
                     <span>MENU</span>
                     <span className="icon">

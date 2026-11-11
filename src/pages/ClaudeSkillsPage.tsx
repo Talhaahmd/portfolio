@@ -1,6 +1,7 @@
 import PageMeta from "@/seo/PageMeta";
+import { itemListSchema } from "@/seo/site";
 import ResourcesHero from "@/shared/sections/resources/ResourcesHero";
-import ClaudeSkillsSection from "@/shared/sections/resources/ClaudeSkillsSection";
+import ClaudeSkillsSection, { SKILLS } from "@/shared/sections/resources/ClaudeSkillsSection";
 import VideoSection from "@/shared/sections/resources/VideoSection";
 
 export default function ClaudeSkillsPage() {
@@ -9,6 +10,7 @@ export default function ClaudeSkillsPage() {
       <PageMeta
         title="Claude Skills Every Freelancer Should Know"
         description="6 Claude skills, from marketing to sales, that every freelancer should know."
+        jsonLd={[itemListSchema("Claude skills for freelancers", SKILLS.map((s) => ({ name: s.title, url: s.repo, description: s.tagline })))]}
       />
       <ResourcesHero
         title="Claude Skills Every Freelancer Should Know"

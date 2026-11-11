@@ -106,7 +106,7 @@ export default function Section2() {
 
                                             <img
                                                 src="/assets/imgs/pages/Image for Bento 1 (1).jpg"
-                                                alt="Intelligent Systems"
+                                                alt="Talha representing Talha Speaks AI at the Global AI Show"
                                                 width={600}
                                                 height={400}
                                                 className="sec-2-home-5__hero-img"
@@ -161,7 +161,7 @@ export default function Section2() {
                                             <div className="sec-2-home-5__avatar rounded-3 overflow-hidden flex-shrink-0">
                                                 <img
                                                     src="/assets/imgs/pages/1784065267489.png"
-                                                    alt="MS."
+                                                    alt="Mavlyanov S., CEO and Founder of Moneff"
                                                     width={56}
                                                     height={56}
                                                     className="img-cover" loading="lazy" />
@@ -189,7 +189,7 @@ export default function Section2() {
                                                 <div key={i} className="sec-2-home-5__avatar-sm">
                                                     <img
                                                         src={src}
-                                                        alt="Talha Speaks AI"
+                                                        alt="Talha at a Global AI Show event"
                                                         width={65}
                                                         height={65}
                                                         className="img-cover" loading="lazy" />
@@ -265,7 +265,7 @@ export default function Section2() {
                                         >
                                             <img
                                                 src="/assets/imgs/pages/github.svg"
-                                                alt="Talha Speaks AI"
+                                                alt="Talha Speaks AI automation templates on GitHub"
                                                 width={894}
                                                 height={206}
                                                 style={{

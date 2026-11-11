@@ -1,7 +1,6 @@
 import "./layout-fixes.css";
 import { Outlet } from "react-router-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
-import PopupSearch from "@/shared/PopupSearch";
 import Header2 from "@/shared/header/Header2";
 import Header5 from "@/shared/header/Header5";
 import Footer2 from "@/shared/footer/Footer2";
@@ -139,7 +138,6 @@ export default function MainLayout({
         onOpenHamburgerMenu={handlers.openHamburgerMenu}
       />
       <SideBar open={sidebarOpen} hamburgerOpen={hamburgerMenuOpen} onClose={handlers.closeAllMenus} />
-      <PopupSearch open={searchOpen} onClose={handlers.closeSearch} />
 
       <div id="smooth-wrapper">
         <div id="smooth-content" className="z-index-3">
