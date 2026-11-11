@@ -55,7 +55,7 @@ export default function Section1() {
                             </span>
                             <p className="sec-1-home-9__intro-text reveal-text text-white">
                                 <RevealText>
-                                    Based in Canada, <span className="text-theme text-scramble">Talha Speaks AI</span> is a creative design agency dedicated to providing innovative brand solutions for a global clientele.
+                                    Based in Lahore, Pakistan, <span className="text-theme text-scramble">Talha Speaks AI</span> is a creative design agency dedicated to providing innovative brand solutions for a global clientele.
                                 </RevealText>
                             </p>
                         </div>

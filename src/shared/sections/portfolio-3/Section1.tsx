@@ -62,7 +62,7 @@ export default function Section1() {
                     <div className="col-xxl-3 col-lg-5 ms-lg-auto">
 
                         <h6 className="fw-500 fz-font-lg text-lg-end mt-3 mb-0">
-                            talha@talhaspeaksai.com / +971 588 44 9147
+                            muhammad.talha@klarus.io
                         </h6>
                     </div>
                     <div className="col-12">

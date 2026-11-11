@@ -63,10 +63,8 @@ const OFFICES = [
         title: "Get in Touch",
         address: "Lahore, Pakistan",
         city: "",
-        phone: "+971 588 44 9147",
-        phoneHref: "tel:+971588449147",
-        email: "talha@talhaspeaksai.com",
-        emailHref: "mailto:talha@talhaspeaksai.com",
+        email: "muhammad.talha@klarus.io",
+        emailHref: "mailto:muhammad.talha@klarus.io",
     },
 ];
 
@@ -160,11 +158,6 @@ export default function Section4({ classList = "" }: { classList?: string }) {
                                                             {office.city}
                                                         </>
                                                     )}
-                                                    <br className="d-block" />
-                                                    Phone:{" "}
-                                                    <span className="neutral-900">
-                                                        <Link to={office.phoneHref}>{office.phone}</Link>
-                                                    </span>
                                                     <br className="d-block" />
                                                     Email:{" "}
                                                     <span className="neutral-900">

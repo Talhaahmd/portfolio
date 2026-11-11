@@ -54,7 +54,7 @@ export default function Section1() {
                 <div className="container p-relative">
                     <div className="p-absolute bottom-100 start-0 ms-5 mb-100 d-none d-lg-block">
                         <a
-                            href="mailto:info@klarus.io"
+                            href="mailto:muhammad.talha@klarus.io"
                             className="at-hero-button at-btn bg-transparent p-relative"
                         >
                             <img
@@ -178,8 +178,8 @@ export default function Section1() {
                             </div>
                         </div>
                         <div className="col-1 ms-auto text-end align-self-start rotate-90 order-xl-2 order-md-1 d-none d-md-block">
-                            <a href="mailto:info@klarus.io" className="text-white fw-600">
-                                <span className="at_fade_anim">info@klarus.io</span>
+                            <a href="mailto:muhammad.talha@klarus.io" className="text-white fw-600">
+                                <span className="at_fade_anim">muhammad.talha@klarus.io</span>
                             </a>
                         </div>
                     </div>

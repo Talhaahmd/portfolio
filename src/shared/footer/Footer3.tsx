@@ -98,18 +98,16 @@ export default function Footer3() {
               <div className="d-flex flex-column gap-3">
                 <span className="d-block fz-font-label neutral-0 opacity-50 text-uppercase">GET IN TOUCH</span>
                 <h6 className="text-white mb-2 fw-medium">
-                  <a href="tel:+2125557398" className="text-white text-decoration-none">+212-555-7398</a>
                 </h6>
                 <h6 className="text-white mb-2">
-                  <a href="mailto:info@klarus.io" className="text-white text-decoration-none">info@klarus.io</a>
+                  <a href="mailto:muhammad.talha@klarus.io" className="text-white text-decoration-none">muhammad.talha@klarus.io</a>
                 </h6>
               </div>
               <div className="d-flex flex-column gap-3 mt-60">
                 <span className="d-block fz-font-label neutral-0 opacity-50 text-uppercase">OFFICE</span>
                 <h6 className="text-white mb-2">
                   <a href="#" className="text-white text-decoration-none">
-                    245 Fifth Avenue, Suite 1800 <br />
-                    New York, NY 10016, USA
+                    Lahore, Pakistan
                   </a>
                 </h6>
               </div>

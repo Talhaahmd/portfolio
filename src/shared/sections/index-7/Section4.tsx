@@ -61,14 +61,10 @@ export default function Section4() {
                                     <div className="flex-grow-1 min-w-0">
                                         <h3 className="sec-4-home-7__loc-title h6 mb-3 at-char-animation">We are here</h3>
                                         <div className="sec-4-home-7__loc-body at_fade_anim">
-                                            <p className="mb-2">205 North Michigan Avenue, Suite 810<br />Chicago, 60601, USA</p>
-                                            <p className="mb-2">
-                                                Phone:{" "}
-                                                <a href="tel:+11234567890" className="sec-4-home-7__loc-strong">(123) 456-7890</a>
-                                            </p>
+                                            <p className="mb-2">Lahore, Pakistan</p>
                                             <p className="mb-0">
                                                 Email:{" "}
-                                                <a href="mailto:info@klarus.io" className="sec-4-home-7__loc-strong">info@klarus.io</a>
+                                                <a href="mailto:muhammad.talha@klarus.io" className="sec-4-home-7__loc-strong">muhammad.talha@klarus.io</a>
                                             </p>
                                         </div>
                                     </div>
@@ -76,14 +72,10 @@ export default function Section4() {
                             </div>
                             <div className="col-lg-6 col-12">
                                 <div className="sec-4-home-7__loc-body sec-4-home-7__loc-body--solo ps-lg-4 at_fade_anim">
-                                    <p className="mb-2">245 Fifth Avenue, Suite 1800<br />New York, NY 10016, USA</p>
-                                    <p className="mb-2">
-                                        Phone:{" "}
-                                        <a href="tel:+12125557398" className="sec-4-home-7__loc-strong">(212) 555-7398</a>
-                                    </p>
+                                    <p className="mb-2">Lahore, Pakistan</p>
                                     <p className="mb-0">
                                         Email:{" "}
-                                        <a href="mailto:info@klarus.io" className="sec-4-home-7__loc-strong">info@klarus.io</a>
+                                        <a href="mailto:muhammad.talha@klarus.io" className="sec-4-home-7__loc-strong">muhammad.talha@klarus.io</a>
                                     </p>
                                 </div>
                             </div>

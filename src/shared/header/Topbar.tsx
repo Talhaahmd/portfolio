@@ -8,15 +8,12 @@ export default function Topbar() {
                         <div className="d-flex justify-content-between align-items-center">
                             <div className="date">
                                 <p className="fz-font-label text-white my-0">
-                                    Toronto, Canada.
+                                    Lahore, Pakistan.
                                 </p>
                             </div>
                             <div className="d-flex align-items-center gap-4">
-                                <Link to="#" className="fz-font-label fw-500 text-white">
-                                    <span>+1 (437) 879-4050</span>
-                                </Link>
                                 <Link to="#" className="fz-font-body text-white fw-500">
-                                    <span>info@klarus.io</span>
+                                    <span>muhammad.talha@klarus.io</span>
                                 </Link>
                             </div>
                         </div>

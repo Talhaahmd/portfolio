@@ -49,16 +49,13 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
                   <Logo style={{ color: "#ffffff" }} />
                 </div>
                 <div className="d-flex flex-column gap-3">
-                  <h6 className="text-white mb-2 fw-medium">+1 (212) 555-7398</h6>
                   <h6 className="text-white mb-2">
-                    <a href="mailto:info@klarus.io" className="text-white text-decoration-none">
-                      info@klarus.io
+                    <a href="mailto:muhammad.talha@klarus.io" className="text-white text-decoration-none">
+                      muhammad.talha@klarus.io
                     </a>
                   </h6>
                   <h6 className="text-white mb-0">
-                    Toronto, Ontario,
-                    <br />
-                    Canada
+                    Lahore, Pakistan
                   </h6>
                 </div>
               </div>

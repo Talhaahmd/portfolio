@@ -45,7 +45,7 @@ export default function Footer14() {
                     <li className="footer-14__studio at_fade_anim" data-fade-from="bottom" data-delay=".5">
                         <div className="footer-14__studio-head">
                             <span className="footer-14__studio-dot" aria-hidden="true"></span>
-                            <h3 className="footer-14__studio-name mb-0">New York</h3>
+                            <h3 className="footer-14__studio-name mb-0">Lahore</h3>
                         </div>
                         <address className="footer-14__studio-addr mb-0">
                             217 Lafayette St &middot; Manhattan, NY 10012

@@ -117,18 +117,11 @@ export default function Section1() {
                                     <div>
                                         <h6 className="fw-600">Ofice</h6>
                                         <span className="fz-font-md neutral-500">
-                                            205 North Michigan Avenue, Suite 810
-                                            <br className="d-block" />
-                                            Chicago, 60601, USA
-                                            <br className="d-block" />
-                                            Phone:{" "}
-                                            <span className="neutral-900">
-                                                <a href="tel:+1234567890">+1234567890</a>
-                                            </span>
+                                            Lahore, Pakistan
                                             <br className="d-block" />
                                             Email:{" "}
                                             <span className="neutral-900">
-                                                <a href="mailto:info@klarus.io">info@klarus.io</a>
+                                                <a href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a>
                                             </span>
                                         </span>
                                     </div>
@@ -140,18 +133,11 @@ export default function Section1() {
                                     <div>
                                         <h6 className="fw-600">Studio</h6>
                                         <span className="fz-font-md neutral-500">
-                                            245 Fifth Avenue, Suite 1800
-                                            <br className="d-block" />
-                                            New York, NY 10016, USA
-                                            <br className="d-block" />
-                                            Phone:{" "}
-                                            <span className="neutral-900">
-                                                <a href="tel:+2125557398">+2125557398</a>
-                                            </span>
+                                            Lahore, Pakistan
                                             <br className="d-block" />
                                             Email:{" "}
                                             <span className="neutral-900">
-                                                <a href="mailto:info@klarus.io">info@klarus.io</a>
+                                                <a href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a>
                                             </span>
                                         </span>
                                     </div>
@@ -208,16 +194,6 @@ export default function Section1() {
                                     placeholder="Your email *"
                                     required
                                     aria-label="Your email"
-                                />
-                            </div>
-                            <div className="sec-4-about-form__field">
-                                <input
-                                    type="tel"
-                                    className="sec-4-about-form__input"
-                                    name="phone"
-                                    placeholder="Your phone *"
-                                    required
-                                    aria-label="Your phone"
                                 />
                             </div>
                             <div className="sec-4-about-form__field">

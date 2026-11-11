@@ -12,14 +12,11 @@ export default function Section1() {
                     </div>
                     <div className="col-lg-3 ms-auto text-lg-end">
                         <h5>
-                            <a href="mailto:info@klarus.io" className="text-decoration-none">
-                                info@klarus.io
+                            <a href="mailto:muhammad.talha@klarus.io" className="text-decoration-none">
+                                muhammad.talha@klarus.io
                             </a>
                         </h5>
                         <h6 className="fw-600">
-                            <a href="tel:+2125557398" className="text-decoration-none">
-                                (212) 555-7398
-                            </a>
                         </h6>
                     </div>
                 </div>

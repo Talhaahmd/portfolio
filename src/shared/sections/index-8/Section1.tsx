@@ -106,7 +106,7 @@ export default function Section1() {
                 </p>
 
                 <div className="h8-bottom-meta d-flex align-items-center justify-content-between">
-                    <span className="h8-meta-text text-scramble" data-scramble-text="info@klarus.io">info@klarus.io</span>
+                    <span className="h8-meta-text text-scramble" data-scramble-text="muhammad.talha@klarus.io">muhammad.talha@klarus.io</span>
                     <div className="d-flex align-items-center gap-2">
                         {/* Globe icon */}
                         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="20" viewBox="0 0 27 20" fill="none" aria-hidden="true">

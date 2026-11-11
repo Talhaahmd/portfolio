@@ -79,7 +79,7 @@ export default function Section3() {
                     </div>
                     <div className="col-lg-5">
                         <p className="mb-0 at_fade_anim" data-delay=".25" data-fade-from="right">
-                            Talha Speaks AI is a Toronto-based AI automation agency specialising in branded film, motion design, and visual effects. We work with challenger brands, cultural institutions, and Fortune 500 companies to craft stories that move people -- literally.
+                            Talha Speaks AI is a Lahore-based AI automation agency specialising in branded film, motion design, and visual effects. We work with challenger brands, cultural institutions, and Fortune 500 companies to craft stories that move people -- literally.
                         </p>
                     </div>
                 </div>

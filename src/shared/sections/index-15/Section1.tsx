@@ -22,7 +22,7 @@ export default function Section1() {
                             </svg>
                             <span className="sec-1-home-15__coord-label text-scramble text-white">27.1127&deg; S, 109.3497&deg; W</span>
                         </span>
-                        <a className="sec-1-home-15__email at_fade_anim text-white" data-fade-from="top" data-delay=".3" href="mailto:info@klarus.io">info@klarus.io</a>
+                        <a className="sec-1-home-15__email at_fade_anim text-white" data-fade-from="top" data-delay=".3" href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a>
                     </div>
 
                     <span className="sec-1-home-15__scroll" aria-hidden="true">

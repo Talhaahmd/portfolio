@@ -66,8 +66,8 @@ export default function Footer13() {
                         <div className="footer-13__col at_fade_anim" data-fade-from="bottom" data-delay=".4">
                             <p className="footer-13__col-title mb-0">CONTACT</p>
                             <ul className="footer-13__col-list list-unstyled mb-0">
-                                <li><a href="mailto:info@klarus.io">info@klarus.io</a></li>
-                                <li><a href="tel:+12125550142">+1 (212) 555-0142</a></li>
+                                <li><a href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a></li>
+                                <li></li>
                                 <li><Link to="/contact-1">Press inquiries</Link></li>
                                 <li><Link to="/contact-1">Schedule a visit</Link></li>
                                 <li><Link to="/contact-1">Job applications</Link></li>
@@ -80,7 +80,7 @@ export default function Footer13() {
                     <li className="footer-13__studio at_fade_anim" data-fade-from="bottom" data-delay=".1">
                         <div className="footer-13__studio-head">
                             <span className="footer-13__studio-dot footer-13__studio-dot--active" aria-hidden="true"></span>
-                            <h3 className="footer-13__studio-name mb-0">New York</h3>
+                            <h3 className="footer-13__studio-name mb-0">Lahore</h3>
                         </div>
                         <address className="footer-13__studio-addr mb-0">
                             Studio 4F &middot; 217 Lafayette St<br />

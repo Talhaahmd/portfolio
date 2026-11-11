@@ -163,18 +163,14 @@ export default function Section2() {
                         <div className="d-flex flex-md-row flex-column gap-md-5 gap-3 align-items-md-end justify-content-md-between">
                             <div>
                                 <h6 className="fw-600">
-                                    <a href="tel:+12125557398" className="text-decoration-none">
-                                        +1 (212) 555-7398
-                                    </a>
                                 </h6>
                                 <h4 className="mb-0 fw-medium text-decoration-underline">
-                                    <Link to="mailto:info@klarus.io">info@klarus.io</Link>
+                                    <Link to="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</Link>
                                 </h4>
                             </div>
                             <h6 className="fw-600">
                                 <Link to="#" className="text-decoration-none fz-font-lg fw-500">
-                                    Toronto, Ontario, <br />
-                                    Canada
+                                    Lahore, Pakistan
                                 </Link>
                             </h6>
                         </div>

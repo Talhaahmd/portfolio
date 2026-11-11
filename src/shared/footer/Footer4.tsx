@@ -80,7 +80,7 @@ export default function Footer4() {
                         </div>
                         <div className="col-lg-5 col-md-6 d-flex flex-column justify-content-between gap-lg-5 gap-4">
                             <h4 className="text-white mb-5 fw-medium text-decoration-underline">
-                                <a href="mailto:info@klarus.io">info@klarus.io</a>
+                                <a href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a>
                             </h4>
                             <div className="d-flex flex-wrap gap-lg-5 gap-4">
                                 <div className="d-flex flex-column">
@@ -89,8 +89,7 @@ export default function Footer4() {
                                     </span>
                                     <h6 className="text-white mb-2">
                                         <Link to="#" className="text-white text-decoration-none">
-                                            245 Fifth Avenue, Suite 1800 <br className="d-block" />
-                                            New York, NY 10016, USA
+                                            Lahore, Pakistan
                                         </Link>
                                     </h6>
                                 </div>
@@ -99,14 +98,8 @@ export default function Footer4() {
                                         Tel
                                     </span>
                                     <h6 className="text-white mb-2">
-                                        <Link to="tel:+2125557398" className="text-white text-decoration-none">
-                                            +212 - 555-7398
-                                        </Link>
                                     </h6>
                                     <h6 className="text-white mb-2">
-                                        <Link to="tel:+2126667399" className="text-white text-decoration-none">
-                                            +212 - 666-7399
-                                        </Link>
                                     </h6>
                                 </div>
                             </div>

@@ -125,17 +125,15 @@ export default function Section6() {
                             <div className="sec-6-home-9__footer-block">
                                 <h3 className="sec-6-home-9__footer-heading at_fade_anim" data-delay=".1">We are here</h3>
                                 <div className="sec-6-home-9__footer-lines at_fade_anim" data-delay=".2">
-                                    <p>205 North Michigan Avenue, Suite 810<br />Chicago, 60601, USA</p>
-                                    <p>Phone: <a className="sec-6-home-9__footer-link" href="tel:+11234567890">(123) 456-7890</a></p>
-                                    <p>Email: <a className="sec-6-home-9__footer-link" href="mailto:info@klarus.io">info@klarus.io</a></p>
+                                    <p>Lahore, Pakistan</p>
+                                    <p>Email: <a className="sec-6-home-9__footer-link" href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a></p>
                                 </div>
                             </div>
                         </div>
                         <div className="sec-6-home-9__footer-secondary">
                             <div className="sec-6-home-9__footer-lines at_fade_anim" data-delay=".3">
-                                <p>245 Fifth Avenue, Suite 1800<br />New York, NY 10016, USA</p>
-                                <p>Phone: <a className="sec-6-home-9__footer-link" href="tel:+12125557398">(212) 555-7398</a></p>
-                                <p>Email: <a className="sec-6-home-9__footer-link" href="mailto:info@klarus.io">info@klarus.io</a></p>
+                                <p>Lahore, Pakistan</p>
+                                <p>Email: <a className="sec-6-home-9__footer-link" href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a></p>
                             </div>
                         </div>
                     </footer>

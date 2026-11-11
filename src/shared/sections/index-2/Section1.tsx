@@ -78,7 +78,6 @@ export default function Section1({ classList }: { classList?: string }) {
                                         </Link>
                                     ))}
                                 </div>
-                                <p className="fz-font-lg fw-500 mb-0">[+971 588 449 147]</p>
                             </div>
                         </div>
                     </div>

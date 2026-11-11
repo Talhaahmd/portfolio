@@ -42,8 +42,7 @@ export default function Section5() {
                             <div className="sec-5-home-9__block">
                                 <p className="sec-5-home-9__label text-white">Base on</p>
                                 <p className="sec-5-home-9__value text-white">
-                                    245 Fifth Avenue, Suite 1800<br />
-                                    New York, NY 10016, USA
+                                    Lahore, Pakistan
                                 </p>
                             </div>
                         </div>
@@ -51,8 +50,6 @@ export default function Section5() {
                             <div className="sec-5-home-9__block">
                                 <p className="sec-5-home-9__label text-white">Tel</p>
                                 <div className="sec-5-home-9__value sec-5-home-9__value--stack">
-                                    <p className="mb-0 text-white">+212 - 555-7398</p>
-                                    <p className="mb-0 text-white">+212 - 666-7399</p>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +57,7 @@ export default function Section5() {
                             <div className="sec-5-home-9__block">
                                 <p className="sec-5-home-9__label text-white">Message</p>
                                 <p className="sec-5-home-9__value mb-0 text-white">
-                                    <a className="sec-5-home-9__mailto text-white" href="mailto:info@klarus.io">info@klarus.io</a>
+                                    <a className="sec-5-home-9__mailto text-white" href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a>
                                 </p>
                             </div>
                         </div>

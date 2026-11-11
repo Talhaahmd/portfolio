@@ -133,19 +133,13 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
             <h5 className="at-offcanvas-title sm">Get in touch</h5>
             <ul>
               <li>
-                <a className="fz-font-lg" href="tel:+12125557398">
-                  +1 (212) 555-7398
-                </a>
-              </li>
-              <li>
-                <a className="fz-font-lg" href="mailto:info@klarus.io">
-                  info@klarus.io
+                <a className="fz-font-lg" href="mailto:muhammad.talha@klarus.io">
+                  muhammad.talha@klarus.io
                 </a>
               </li>
               <li>
                 <a className="fz-font-lg" href="#" onClick={(e) => e.preventDefault()}>
-                  Toronto, Ontario, <br />
-                  Canada
+                  Lahore, Pakistan
                 </a>
               </li>
             </ul>

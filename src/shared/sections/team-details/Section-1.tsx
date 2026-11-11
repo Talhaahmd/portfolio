@@ -216,7 +216,6 @@ export default function Section1() {
                                     <a href="mailto:amelia@klarus.io">amelia@klarus.io</a>
                                 </h6>
                                 <h6 className="fw-600">
-                                    <a href="tel:(212) 555-7398">(212) 555-7398</a>
                                 </h6>
                             </div>
                             <div className="block-content">

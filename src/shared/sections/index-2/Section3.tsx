@@ -96,7 +96,7 @@ export default function Section3() {
                     <div className="col-12">
                         <div className="d-flex flex-wrap align-items-center justify-content-center">
                             <Link
-                                to="mailto:info@klarus.io"
+                                to="mailto:muhammad.talha@klarus.io"
                                 className="at-btn bg-transparent p-relative"
                             >
                                 <img

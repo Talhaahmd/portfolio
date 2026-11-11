@@ -56,12 +56,11 @@ export default function Section4() {
                             We wil answer to you shortly! Meet our Support team
                         </p>
                         <h5 className="mt-40">
-                            <a href="mailto:info@klarus.io">
-                                info@klarus.io
+                            <a href="mailto:muhammad.talha@klarus.io">
+                                muhammad.talha@klarus.io
                             </a>
                         </h5>
                         <h6>
-                            <a href="tel:+2125557398">(212) 555-7398</a>
                         </h6>
                     </div>
                 </div>

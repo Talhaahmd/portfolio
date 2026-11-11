@@ -113,10 +113,9 @@ export default function Section12({ className = "", showNoise = true }: Section1
                                 Contact Us
                             </Link>
                             <h6 className="fw-600">
-                                <a href="mailto:info@klarus.io">info@klarus.io</a>
+                                <a href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a>
                             </h6>
                             <h6 className="fw-600">
-                                <a href="tel:+12125557398">(212) 555-7398</a>
                             </h6>
                         </div>
                     </div>

@@ -53,19 +53,15 @@ export default function Footer6() {
                         <div className="col-lg-3 col-md-6">
                             <div className="d-flex flex-column">
                                 <p className="h6 text-white mb-2 fw-medium">
-                                    <Link to="tel:+2125557398" className="text-white text-decoration-none">
-                                        +212-555-7398
-                                    </Link>
                                 </p>
                                 <p className="h6 text-white mb-2">
-                                    <Link to="mailto:info@klarus.io" className="text-white text-decoration-none">
-                                        info@klarus.io
+                                    <Link to="mailto:muhammad.talha@klarus.io" className="text-white text-decoration-none">
+                                        muhammad.talha@klarus.io
                                     </Link>
                                 </p>
                                 <p className="h6 text-white mb-2">
                                     <Link to="#" className="text-white text-decoration-none">
-                                        245 Fifth Avenue, Suite 1800 <br />
-                                        New York, NY 10016, USA
+                                        Lahore, Pakistan
                                     </Link>
                                 </p>
                             </div>

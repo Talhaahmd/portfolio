@@ -40,9 +40,6 @@ export default function Section11() {
                                 <input type="email" className="sec-4-about-form__input" name="email" placeholder="Your email *" required aria-label="Your email" />
                             </div>
                             <div className="sec-4-about-form__field at_fade_anim">
-                                <input type="tel" className="sec-4-about-form__input" name="phone" placeholder="Your phone *" required aria-label="Your phone" />
-                            </div>
-                            <div className="sec-4-about-form__field at_fade_anim">
                                 <textarea className="sec-4-about-form__input sec-4-about-form__textarea" name="message" placeholder="Your message *" rows={5} required aria-label="Your message"></textarea>
                             </div>
                             <div className="sec-4-about-form__actions at_fade_anim">

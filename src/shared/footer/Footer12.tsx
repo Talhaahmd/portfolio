@@ -24,7 +24,7 @@ export default function Footer12() {
                         <p className="footer-12__cta-sub mb-0 at_fade_anim" data-fade-from="bottom" data-delay=".15">Drop a line. We&rsquo;ll get back within a day.</p>
                         <form className="footer-12__cta-form at_fade_anim" data-fade-from="bottom" data-delay=".25" action="#" method="post">
                             <label className="visually-hidden" htmlFor="footer12Email">Email</label>
-                            <input id="footer12Email" className="footer-12__cta-input" type="email" name="email" placeholder="info@klarus.io" required />
+                            <input id="footer12Email" className="footer-12__cta-input" type="email" name="email" placeholder="muhammad.talha@klarus.io" required />
                             <button className="footer-12__cta-submit" type="submit">
                                 <span>Get started</span>
                             </button>

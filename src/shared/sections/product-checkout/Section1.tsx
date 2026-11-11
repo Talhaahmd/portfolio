@@ -92,19 +92,6 @@ export default function Section1() {
                                             <label htmlFor="billing-email" className="checkout-billing__label">Email address *</label>
                                             <input type="email" id="billing-email" className="checkout-billing__input" name="email" placeholder="Enter email address" required aria-required />
                                         </div>
-                                        <div className="checkout-billing__field">
-                                            <label htmlFor="billing-phone" className="checkout-billing__label">Phone number *</label>
-                                            <div className="checkout-billing__phone-wrap">
-                                                <select id="billing-country" className="checkout-billing__country-select" name="country_code" aria-label="Country code" title="Country" defaultValue="+1">
-                                                    {COUNTRY_OPTIONS.map((opt) => (
-                                                        <option key={opt.value} value={opt.value} data-flag={opt.flag}>
-                                                            {opt.label}
-                                                        </option>
-                                                    ))}
-                                                </select>
-                                                <input type="tel" id="billing-phone" className="checkout-billing__input checkout-billing__input--phone" name="phone" placeholder="Enter phone number" required aria-required />
-                                            </div>
-                                        </div>
                                     </div>
                                     <div className="checkout-billing__row">
                                         <div className="checkout-billing__field checkout-billing__field--full">

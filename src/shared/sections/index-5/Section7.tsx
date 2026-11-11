@@ -171,15 +171,11 @@ export default function Section7() {
                     <div className="col-xxl-5 col-md-8 ms-xxl-auto">
                         <div className="d-flex align-items-center gap-5 justify-content-xxl-end">
                             <h6 className="fw-600">
-                                245 Fifth Avenue, Suite 1800 <br />
-                                New York, NY 10016, USA
+                                Lahore, Pakistan
                             </h6>
                             <div>
                                 <h6 className="fw-600">
-                                    <Link to="tel:+2125557398">+212-555-7398</Link>
-                                </h6>
-                                <h6 className="fw-600">
-                                    <Link to="mailto:info@klarus.io">info@klarus.io</Link>
+                                    <Link to="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</Link>
                                 </h6>
                             </div>
                         </div>

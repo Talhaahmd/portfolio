@@ -93,13 +93,12 @@ export default function Footer8() {
                         <div className="col-xxl-3 col-lg-4 col-md-6">
                             <div className="footer-8__contact">
                                 <p className="footer-8__contact-line mb-1">
-                                    <Link to="tel:+12125557398">+212 - 555-7398</Link>
                                 </p>
                                 <p className="footer-8__contact-line mb-3">
-                                    <Link to="mailto:info@klarus.io">info@klarus.io</Link>
+                                    <Link to="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</Link>
                                 </p>
                                 <p className="footer-8__address mb-0">
-                                    245 Fifth Avenue, Suite 1800<br />New York, NY 10016, USA
+                                    Lahore, Pakistan
                                 </p>
 
                                 <div className="footer-8__hours mt-30">
