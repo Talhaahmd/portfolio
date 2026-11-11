@@ -8,6 +8,7 @@ export default function ResourcesPage() {
     <>
       <PageMeta
         title="Claude Motion Graphics"
+        description="A gallery of Claude-generated motion graphics, plus free AI resources from Talha Speaks AI."
       />
       <ResourcesHero />
       <VideoSection />

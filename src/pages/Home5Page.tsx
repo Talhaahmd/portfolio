@@ -12,7 +12,7 @@ import Section8 from "@/shared/sections/index-5/Section8";
 export default function Home5Page() {
   return (
     <>
-      <PageMeta title="Talha Speaks AI" description="AI Automations, N8n, Claude, OpenAI integrations, and MVP Development for founders and operators." />
+      <PageMeta title="Talha Speaks AI | AI Creator, Automations & Claude" description="Talha (Talha Speaks AI) is an AI creator teaching Claude, n8n automations and AI skills. Free resources, Claude skills and a 90 day roadmap to remote work." />
       <div className="d-none d-md-block">
         <Section1 />
       </div>
