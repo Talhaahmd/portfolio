@@ -4,7 +4,7 @@ import ContactSection from "@/shared/sections/contact/ContactSection";
 export default function ContactPage() {
   return (
     <>
-      <PageMeta title="Talha Speaks AI | Contact & Book a Call" description="Book an appointment with Talha — AI automation specialist based in Lahore, Pakistan." />
+      <PageMeta title="Contact & Book a Call" description="Contact Talha Speaks AI or book a call. AI creator based in Lahore, Pakistan, teaching Claude and automation. Replies within 1 to 2 business days." />
       <div className="pt-85" />
       <ContactSection />
 

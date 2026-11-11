@@ -9,7 +9,7 @@ export default function RoadmapPage() {
     <>
       <PageMeta
         title="Your 90 Days Roadmap"
-        description="A step-by-step action plan to build in-demand skills, create projects, and land international remote jobs from Pakistan."
+        description="A step-by-step 90 day plan to build in-demand skills, create projects, polish your CV and LinkedIn, and land international remote jobs from Pakistan."
         jsonLd={[itemListSchema("90 day roadmap resources", RESOURCES.map((r) => ({ name: r.title, description: r.description })))]}
       />
       <ResourcesHero

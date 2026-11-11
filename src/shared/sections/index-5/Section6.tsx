@@ -142,9 +142,9 @@ export default function Section6() {
                         </div>
                         <div className="col-lg-3 ms-lg-auto d-flex justify-content-lg-end">
                             <div className="at-btn-group at_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
-                                <Link className="at-btn-circle bg-neutral-700" to="https://calendar.app.google/8o7kWArjFZQchGAEA">{ARROW_CIRCLE_SVG}</Link>
+                                <Link className="at-btn-circle bg-neutral-700" to="https://calendar.app.google/8o7kWArjFZQchGAEA" aria-label="Book a call">{ARROW_CIRCLE_SVG}</Link>
                                 <Link className="at-btn z-index-1 bg-neutral-700" to="https://calendar.app.google/8o7kWArjFZQchGAEA">Book A Call Now</Link>
-                                <Link className="at-btn-circle bg-neutral-700" to="https://calendar.app.google/8o7kWArjFZQchGAEA">{ARROW_CIRCLE_SVG}</Link>
+                                <Link className="at-btn-circle bg-neutral-700" to="https://calendar.app.google/8o7kWArjFZQchGAEA" aria-label="Book a call">{ARROW_CIRCLE_SVG}</Link>
                             </div>
                         </div>
                     </div>

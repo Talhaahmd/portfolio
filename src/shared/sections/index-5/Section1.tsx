@@ -81,7 +81,7 @@ export default function Section1() {
                                         />
                                     </picture>
                                     <div className="p-absolute bottom-0 start-50 translate-middle-x z-n1 d-lg-none d-xxl-block">
-                                        <h1 className="fz-290 fw-600 text-nowrap lh-1">Talha Speaks AI</h1>
+                                        <div className="fz-290 fw-600 text-nowrap lh-1" aria-hidden="true">Talha Speaks AI</div>
                                     </div>
                                 </div>
                             </div>
@@ -99,13 +99,13 @@ export default function Section1() {
                                     data-fade-from="bottom"
                                     data-ease="bounce"
                                 >
-                                    <Link className="at-btn-circle" to="/90-days-roadmap">
+                                    <Link className="at-btn-circle" to="/90-days-roadmap" aria-label="Get free resources">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
                                     <Link className="at-btn z-index-1" to="/90-days-roadmap">
                                         Get Free Resources
                                     </Link>
-                                    <Link className="at-btn-circle" to="/90-days-roadmap">
+                                    <Link className="at-btn-circle" to="/90-days-roadmap" aria-label="Get free resources">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
                                 </div>

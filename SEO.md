@@ -43,7 +43,7 @@ Site: https://www.klarus.io (set with `VITE_SITE_URL`). Brand: **Talha Speaks AI
 - Put `https://www.klarus.io` in your YouTube channel description and About links, X bio, LinkedIn Contact info and Featured, and Instagram bio.
 - Use the same name ("Talha Speaks AI") and the same one-line bio on every profile.
 - Link to the Resources, Claude Skills and Roadmap pages from video descriptions.
-- Replace `public/og-image.png` (1200x630) with a branded image that has your face and name.
+- Replace `public/og-image.jpg` (1200x630) with a branded image that has your face and name.
 
 ## Ongoing
 - One new page or post per video, targeting a specific search (for example "Claude skills for freelancers", "n8n automation tutorial"). Link it from the video and back to it.

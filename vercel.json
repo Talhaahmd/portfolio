@@ -70,6 +70,15 @@
       ]
     },
     {
+      "source": "/(assets/css|assets/js|scripts)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
       "source": "/assets/(.*)\\.(png|jpg|jpeg|webp|svg|gif|woff2|woff|ttf|webm|mp4)",
       "headers": [
         {
@@ -79,7 +88,7 @@
       ]
     },
     {
-      "source": "/(og-image.png|icon-192.png|icon-512.png|apple-touch-icon.png|favicon.svg)",
+      "source": "/(og-image.jpg|icon-192.png|icon-512.png|apple-touch-icon.png|favicon.svg)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -87,5 +96,6 @@
         }
       ]
     }
-  ]
+  ],
+  "trailingSlash": false
 }

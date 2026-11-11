@@ -12,5 +12,5 @@
 .mh__btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#1f1f1f;color:#fff;border-radius:999px;padding:15px 24px;font-size:16px;font-weight:600;text-decoration:none;line-height:1}
 .mh__btn:hover{color:#fff;opacity:.9}
 .mh__socials{padding-top:20px;border-top:1px solid rgba(0,0,0,.1)}
-.mh__socials-label{font-size:13px;font-weight:600;opacity:.6;margin:0 0 12px;text-transform:uppercase;letter-spacing:.06em}
+.mh__socials-label{font-size:13px;font-weight:600;color:#555;margin:0 0 12px;text-transform:uppercase;letter-spacing:.06em}
 @media (min-width:576px){.mh{padding-top:110px;padding-bottom:56px}.mh__inner{max-width:640px;margin:0 auto}.mh__stage{margin-left:0;margin-right:0;border-radius:24px;overflow:hidden;height:360px}.mh__title{font-size:84px}.mh__lead{font-size:20px}}

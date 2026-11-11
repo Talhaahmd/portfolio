@@ -11,12 +11,12 @@ export default function MobileHero() {
                 <i />
                 AI creator · Claude · Automation
             </span>
-            <h1 className="mh__title">
+            <p className="mh__title" aria-hidden="true">
                 <span className="mh__line">Talha</span>
                 <span className="mh__line">
                     Speaks AI<sup>®</sup>
                 </span>
-            </h1>
+            </p>
             <div className="mh__stage">
                 <img
                     src="/assets/imgs/pages/webp-images/Hero image.webp"

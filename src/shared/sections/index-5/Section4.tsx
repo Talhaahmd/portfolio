@@ -91,13 +91,13 @@ export default function Section4() {
                                     data-fade-from="bottom"
                                     data-ease="bounce"
                                 >
-                                    <Link className="at-btn-circle" to="/90-days-roadmap">
+                                    <Link className="at-btn-circle" to="/90-days-roadmap" aria-label="Get free resources">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
                                     <Link className="at-btn z-index-1" to="/90-days-roadmap">
                                         Get Free Resources
                                     </Link>
-                                    <Link className="at-btn-circle" to="/90-days-roadmap">
+                                    <Link className="at-btn-circle" to="/90-days-roadmap" aria-label="Get free resources">
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
                                 </div>

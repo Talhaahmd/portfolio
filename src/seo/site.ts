@@ -4,7 +4,7 @@ export const PERSON_NAME = "Talha";
 export const DEFAULT_TITLE = "Talha Speaks AI | AI Creator, Automations & Claude";
 export const DEFAULT_DESCRIPTION =
   "Talha (Talha Speaks AI) is an AI creator teaching Claude, n8n automations and AI skills. Free resources, Claude skills and a 90 day roadmap to remote work.";
-export const OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 export const SOCIALS = {
   instagram: "https://www.instagram.com/talhaspeaksai/",
   youtube: "https://www.youtube.com/@Talhaspeaksai",

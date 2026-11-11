@@ -50,11 +50,11 @@ const SKILLS_LIST_ITEMS = [
     "",
 ];
 const AVATAR_IMGS = [
-    "/assets/imgs/pages/IMG_3802.jpg",
-    "/assets/imgs/pages/IMG_3803.jpg",
-    "/assets/imgs/pages/IMG_3804.jpg",
-    "/assets/imgs/pages/IMG_3805.jpg",
-    "/assets/imgs/pages/IMG_3806.jpg",
+    "/assets/imgs/pages/IMG_3802-sm.jpg",
+    "/assets/imgs/pages/IMG_3803-sm.jpg",
+    "/assets/imgs/pages/IMG_3804-sm.jpg",
+    "/assets/imgs/pages/IMG_3805-sm.jpg",
+    "/assets/imgs/pages/IMG_3806-sm.jpg",
 ];
 
 const FOOTER_TAGS = [
@@ -160,7 +160,7 @@ export default function Section2() {
                                         <div className="d-flex align-items-center gap-3 mb-3">
                                             <div className="sec-2-home-5__avatar rounded-3 overflow-hidden flex-shrink-0">
                                                 <img
-                                                    src="/assets/imgs/pages/1784065267489.png"
+                                                    src="/assets/imgs/pages/1784065267489-sm.png"
                                                     alt="Mavlyanov S., CEO and Founder of Moneff"
                                                     width={56}
                                                     height={56}

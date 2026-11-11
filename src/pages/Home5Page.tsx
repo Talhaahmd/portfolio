@@ -24,6 +24,7 @@ export default function Home5Page() {
           },
         ]}
       />
+      <h1 className="visually-hidden">Talha Speaks AI: AI creator teaching Claude and automation</h1>
       <div className="d-none d-lg-block">
         <Section1 />
       </div>

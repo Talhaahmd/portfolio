@@ -9,7 +9,7 @@ export default function ClaudeSkillsPage() {
     <>
       <PageMeta
         title="Claude Skills Every Freelancer Should Know"
-        description="6 Claude skills, from marketing to sales, that every freelancer should know."
+        description="Six Claude skills for freelancers: marketing and SEO, PRD writing, cold outreach, LinkedIn, Instagram and sales. Setup steps and a full video walkthrough."
         jsonLd={[itemListSchema("Claude skills for freelancers", SKILLS.map((s) => ({ name: s.title, url: s.repo, description: s.tagline })))]}
       />
       <ResourcesHero
