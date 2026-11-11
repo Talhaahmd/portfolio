@@ -1,7 +1,6 @@
 import PageMeta from "@/seo/PageMeta";
 import AboutFaq, { FAQS } from "@/shared/sections/index-5/AboutFaq";
-import Section1 from "@/shared/sections/index-5/Section1";
-import MobileHero from "@/shared/sections/index-5/MobileHero";
+import CinematicHero from "@/shared/sections/index-5/CinematicHero";
 import Section2 from "@/shared/sections/index-5/Section22";
 import Section3 from "@/shared/sections/index-5/Section3";
 import Section4 from "@/shared/sections/index-5/Section4";
@@ -24,13 +23,7 @@ export default function Home5Page() {
           },
         ]}
       />
-      <h1 className="visually-hidden">Talha Speaks AI: AI creator teaching Claude and automation</h1>
-      <div className="d-none d-lg-block">
-        <Section1 />
-      </div>
-      <div className="d-block d-lg-none">
-        <MobileHero />
-      </div>
+      <CinematicHero />
       <Section2 />
       <Section4 />
       <Section3 />
