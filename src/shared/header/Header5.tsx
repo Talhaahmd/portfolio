@@ -1,15 +1,20 @@
 import MainMenu from "@/shared/MainMenu";
 import Logo from "@/shared/Logo";
+import { useLocation } from "react-router-dom";
+import "./header-hero.css";
+
 export default function Header5({ onOpenHamburgerMenu }: { onOpenHamburgerMenu?: () => void }) {
+    // On the home page the header floats transparent over the full-screen hero
+    const overHero = useLocation().pathname === "/";
     return (
         <>
-            <header>
-                <div className="container-1136 at-header-spacing bg-neutral-0 rounded-4 mt-3 border-100 mx-xxl-auto mx-lg-3 mx-2 p-relative z-index-10">
+            <header className={overHero ? "hdr-hero" : undefined}>
+                <div className={`container-1136 at-header-spacing ${overHero ? "hdr-hero__bar" : "bg-neutral-0 border-100"} rounded-4 mt-3 mx-xxl-auto mx-lg-3 mx-2 p-relative z-index-10`}>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-xl-3 col-6">
                                 <div className="at-header-logo px-2">
-                                    <Logo />
+                                    <Logo variant={overHero ? "light" : "dark"} />
                                 </div>
                             </div>
                             <div className="col-xl-6 d-none d-xl-block">

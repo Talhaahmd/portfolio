@@ -1,10 +1,10 @@
 /* Home hero: orange portrait stage with a cursor-driven "augmented" reveal. Mobile-first. */
-.ch{--cx:50%;--cy:30%;position:relative;margin:12px 8px 0;border-radius:28px;overflow:hidden;color:#fff;isolation:isolate;
+.ch{--cx:50%;--cy:30%;position:relative;margin:0;border-radius:0;min-height:100vh;min-height:100svh;overflow:hidden;color:#fff;isolation:isolate;
   background:radial-gradient(120% 90% at 18% 10%,#ff8a1f 0%,#f0501a 38%,#b5200f 72%,#7d0f0a 100%)}
 .ch::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.18;mix-blend-mode:overlay;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 .ch::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top,rgba(80,10,5,.72) 0%,rgba(80,10,5,.35) 40%,rgba(80,10,5,0) 70%)}
-.ch__inner{display:flex;flex-direction:column;padding:92px 20px 22px}
+.ch__inner{display:flex;flex-direction:column;min-height:100vh;min-height:100svh;padding:92px 20px 22px}
 
 /* rings + stats (decor) */
 .ch__ring{position:absolute;left:calc(var(--cx) - var(--d) / 2);top:calc(var(--cy) - var(--d) / 2);width:var(--d);aspect-ratio:1;border:1px solid rgba(255,255,255,.26);border-radius:50%;pointer-events:none;z-index:0;animation:ch-ring 1.4s .2s both cubic-bezier(.2,.7,.2,1)}
@@ -19,14 +19,14 @@
 .ch__title span{display:block}
 
 /* portrait stage */
-.ch__stage{position:relative;height:clamp(250px,72vw,330px);margin:6px -20px 0;overflow:hidden;z-index:0}
+.ch__stage{position:relative;height:clamp(220px,62vw,330px);margin:6px -20px 0;overflow:hidden;z-index:0;-webkit-mask-image:linear-gradient(#000 72%,transparent 100%);mask-image:linear-gradient(#000 72%,transparent 100%)}
 .ch__figure{position:absolute;left:50%;top:0;height:128%;aspect-ratio:550/850;transform:translateX(-50%)}
 .ch__base,.ch__layer{position:absolute;inset:0;width:100%;height:100%;display:block}
 .ch__base{object-fit:contain;filter:drop-shadow(0 0 40px rgba(255,120,30,.25))}
 .ch__layer{pointer-events:none}
 
 /* body: copy, cta, socials */
-.ch__body{position:relative;z-index:2;margin-top:-34px}
+.ch__body{position:relative;z-index:2;margin-top:12px}
 .ch__lead{font-size:16px;line-height:1.5;margin:0 0 20px;color:rgba(255,255,255,.92);max-width:46ch}
 .ch__cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
 .ch__btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#1b1b1b;border-radius:999px;padding:14px 24px;font-size:16px;font-weight:600;line-height:1;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.25);transition:transform .2s}
@@ -45,13 +45,13 @@
 @keyframes ch-fade{from{opacity:0}to{opacity:1}}
 @keyframes ch-ring{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:none}}
 
-@media (min-width:576px){.ch{margin:12px 12px 0;border-radius:32px}.ch__inner{padding:104px 36px 32px;max-width:720px;margin:0 auto}.ch__stage{margin:8px -36px 0;height:clamp(380px,58vw,480px)}.ch__figure{height:124%}}
+@media (min-width:576px){.ch__inner{padding:104px 36px 32px;max-width:720px;margin:0 auto}.ch__stage{margin:8px -36px 0;height:clamp(380px,58vw,480px)}.ch__figure{height:124%}}
 
 @media (min-width:992px){
-  .ch{--cx:52%;--cy:34%;margin:12px 16px 0;border-radius:36px;min-height:clamp(640px,calc(100vh - 110px),860px);display:block}
+  .ch{--cx:52%;--cy:34%;display:block}
   .ch::after{background:radial-gradient(75% 80% at 0% 100%,rgba(80,10,5,.78) 0%,rgba(80,10,5,.45) 45%,rgba(80,10,5,0) 78%)}
   .ch__inner{position:absolute;inset:0;max-width:none;margin:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(32px,4.5vw,72px) clamp(32px,6vh,64px)}
-  .ch__stage{position:absolute;inset:0;margin:0;height:auto}
+  .ch__stage{position:absolute;inset:0;margin:0;height:auto;-webkit-mask-image:none;mask-image:none}
   .ch__figure{left:var(--cx);top:auto;bottom:-3%;height:104%}
   .ch__head{max-width:min(46vw,620px);margin-bottom:22px}
   .ch__title{font-size:clamp(52px,6vw,104px)}
