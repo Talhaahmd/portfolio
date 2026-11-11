@@ -47,7 +47,7 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
             <div className="col-lg-4">
               <div className="d-flex flex-wrap align-items-start gap-5">
                 <div className="at-header-logo">
-                  <Logo style={{ color: "#ffffff" }} />
+                  <Logo variant="light" height={44} />
                 </div>
                 <div className="d-flex flex-column gap-3">
                   <p className="text-white mb-2 fw-bold">
