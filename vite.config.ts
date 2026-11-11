@@ -1,8 +1,37 @@
 import { defineConfig, loadEnv, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "node:path";
+import { execSync } from "node:child_process";
 
 // Pages that should appear in sitemap.xml (keep in sync with src/App.tsx)
+// Source file whose git history decides each page's published/modified dates
+const PAGE_SOURCES: Record<string, string> = {
+  "/": "src/pages/Home5Page.tsx",
+  "/resources": "src/pages/ResourcesPage.tsx",
+  "/claude-skills": "src/pages/ClaudeSkillsPage.tsx",
+  "/90-days-roadmap": "src/pages/RoadmapPage.tsx",
+  "/contact": "src/pages/ContactPage.tsx",
+};
+
+function git(cmd: string) {
+  try {
+    return execSync(`git ${cmd}`, { stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
+  } catch {
+    return "";
+  }
+}
+
+/** Real dates from git (first and last commit touching the page file); falls back to today. */
+function pageDates() {
+  const today = new Date().toISOString().slice(0, 10);
+  const out: Record<string, { published: string; modified: string }> = {};
+  for (const [route, file] of Object.entries(PAGE_SOURCES)) {
+    const log = git(`log --format=%cs -- ${file}`).split("\n").filter(Boolean);
+    out[route] = { modified: log[0] || today, published: log[log.length - 1] || today };
+  }
+  return out;
+}
+
 const SITEMAP_PATHS = [
   { path: "/", priority: "1.0" },
   { path: "/resources", priority: "0.8" },
@@ -11,7 +40,7 @@ const SITEMAP_PATHS = [
   { path: "/contact", priority: "0.6" },
 ];
 
-function seoFiles(siteUrl: string, env: Record<string, string>): Plugin {
+function seoFiles(siteUrl: string, env: Record<string, string>, dates: ReturnType<typeof pageDates>): Plugin {
   return {
     name: "seo-files",
     transformIndexHtml: {
@@ -27,10 +56,9 @@ function seoFiles(siteUrl: string, env: Record<string, string>): Plugin {
       },
     },
     generateBundle() {
-      const today = new Date().toISOString().slice(0, 10);
       const urls = SITEMAP_PATHS.map(
         (p) =>
-          `  <url><loc>${siteUrl}${p.path === "/" ? "/" : p.path}</loc><lastmod>${today}</lastmod><priority>${p.priority}</priority></url>`,
+          `  <url><loc>${siteUrl}${p.path === "/" ? "/" : p.path}</loc><lastmod>${dates[p.path]?.modified ?? ""}</lastmod><priority>${p.priority}</priority></url>`,
       ).join("\n");
       this.emitFile({
         type: "asset",
@@ -54,9 +82,11 @@ function seoFiles(siteUrl: string, env: Record<string, string>): Plugin {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
+  const dates = pageDates();
   const siteUrl = (env.VITE_SITE_URL || "https://www.klarus.io").replace(/\/$/, "");
   return {
-    plugins: [react(), seoFiles(siteUrl, env)],
+    plugins: [react(), seoFiles(siteUrl, env, dates)],
+    define: { __PAGE_DATES__: JSON.stringify(dates) },
     build: {
       rollupOptions: {
         output: {

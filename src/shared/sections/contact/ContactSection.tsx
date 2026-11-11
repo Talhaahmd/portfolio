@@ -74,7 +74,7 @@ export default function ContactSection({ classList = "" }: { classList?: string 
                 if (target && (window as any).calendar?.schedulingButton) {
                     (window as any).calendar.schedulingButton.load({
                         url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2qDvwRTaK2JAy9rVIQImaORQHDLWSAGMSmSAyMUo6ebDMFQmBd880K-kX1P2VQfzvHxq2q7Iie?gv=true',
-                        color: '#039BE5',
+                        color: '#0277BD',
                         label: 'Book an appointment',
                         target,
                     });
@@ -87,7 +87,7 @@ export default function ContactSection({ classList = "" }: { classList?: string 
             if (target && (window as any).calendar?.schedulingButton) {
                 (window as any).calendar.schedulingButton.load({
                     url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2qDvwRTaK2JAy9rVIQImaORQHDLWSAGMSmSAyMUo6ebDMFQmBd880K-kX1P2VQfzvHxq2q7Iie?gv=true',
-                    color: '#039BE5',
+                    color: '#0277BD',
                     label: 'Book an appointment',
                     target,
                 });
@@ -131,7 +131,7 @@ export default function ContactSection({ classList = "" }: { classList?: string 
                                     <div className="d-flex gap-4">
                                         <div className="icon">{office.icon}</div>
                                         <div>
-                                            <h6 className="fw-600">{office.title}</h6>
+                                            <h2 className="fw-600 h6">{office.title}</h2>
                                             <div className="d-flex flex-wrap gap-md-5 gap-4">
                                                 <span className="fz-font-md neutral-500">
                                                     {office.address}

@@ -15,7 +15,8 @@ const resolveDuration = (value?: number) => {
 
 export const useOdometerCounter = ({ dataCount, duration }: UseOdometerCounterProps) => {
   const [isCounted, setIsCounted] = useState(false);
-  const [currentValue, setCurrentValue] = useState(0);
+  // On the server (prerender) show the real number so crawlers and no-JS readers never see 0
+  const [currentValue, setCurrentValue] = useState(typeof window === "undefined" ? (Number.isFinite(dataCount) ? dataCount : 0) : 0);
   const animationRef = useRef<number | null>(null);
   const previousCountRef = useRef<number>(dataCount);
 

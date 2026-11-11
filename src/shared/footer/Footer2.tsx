@@ -50,14 +50,14 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
                   <Logo style={{ color: "#ffffff" }} />
                 </div>
                 <div className="d-flex flex-column gap-3">
-                  <h6 className="text-white mb-2">
+                  <p className="text-white mb-2 fw-bold">
                     <a href="mailto:muhammad.talha@klarus.io" className="text-white text-decoration-none">
                       muhammad.talha@klarus.io
                     </a>
-                  </h6>
-                  <h6 className="text-white mb-0">
+                  </p>
+                  <p className="text-white mb-0 fw-bold">
                     Lahore, Pakistan
-                  </h6>
+                  </p>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
                 <div className="d-flex flex-wrap align-items-end gap-4 gap-md-5 mb-3">
                   <div className="footer-2-hours text-white">
                     <span className="d-block fz-font-md opacity-50">Mo - Sa</span>
-                    <h5 className="fw-400 common-white">9am - 5pm</h5>
+                    <p className="h5 fw-400 common-white">9am - 5pm</p>
                   </div>
                 </div>
               </div>

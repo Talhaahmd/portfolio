@@ -89,7 +89,7 @@ export default function Section1() {
                             <div className="col-lg-3 col-md-6 mx-lg-auto z-index-2">
                                 <div className="mb-30"><SocialLinks /></div>
                                 <div className="icon mb-30">{DIAMOND_ICON}</div>
-                                <h4>I'm Talha</h4>
+                                <p className="h4 fw-bold">I'm Talha</p>
                                 <p className="fz-lg neutral-900 fw-600">
                                     I'm Talha, an AI creator. I teach Claude and automation on YouTube, build AI software, and help SaaS companies scale.
                                 </p>

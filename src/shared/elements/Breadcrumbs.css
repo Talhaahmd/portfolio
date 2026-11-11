@@ -1,0 +1,14 @@
+.tbc{margin:0 0 24px}
+.tbc ol{list-style:none;margin:0;padding:0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;font-size:14px}
+.tbc li+li::before{content:"/";margin-right:8px;opacity:.4}
+.tbc a{text-decoration:underline;text-underline-offset:3px}
+.tbc [aria-current]{color:#444}
+.tbc-byline{font-size:14px;color:#444;margin:0 0 24px}
+.tbc-byline a{text-decoration:underline;text-underline-offset:3px}
+.tbc-related{padding:72px 0}
+.tbc-related h2{font-size:clamp(28px,4vw,44px);font-weight:500;letter-spacing:-.03em;margin:0 0 28px}
+.tbc-related__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.tbc-related__card{display:block;border:1px solid rgba(0,0,0,.12);border-radius:20px;padding:24px;text-decoration:none;color:inherit;transition:transform .2s,border-color .2s}
+.tbc-related__card:hover{transform:translateY(-3px);border-color:#111}
+.tbc-related__card strong{display:block;font-size:19px;margin-bottom:8px}
+.tbc-related__card span{font-size:15px;line-height:1.45;opacity:.75}

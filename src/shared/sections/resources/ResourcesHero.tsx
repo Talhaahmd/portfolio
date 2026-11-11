@@ -1,5 +1,8 @@
 // Resources page hero — same look as Home 5 hero (grid backdrop, tag, big title, portrait image)
 import SocialLinks from "@/shared/elements/SocialLinks";
+import Breadcrumbs from "@/shared/elements/Breadcrumbs";
+import PageByline from "@/shared/elements/PageByline";
+import "@/shared/elements/Breadcrumbs.css";
 
 const DIAMOND_ICON = (
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 38 38" fill="none">
@@ -43,6 +46,7 @@ export default function ResourcesHero({
                 <div className="pb-100">
                     <div className="container-fluid px-3 px-lg-5">
                         <div className="text-center mx-auto z-index-2 p-relative" style={{ maxWidth: "100%" }}>
+                            <Breadcrumbs current={title} />
                             <span className="category-tag mb-30">
                                 <span className="dot" />
                                 Talha Speaks AI
@@ -59,6 +63,7 @@ export default function ResourcesHero({
                             <p className="fz-lg neutral-900 mx-auto mb-40" style={{ maxWidth: 760, opacity: 0.8 }}>
                                 {description}
                             </p>
+                            <PageByline />
                             <div className="d-flex justify-content-center"><SocialLinks variant="labeled" /></div>
                         </div>
                     </div>

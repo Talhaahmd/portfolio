@@ -43,9 +43,9 @@ const JOURNEY_ITEMS = [
     },
     {
         date: "Nov 2024 – Dec 2025",
-        title: "Software Development Lead - ",
-        company: "Talha Speaks AI",
-        desc: "Led go-to-market campaigns and managed development pipelines for AI-powered solutions.",
+        title: "Accounts Associate - ",
+        company: "Klarus AI",
+        desc: "Managed client accounts, invoicing and financial records, and supported day-to-day operations for AI-powered solutions.",
     },
     {
         date: "June 2024 – Sept 2024",
@@ -137,7 +137,7 @@ export default function Section6() {
                                 </span>
                                 <i>{ARROW_SVG}{ARROW_SVG}</i>
                             </span>
-                            <h3 className="text-white reveal-text"><RevealText>Career Path & Expertise</RevealText></h3>
+                            <h2 className="text-white reveal-text h3"><RevealText>Career Path & Expertise</RevealText></h2>
                             <p className="text-white fz-font-lg m-0">Tracking the evolution of successful Product Lifecycle, Market Experience, and reliable automations.</p>
                         </div>
                         <div className="col-lg-3 ms-lg-auto d-flex justify-content-lg-end">
@@ -155,15 +155,15 @@ export default function Section6() {
                                     <img className="w-100 scale-img-from-to" data-value-1="1.5" data-value-2="1" src="/assets/imgs/pages/webp-images/Untitled design.webp" alt="Talha Speaks AI" width={550} height={540} loading="lazy" />
                                     <div className="alt-portfolio-btn">
                                         <div className="content">
-                                            <h2 className="fw-400 fz-font-3xl text-white mb-0 mt-20">Click to download my Résumé.</h2>
+                                            <h3 className="h2 fw-400 fz-font-3xl text-white mb-0 mt-20">Click to download my Résumé.</h3>
                                             <p className="text-white fz-font-md mb-0 mt-10 text-truncate-2 des">I have had the privilege of working on a diverse range of projects.</p>
                                         </div>
                                     </div>
                                 </a>
                                 <div className="alt-portfolio-content d-flex justify-content-between align-items-center bg-neutral-700">
-                                    <h5 className="alt-portfolio-title mb-0">
+                                    <p className="alt-portfolio-title mb-0 fw-bold">
                                         <a href="#" id="cv-download-link" onClick={openModal} className="common-underline text-white">Download CV.</a>
-                                    </h5>
+                                    </p>
                                     <span className="alt-portfolio-plus text-white">{PLUS_ICON}</span>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@ export default function Section6() {
                                     <li key={i} className="journey-list__item scroll-move-up">
                                         <span className="journey-list__date">{item.date}</span>
                                         <div className="journey-list__body">
-                                            <h6 className="journey-list__title neutral-0">{item.title} <span className="journey-list__company">{item.company}</span></h6>
+                                            <h3 className="journey-list__title neutral-0 h6">{item.title} <span className="journey-list__company">{item.company}</span></h3>
                                             <p className="journey-list__desc">{item.desc}</p>
                                         </div>
                                         <Link to="#" className="journey-list__link" aria-label="View details">{ARROW_SVG}</Link>

@@ -27,7 +27,6 @@ import Home10Sec4PinEffect from "@/shared/effects/Home10Sec4PinEffect";
 import Home10Sec6PinEffect from "@/shared/effects/Home10Sec6PinEffect";
 import Home12Sec2StackEffect from "@/shared/effects/Home12Sec2StackEffect";
 import Home15Sec6FlipEffect from "@/shared/effects/Home15Sec6FlipEffect";
-import MagnificPopupEffect from "@/shared/effects/MagnificPopupEffect";
 import CursorTrailEffect from "@/shared/effects/CursorTrailEffect";
 
 /**
@@ -71,7 +70,6 @@ export default function GlobalEffects() {
       <Home10Sec6PinEffect key={`h10s6pin-${key}`} />
       <Home12Sec2StackEffect key={`h12s2stack-${key}`} />
       <Home15Sec6FlipEffect key={`h15s6flip-${key}`} />
-      <MagnificPopupEffect key={`magnific-${key}`} />
       <CursorTrailEffect key={`cursor-trail-${key}`} />
     </>
   );

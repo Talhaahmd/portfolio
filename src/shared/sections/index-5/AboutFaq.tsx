@@ -47,7 +47,13 @@ export default function AboutFaq() {
                                 {i === 3 ? (
                                     <>
                                         {" "}
-                                        <Link to="/resources">Browse the resources</Link>.
+                                        Start with the <Link to="/90-days-roadmap">90 day roadmap</Link>, the <Link to="/claude-skills">Claude skills guide</Link> or the{" "}
+                                        <Link to="/resources">motion graphics gallery</Link>.
+                                    </>
+                                ) : i === 4 ? (
+                                    <>
+                                        {" "}
+                                        Go to the <Link to="/contact">contact page</Link>.
                                     </>
                                 ) : null}
                             </p>

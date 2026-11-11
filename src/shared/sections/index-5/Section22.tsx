@@ -85,10 +85,10 @@ export default function Section2() {
                                 </span>
                             </div>
                             <div className="col-xxl-9 col-lg-10">
-                                <h3 className="reveal-text lh-1">
+                                <h2 className="reveal-text lh-1 h3">
                                     <RevealText>
                                         I help businesses acquire and retain customers through AI automation, sales, and growth strategies.                                </RevealText>
-                                </h3>
+                                </h2>
                             </div>
                         </div>
 
@@ -115,9 +115,9 @@ export default function Section2() {
                                         </picture>
                                         <div className="sec-2-home-5__hero-overlay p-absolute top-0 left-0 w-100 h-100 d-flex flex-column justify-content-between p-4">
                                             <div className="d-flex justify-content-between align-items-start">
-                                                <h6 className="sec-2-home-5__hero-title text-white fw-bold mb-0">
+                                                <p className="sec-2-home-5__hero-title text-white fw-bold mb-0">
                                                     Representative At The <br />Global AI Show.
-                                                </h6>
+                                                </p>
                                                 <span className="text-white opacity-75 text-nowrap">© 2026</span>
                                             </div>
                                             <div className="d-flex justify-content-between align-items-end flex-wrap gap-2">
@@ -167,7 +167,7 @@ export default function Section2() {
                                                     className="img-cover" loading="lazy" />
                                             </div>
                                             <div>
-                                                <h6 className="fw-600 neutral-900 fz-font-md mb-0">Mavlyanov S.</h6>
+                                                <p className="fw-600 neutral-900 fz-font-md mb-0">Mavlyanov S.</p>
                                                 <span className="neutral-500 small fz-font-label">CEO & Founder, Moneff</span>
                                             </div>
                                         </div>
