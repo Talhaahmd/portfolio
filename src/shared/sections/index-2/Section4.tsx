@@ -71,7 +71,7 @@ export default function Section4({ className }: Section4Props) {
                                     </i>
                                 </span>
                                 <span className="fs-font-md fw-500 text-decoration-underline">
-                                    © Klarus AI
+                                    © Talha Speaks AI
                                 </span>
                             </div>
                         </div>
@@ -113,7 +113,7 @@ export default function Section4({ className }: Section4Props) {
                                             <div className="rounded-4 overflow-hidden">
                                                 <img
                                                     src={service.image}
-                                                    alt="Klarus AI"
+                                                    alt="Talha Speaks AI"
                                                     width={600}
                                                     height={400}
                                                     className="img-cover" loading="lazy" />

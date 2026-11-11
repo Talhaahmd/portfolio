@@ -133,7 +133,7 @@ export default function Section6() {
                                 <img
                                     className="badge-zoon-in"
                                     src="/assets/imgs/icons/badge-2.svg"
-                                    alt="Klarus AI"
+                                    alt="Talha Speaks AI"
                                     width={120}
                                     height={120} loading="lazy" />
                                 <span className="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center justify-content-center overflow-unset">

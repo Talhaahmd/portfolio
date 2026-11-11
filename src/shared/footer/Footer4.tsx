@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// Footer 4 - Klarus AI Solutions
+// Footer 4 - Talha Speaks AI
 
 const ARROW_SVG = (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@ export default function Footer4() {
                     <div className="row g-md-5 g-4 pb-45 mb-40">
                         <div className="col-12 text-center">
                             <h2 className="footer-4-connect-title fw-900 fz-200 text-white mb-0 text-scale-anim text-center text-nowrap">
-                                Klarus AI Solutions
+                                Talha Speaks AI
                                 <sup className="fz-80 fw-400">®</sup>
                             </h2>
                         </div>
@@ -157,7 +157,7 @@ export default function Footer4() {
                         <div className="row align-items-center g-3">
                             <div className="col-xl-2 col-lg-5">
                                 <div className="at-footer-copyright-wrap text">
-                                    <span className="at-footer-copyright">Klarus AI © 2026</span>
+                                    <span className="at-footer-copyright">Talha Speaks AI © 2026</span>
                                 </div>
                             </div>
                             <div className="col-xl-7 col-lg-7">

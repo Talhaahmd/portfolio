@@ -154,7 +154,7 @@ export default function Section3() {
                                 <div className="content">
                                     <h5 className="revert-text mb-0 reveal-text">
                                         <RevealText>
-                                            Klarus AI is a digital agency building impactful AI solutions. We think
+                                            Talha Speaks AI is a digital agency building impactful AI solutions. We think
                                             like strategists and execute with clarity, creativity, and performance.
                                         </RevealText>
                                     </h5>

@@ -67,7 +67,7 @@ export default function Section6() {
                             <span className="sec-6-home-9__tag-text text-scramble">Meet our team</span>
                             <img
                                 src="/assets/imgs/pages/home-9/sec-6-tag-arrow.webp"
-                                alt="Klarus AI"
+                                alt="Talha Speaks AI"
                                 width={14}
                                 height={13}
                                 loading="lazy"
@@ -92,7 +92,7 @@ export default function Section6() {
                                         <div className="sec-6-home-9__avatar">
                                             <img
                                                 src={member.avatar}
-                                                alt="Klarus AI"
+                                                alt="Talha Speaks AI"
                                                 width={68}
                                                 height={68}
                                                 loading="lazy"
@@ -116,7 +116,7 @@ export default function Section6() {
                             <div className="sec-6-home-9__footer-icon">
                                 <img
                                     src="/assets/imgs/pages/home-9/sec-6-shape.webp"
-                                    alt="Klarus AI"
+                                    alt="Talha Speaks AI"
                                     width={40}
                                     height={40}
                                     loading="lazy"

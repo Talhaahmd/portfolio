@@ -57,7 +57,7 @@ export default function Footer8() {
             <div className="footer-8__bg" aria-hidden="true">
                 <img
                     src="/assets/imgs/pages/home-8/footer-8-bg.webp"
-                    alt="Klarus AI"
+                    alt="Talha Speaks AI"
                     style={{ objectFit: "cover" }}
                     priority={false} loading="lazy" />
             </div>
@@ -77,7 +77,7 @@ export default function Footer8() {
                                 <img
                                     className="footer-8__nav-arrow"
                                     src="/assets/imgs/pages/home-8/footer-8-nav-arrow.svg"
-                                    alt="Klarus AI"
+                                    alt="Talha Speaks AI"
                                     width={14}
                                     height={13}
                                     aria-hidden="true"
@@ -134,7 +134,7 @@ export default function Footer8() {
                                                 <img
                                                     className="footer-8__social-icon"
                                                     src={`/assets/imgs/pages/home-8/${social.icon}`}
-                                                    alt="Klarus AI"
+                                                    alt="Talha Speaks AI"
                                                     width={18}
                                                     height={18} loading="lazy" />
                                                 <span>{social.label}</span>
@@ -142,7 +142,7 @@ export default function Footer8() {
                                             <span className="footer-8__social-arrow" aria-hidden="true">
                                                 <img
                                                     src={`/assets/imgs/pages/home-8/${social.arrow}`}
-                                                    alt="Klarus AI"
+                                                    alt="Talha Speaks AI"
                                                     width={24}
                                                     height={10} loading="lazy" />
                                             </span>
@@ -211,7 +211,7 @@ export default function Footer8() {
                 {/* Bottom */}
                 <div className="footer-8__bottom">
                     <div className="footer-8__bottom-inner d-flex flex-wrap gap-3 align-items-center justify-content-between">
-                        <span className="footer-8__copy">Klarus AI &copy; 2026</span>
+                        <span className="footer-8__copy">Talha Speaks AI &copy; 2026</span>
                         <ul className="footer-8__policies list-unstyled d-flex flex-wrap gap-3 mb-0">
                             <li>
                                 <Link to="#">Privacy Policy</Link>

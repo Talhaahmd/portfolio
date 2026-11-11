@@ -178,11 +178,11 @@ export default function Footer9() {
                     </div>
                 </div>
 
-                <h2 className="footer-9__brand text-scale-anim">Klarus AI</h2>
+                <h2 className="footer-9__brand text-scale-anim">Talha Speaks AI</h2>
 
                 <div className="footer-9__bottom">
                     <div className="footer-9__bottom-bar d-flex flex-wrap align-items-center justify-content-between gap-3">
-                        <span className="footer-9__copy">Klarus AI &copy; 2026</span>
+                        <span className="footer-9__copy">Talha Speaks AI &copy; 2026</span>
                         <ul className="footer-9__policies list-unstyled d-flex flex-wrap gap-3 gap-xxl-4 mb-0">
                             <li>
                                 <Link to="#">Privacy Policy</Link>
@@ -198,7 +198,7 @@ export default function Footer9() {
                     <div className="footer-9__line" aria-hidden="true">
                         <img
                             src="/assets/imgs/pages/home-9/footer-9-line.webp"
-                            alt="Klarus AI"
+                            alt="Talha Speaks AI"
                             width={1720}
                             height={33}
                             loading="lazy"

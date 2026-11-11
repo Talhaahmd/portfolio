@@ -5,7 +5,7 @@ import { SLIDESHOW_PROJECTS } from "@/shared/slideshow/projects";
 export default function PortfolioHorizontalPage() {
   return (
     <>
-      <PageMeta title="Klarus AI - PortfolioHorizontal" />
+      <PageMeta title="Talha Speaks AI - PortfolioHorizontal" />
             <Slideshow variant="horizontal" projects={SLIDESHOW_PROJECTS} />
         
     </>

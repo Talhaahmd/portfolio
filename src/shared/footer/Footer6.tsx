@@ -22,7 +22,7 @@ export default function Footer6() {
                     <div className="row g-5 pb-45 align-items-end">
                         <div className="col-12">
                             <h2 className="footer-3-connect-title fw-600 fz-180 text-white mb-0 text-scale-anim text-center">
-                                Klarus AI
+                                Talha Speaks AI
                             </h2>
                         </div>
                         <div className="col-lg-3 col-md-6 d-flex flex-column justify-content-between">
@@ -139,7 +139,7 @@ export default function Footer6() {
                                     <div className="alt-footer-link-item">
                                         <ul className="d-flex flex-wrap align-items-center justify-content-between text-center gap-1">
                                             <li>
-                                                <span className="fz-font-md neutral-0 opacity-50">Klarus AI &copy; 2026 </span>
+                                                <span className="fz-font-md neutral-0 opacity-50">Talha Speaks AI &copy; 2026 </span>
                                             </li>
                                             <li>
                                                 <span className="fz-font-md neutral-0 opacity-50">[ Since 2012 ] </span>

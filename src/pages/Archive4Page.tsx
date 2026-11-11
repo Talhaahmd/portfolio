@@ -5,7 +5,7 @@ import Section2 from "@/shared/sections/index-3/Section12";
 export default function Archive4Page() {
   return (
     <>
-      <PageMeta title="Klarus AI - Blog" />
+      <PageMeta title="Talha Speaks AI - Blog" />
                 <Section1 />
                 <Section2 />
             

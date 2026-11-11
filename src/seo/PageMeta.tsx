@@ -39,8 +39,8 @@ export default function PageMeta({ title, description, favicon, image, noindex }
     const url = SITE_URL + canonicalPath(pathname);
     const img = image || OG_IMAGE;
     const isHome = canonicalPath(pathname) === "/";
-    // Template pages still using the "Klarus AI" placeholder, 404s and alias routes stay out of search
-    const hide = noindex || /klarus/i.test(title);
+    // Template pages still using the "Talha Speaks AI" placeholder, 404s and alias routes stay out of search
+    const hide = noindex;
 
     document.title = fullTitle;
     meta("name", "description", desc);

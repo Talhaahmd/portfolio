@@ -118,7 +118,7 @@ export default function Section1() {
                     className="img-cover scale-up"
                     data-speed=".8"
                     src="/assets/imgs/pages/img-169.webp"
-                    alt="Klarus AI"
+                    alt="Talha Speaks AI"
                     width={1920}
                     height={800} loading="lazy" />
             </div>

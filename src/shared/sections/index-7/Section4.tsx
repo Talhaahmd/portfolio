@@ -29,7 +29,7 @@ export default function Section4() {
                             <img
                                 className="sec-4-home-7__img fix anim-zoomin"
                                 src="/assets/imgs/pages/home-7/sec-4-helmet.webp"
-                                alt="Klarus AI"
+                                alt="Talha Speaks AI"
                                 width={377}
                                 height={471}
                                 loading="lazy"

@@ -48,7 +48,7 @@ export default function Section9() {
                                 </span>
                                 <h3 className="at-section-title reveal-text mb-lg-0 mb-4">
                                     <RevealText>
-                                        Meet the minds behind Klarus AI Studio. Rely on our experienced professionals to find
+                                        Meet the minds behind Talha Speaks AI Studio. Rely on our experienced professionals to find
                                         solutions tailored just for you.
                                     </RevealText>
                                 </h3>

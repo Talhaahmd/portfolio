@@ -17,7 +17,7 @@ import Section13 from "@/shared/sections/index-1/Section13";
 export default function Home11Page() {
   return (
     <>
-      <PageMeta title="Klarus AI" />
+      <PageMeta title="Talha Speaks AI" />
       <Section1 />
       <Section2 />
       <Section3 />

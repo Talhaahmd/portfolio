@@ -5,7 +5,7 @@ import { SLIDESHOW_PROJECTS } from "@/shared/slideshow/projects";
 export default function PortfolioSplitPage() {
   return (
     <>
-      <PageMeta title="Klarus AI - PortfolioSplit" />
+      <PageMeta title="Talha Speaks AI - PortfolioSplit" />
             <Slideshow variant="split" projects={SLIDESHOW_PROJECTS} />
         
     </>

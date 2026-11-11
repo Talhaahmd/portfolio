@@ -10,7 +10,7 @@ import Section7 from "@/shared/sections/about-3/Section7";
 export default function About3Page() {
   return (
     <>
-      <PageMeta title="Klarus AI - About" />
+      <PageMeta title="Talha Speaks AI - About" />
                 <Section1 />
                 <Section2 />
                 <Section3 />

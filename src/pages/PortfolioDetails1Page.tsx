@@ -23,7 +23,7 @@ export default function PortfolioDetails1Page() {
 
     return (
         <>
-            <PageMeta title={caseStudy?.title ? `${caseStudy.title} - Klarus AI` : "Klarus AI - Case Study"} />
+            <PageMeta title={caseStudy?.title ? caseStudy.title : "Case Study"} />
             <Section1 caseStudy={caseStudy} />
             <Section2 currentSlug={slug || "smart-automation"} relatedSlugs={caseStudy?.related_slugs} />
         </>

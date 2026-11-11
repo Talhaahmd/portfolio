@@ -29,7 +29,7 @@ const STATS = [
     suffix: "+",
     label: (
       <>
-        Brands scaled <br /> with Klarus AI
+        Brands scaled <br /> with Talha Speaks AI
       </>
     ),
   },

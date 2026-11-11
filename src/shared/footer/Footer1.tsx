@@ -27,7 +27,7 @@ const FOOTER_SERVICES = [
 ];
 
 const SOCIAL_LINKS = [
-  { label: "Instagram", href: "https://www.instagram.com/klarus.ai/" },
+  { label: "Instagram", href: "https://www.instagram.com/talhaspeaksai/" },
   { label: "Upwork", href: "https://www.upwork.com/freelancers/~017655f3515038fc66" },
 ] as const;
 
@@ -133,7 +133,7 @@ export default function Footer1() {
               </div>
               <div className="col-xxl-9 col-lg-8 col-12 text-lg-end">
                 <h1 className="fz-160 common-white mb-0 text-scale-anim">
-                  Klarus AI<sup className="fz-80 fw-400">®</sup>
+                  Talha Speaks AI<sup className="fz-80 fw-400">®</sup>
                 </h1>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Footer1() {
             <div className="row align-items-center g-3">
               <div className="col-lg-2">
                 <div className="at-footer-copyright-wrap text">
-                  <span className="at-footer-copyright">Klarus © 2026 </span>
+                  <span className="at-footer-copyright">Talha Speaks AI © 2026 </span>
                 </div>
               </div>
               <div className="col-lg-8">

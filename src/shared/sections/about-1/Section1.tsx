@@ -13,18 +13,18 @@ const ARROW_SVG = (
 );
 
 const AVATARS = [
-    { src: "/assets/imgs/template/avatar/avatar-10.webp", alt: "Klarus AI", hiddenOnMobile: false },
-    { src: "/assets/imgs/template/avatar/avatar-11.webp", alt: "Klarus AI", hiddenOnMobile: false },
-    { src: "/assets/imgs/template/avatar/avatar-12.webp", alt: "Klarus AI", hiddenOnMobile: false },
-    { src: "/assets/imgs/template/avatar/avatar-13.webp", alt: "Klarus AI", hiddenOnMobile: false },
-    { src: "/assets/imgs/template/avatar/avatar-14.webp", alt: "Klarus AI", hiddenOnMobile: true },
+    { src: "/assets/imgs/template/avatar/avatar-10.webp", alt: "Talha Speaks AI", hiddenOnMobile: false },
+    { src: "/assets/imgs/template/avatar/avatar-11.webp", alt: "Talha Speaks AI", hiddenOnMobile: false },
+    { src: "/assets/imgs/template/avatar/avatar-12.webp", alt: "Talha Speaks AI", hiddenOnMobile: false },
+    { src: "/assets/imgs/template/avatar/avatar-13.webp", alt: "Talha Speaks AI", hiddenOnMobile: false },
+    { src: "/assets/imgs/template/avatar/avatar-14.webp", alt: "Talha Speaks AI", hiddenOnMobile: true },
 ];
 
 const SLIDES = [
-    { src: "/assets/imgs/pages/img-117.webp", alt: "Klarus AI" },
-    { src: "/assets/imgs/pages/img-118.webp", alt: "Klarus AI" },
-    { src: "/assets/imgs/pages/img-119.webp", alt: "Klarus AI" },
-    { src: "/assets/imgs/pages/img-120.webp", alt: "Klarus AI" },
+    { src: "/assets/imgs/pages/img-117.webp", alt: "Talha Speaks AI" },
+    { src: "/assets/imgs/pages/img-118.webp", alt: "Talha Speaks AI" },
+    { src: "/assets/imgs/pages/img-119.webp", alt: "Talha Speaks AI" },
+    { src: "/assets/imgs/pages/img-120.webp", alt: "Talha Speaks AI" },
 ];
 
 export default function Section1() {

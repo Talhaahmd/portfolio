@@ -21,7 +21,7 @@ export default function Section2() {
                                 <img
                                     className="img-cover"
                                     src={img.src}
-                                    alt="Klarus AI"
+                                    alt="Talha Speaks AI"
                                     width={img.width}
                                     height={img.height} loading="lazy" />
                             </div>

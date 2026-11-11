@@ -45,13 +45,13 @@ export default function Section1() {
                     <div className="col-xl-6 h8-col-right">
                         <div className="h8-photos d-flex align-items-start">
                             <div className="h8-photo-box anim-zoomin-wrap" scroll-parallax-range="228" data-h8-parallax-ease="sine.inOut">
-                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-1.webp" alt="Klarus AI" width={500} height={600} loading="lazy" />
+                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-1.webp" alt="Talha Speaks AI" width={500} height={600} loading="lazy" />
                             </div>
                             <div className="h8-photo-box h8-photo-down anim-zoomin-wrap" scroll-parallax-range="110" data-h8-parallax-ease="power3.in">
-                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-2.webp" alt="Klarus AI" width={500} height={600} loading="lazy" />
+                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-2.webp" alt="Talha Speaks AI" width={500} height={600} loading="lazy" />
                             </div>
                             <div className="h8-photo-box anim-zoomin-wrap" scroll-parallax-range="52" data-h8-parallax-ease="sine.inOut">
-                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-3.webp" alt="Klarus AI" width={500} height={600} loading="lazy" />
+                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-3.webp" alt="Talha Speaks AI" width={500} height={600} loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -66,13 +66,13 @@ export default function Section1() {
                     <div className="col-xl-6 h8-col-left-2 d-none d-xl-block">
                         <div className="h8-photos d-flex align-items-start">
                             <div className="h8-photo-box h8-photo-down anim-zoomin-wrap" scroll-parallax-range="92" data-h8-parallax-ease="expo.in">
-                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-4.webp" alt="Klarus AI" width={500} height={600} loading="lazy" />
+                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-4.webp" alt="Talha Speaks AI" width={500} height={600} loading="lazy" />
                             </div>
                             <div className="h8-photo-box anim-zoomin-wrap" scroll-parallax-range="24" data-h8-parallax-ease="none">
-                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-5.webp" alt="Klarus AI" width={500} height={600} loading="lazy" />
+                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-5.webp" alt="Talha Speaks AI" width={500} height={600} loading="lazy" />
                             </div>
                             <div className="h8-photo-box h8-photo-down anim-zoomin-wrap" scroll-parallax-range="125" data-h8-parallax-ease="power2.inOut">
-                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-6.webp" alt="Klarus AI" width={500} height={600} loading="lazy" />
+                                <img className="anim-zoomin" src="/assets/imgs/pages/home-8/hero8-img-6.webp" alt="Talha Speaks AI" width={500} height={600} loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@ export default function Section1() {
                 <p className="h8-big-title">
                     <span className="h8-word text-scale-anim">ORISA</span><sup className="h8-registered">&#174;</sup>
                     <span className="h8-portrait-frame">
-                        <img src="/assets/imgs/pages/home-8/hero8-img-8.gif" alt="Klarus AI" width={120} height={120} loading="lazy" />
+                        <img src="/assets/imgs/pages/home-8/hero8-img-8.gif" alt="Talha Speaks AI" width={120} height={120} loading="lazy" />
                     </span>
                     <span className="h8-word text-scale-anim">STUDIO</span>
                 </p>

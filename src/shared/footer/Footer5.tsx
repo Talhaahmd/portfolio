@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-// Footer 5 - Klarus AI Nova (light style with grid background)
+// Footer 5 - Talha Speaks AI Nova (light style with grid background)
 
 const DECO_SVG_1 = (
     <svg xmlns="http://www.w3.org/2000/svg" width="57" height="91" viewBox="0 0 57 91" fill="none">
@@ -82,7 +82,7 @@ export default function Footer5() {
 
                                     <img
                                         src="/assets/imgs/pages/footer.png"
-                                        alt="Klarus AI"
+                                        alt="Talha Speaks AI"
                                         width={205}
                                         height={315}
                                         className="d-none d-md-block"

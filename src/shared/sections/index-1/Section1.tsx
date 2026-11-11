@@ -48,7 +48,7 @@ export default function Section1() {
                         className="layer"
                         data-depth=".1"
                         src="/assets/imgs/pages/img-1.webp"
-                        alt="Klarus AI"
+                        alt="Talha Speaks AI"
                         style={{ width: "auto", height: "auto", alignSelf: "flex-end" }} loading="lazy" />
                 </div>
                 <div className="container p-relative">

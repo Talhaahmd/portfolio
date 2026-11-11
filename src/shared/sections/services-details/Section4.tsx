@@ -102,7 +102,7 @@ export default function Section4() {
                                         <img
                                             className="img-cover rounded-2"
                                             src={step.img}
-                                            alt="Klarus AI"
+                                            alt="Talha Speaks AI"
                                             width={400}
                                             height={280} loading="lazy" />
                                     </div>

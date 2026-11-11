@@ -29,7 +29,7 @@ export default function Section5() {
                     <img
                         className="sec-5-home-9__bg-img"
                         src="/assets/imgs/pages/home-9/sec-5-img-1.webp"
-                        alt="Klarus AI"
+                        alt="Talha Speaks AI"
                         width={1024}
                         height={512}
                         loading="lazy"

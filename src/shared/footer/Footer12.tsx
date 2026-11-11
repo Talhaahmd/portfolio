@@ -39,8 +39,8 @@ export default function Footer12() {
 
                     <div className="footer-12__columns">
                         <div className="footer-12__col footer-12__col--brand">
-                            <Link className="footer-12__brand" to="/index-12" aria-label="Klarus AI home">
-                                <img className="footer-12__brand-logo" src="/assets/imgs/template/logo/logo-w.svg" alt="Klarus AI" loading="lazy" />
+                            <Link className="footer-12__brand" to="/index-12" aria-label="Talha Speaks AI home">
+                                <img className="footer-12__brand-logo" src="/assets/imgs/template/logo/logo-w.svg" alt="Talha Speaks AI" loading="lazy" />
                             </Link>
                             <p className="footer-12__brand-desc">Quiet craft for loud ideas. An independent studio shaping portfolios, identities, and digital products built to last.</p>
                             <div className="at-hero-social footer-12__socials" aria-label="Social links">
@@ -86,7 +86,7 @@ export default function Footer12() {
                     <span className="footer-12__divider" aria-hidden="true"></span>
 
                     <div className="footer-12__bottom">
-                        <p className="footer-12__copy mb-0">&copy; 2026 Klarus AI. All rights reserved.</p>
+                        <p className="footer-12__copy mb-0">&copy; 2026 Talha Speaks AI. All rights reserved.</p>
                         <ul className="footer-12__legal" aria-label="Legal">
                             <li><a href="#">Terms</a></li>
                             <li><a href="#">Privacy</a></li>

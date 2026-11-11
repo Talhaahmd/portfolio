@@ -28,7 +28,7 @@ export default function Section1({ caseStudy }: Section1Props) {
     const tagline = caseStudy?.tagline || caseStudy?.eyebrow || "AI Architecture & Engineering";
     const demoUrl = caseStudy?.demo_url || "#";
 
-    const client = caseStudy?.meta_client || caseStudy?.client_name || "Klarus Enterprise Partner";
+    const client = caseStudy?.meta_client || caseStudy?.client_name || "Client";
     const releaseDate = caseStudy?.meta_year || "2024";
     const role = caseStudy?.meta_role || "AI & Automation Engineer";
     const duration = caseStudy?.meta_duration || "6 Weeks";
@@ -75,9 +75,9 @@ export default function Section1({ caseStudy }: Section1Props) {
 
     const quoteText =
         caseStudy?.quote_text ||
-        "\"Klarus AI completely transformed how we operate. Their strategic engineering and attention to reliability delivered an automated system that drives measurable impact every single day.\"";
+        "\"Talha Speaks AI completely transformed how we operate. Their strategic engineering and attention to reliability delivered an automated system that drives measurable impact every single day.\"";
     const quoteAuthor = caseStudy?.quote_author || "Engineering Lead";
-    const quoteRole = caseStudy?.quote_role || "Klarus Enterprise Partner";
+    const quoteRole = caseStudy?.quote_role || "Client";
 
     return (
         <section className="sec-1-portfolio-details-1 overflow-hidden pt-150 pb-100">

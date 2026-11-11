@@ -101,7 +101,7 @@ export default function Section3() {
                             >
                                 <img
                                     src="/assets/imgs/icons/badge-1.svg"
-                                    alt="Klarus AI"
+                                    alt="Talha Speaks AI"
                                     width={140}
                                     height={140} loading="lazy" />
                                 <span className="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center justify-content-center">

@@ -64,7 +64,7 @@ export default function Footer3() {
               <div className="footer-3-logo">
                 <h1 className="fz-120 mb-0 text-scale-anim text-white fw-500">
                   <Link to="/" className="text-white text-decoration-none">
-                    Klarus AI
+                    Talha Speaks AI
                   </Link>
                 </h1>
               </div>
@@ -158,7 +158,7 @@ export default function Footer3() {
                 <div className="at-footer-widget alt-footer-link-item-wrap border-top-opacity pt-4">
                   <div className="alt-footer-link-item">
                     <ul className="d-flex flex-wrap align-items-center justify-content-between text-center gap-1">
-                      <li><span className="fz-font-md neutral-0 opacity-50">Klarus AI © 2026</span></li>
+                      <li><span className="fz-font-md neutral-0 opacity-50">Talha Speaks AI © 2026</span></li>
                       <li><a href="#" className="fz-font-md neutral-0 opacity-50">Privacy Policy</a></li>
                       <li><a href="#" className="fz-font-md neutral-0 opacity-50">Terms of Use</a></li>
                       <li><a href="#" className="fz-font-md neutral-0 opacity-50">Refund Policy</a></li>

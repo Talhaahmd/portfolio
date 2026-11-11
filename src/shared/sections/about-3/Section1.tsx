@@ -24,7 +24,7 @@ const ARROW_CIRCLE_SVG = (
 const JOURNEY_ITEMS = [
     {
         date: "2025 — Present",
-        title: "AI Automations and Agents [ Klarus AI ]",
+        title: "AI Automations and Agents [ Talha Speaks AI ]",
         desc: "Building end-to-end AI automation systems, CRM integrations, and scalable MVPs for clients across multiple industries.",
     },
     {
@@ -109,7 +109,7 @@ export default function Section1() {
                     className="img-cover scale-up"
                     data-speed=".4"
                     src="/assets/imgs/pages/img-137.webp"
-                    alt="Klarus AI"
+                    alt="Talha Speaks AI"
                     width={1400}
                     height={700} loading="lazy" />
             </div>

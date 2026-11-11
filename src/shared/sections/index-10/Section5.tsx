@@ -37,7 +37,7 @@ export default function Section5() {
                             </span>
                         </Link>
                         <h2 className="sec-5-home-10__title mt-3 mb-0 at_fade_anim reveal-text" data-delay="0.1">
-                            <RevealText>At Klarus, we create n8n automations, scalable MVPs, and high-performing mobile apps that turn ideas into real business systems.</RevealText>
+                            <RevealText>At Talha Speaks AI, we create n8n automations, scalable MVPs, and high-performing mobile apps that turn ideas into real business systems.</RevealText>
                         </h2>
                     </div>
                     <div className="col-xl-auto col-lg-10">
@@ -54,7 +54,7 @@ export default function Section5() {
                     <img
                         className="sec-5-home-10__figure-img"
                         src="/assets/imgs/pages/home-10/sec-5-wireframe-head.webp"
-                        alt="Klarus AI"
+                        alt="Talha Speaks AI"
                         width={800}
                         height={500} loading="lazy" />
                 </figure>

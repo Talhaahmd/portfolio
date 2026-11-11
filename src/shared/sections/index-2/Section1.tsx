@@ -46,7 +46,7 @@ export default function Section1({ classList }: { classList?: string }) {
                                 <img
                                     className="img-cover"
                                     src="/assets/imgs/pages/webp-images/hero-mobile.svg"
-                                    alt="Klarus AI"
+                                    alt="Talha Speaks AI"
                                     width={400}
                                     height={500} loading="lazy" />
                             </div>

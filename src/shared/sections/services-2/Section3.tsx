@@ -6,7 +6,7 @@ const FAQ_ITEMS = [
     {
         id: "collapseOne",
         num: "1",
-        question: "What services does Klarus AI offer?",
+        question: "What services does Talha Speaks AI offer?",
         answer: "We offer AI automations, MVP development, CRM integrations, workflow systems, and cloud/API infrastructure. Our work spans from simple automation to complex multi-system integrations.",
         open: true,
     },

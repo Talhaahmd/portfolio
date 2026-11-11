@@ -252,7 +252,7 @@ export default function Footer7() {
                 {/* Bottom */}
                 <div className="footer-7__bottom" data-delay="0.1" data-start="100%">
                     <div className="footer-7__bottom-inner d-flex flex-wrap gap-3 align-items-center justify-content-between">
-                        <span className="footer-7__copy">Klarus AI &copy; 2026</span>
+                        <span className="footer-7__copy">Talha Speaks AI &copy; 2026</span>
                         <ul className="footer-7__policies list-unstyled d-flex flex-wrap gap-3 mb-0">
                             <li>
                                 <Link to="#">Privacy Policy</Link>

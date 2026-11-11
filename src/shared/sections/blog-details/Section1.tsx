@@ -64,7 +64,7 @@ export default function Section1() {
                                 <span className="nav-menu__item fz-font-label fw-600 neutral-500">SHARE THIS ARTICLE</span>
                                 <ul className="at-social-list list-unstyled d-flex flex-wrap align-items-end gap-md-4 gap-3">
                                     <li>
-                                        <a href="https://www.instagram.com/klarus.ai/" target="_blank" rel="noopener noreferrer" className="at-social__link d-flex align-items-center gap-2" aria-label="Instagram">
+                                        <a href="https://www.instagram.com/talhaspeaksai/" target="_blank" rel="noopener noreferrer" className="at-social__link d-flex align-items-center gap-2" aria-label="Instagram">
                                             {INSTAGRAM_SVG}
                                         </a>
                                     </li>

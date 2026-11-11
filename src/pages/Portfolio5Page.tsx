@@ -5,7 +5,7 @@ import Section2 from "@/shared/sections/about-3/Section7";
 export default function Portfolio5Page() {
   return (
     <>
-      <PageMeta title="Klarus AI - Portfolio5" />
+      <PageMeta title="Talha Speaks AI - Portfolio5" />
             <Section1 />
             <Section2 />
         

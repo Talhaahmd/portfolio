@@ -235,7 +235,7 @@ export default function Section4() {
                                 <div className="content">
                                     <h5 className="revert-text mb-0 reveal-text">
                                         <RevealText>
-                                            Klarus builds automation systems, MVPs, and scalable digital solutions.
+                                            Talha Speaks AI builds automation systems, MVPs, and scalable digital solutions.
                                             We combine strategy, development, and integrations to help businesses
                                             launch faster and scale smarter.
                                         </RevealText>

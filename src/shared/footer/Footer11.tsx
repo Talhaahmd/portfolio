@@ -66,7 +66,7 @@ const SOCIAL_LINKS = [
 
 const NAV_ARROW_IMAGE = {
     src: "/assets/imgs/pages/home-8/footer-8-nav-arrow.svg",
-    alt: "Klarus AI",
+    alt: "Talha Speaks AI",
     width: 14,
     height: 13,
 };
@@ -247,7 +247,7 @@ export default function Footer11() {
                                                 <img
                                                     className="footer-8__social-icon"
                                                     src={`/assets/imgs/pages/home-8/${social.icon}`}
-                                                    alt="Klarus AI"
+                                                    alt="Talha Speaks AI"
                                                     width={18}
                                                     height={18} loading="lazy" />
                                                 <span>{social.label}</span>
@@ -255,7 +255,7 @@ export default function Footer11() {
                                             <span className="footer-8__social-arrow" aria-hidden="true">
                                                 <img
                                                     src={`/assets/imgs/pages/home-8/${social.arrow}`}
-                                                    alt="Klarus AI"
+                                                    alt="Talha Speaks AI"
                                                     width={24}
                                                     height={10} loading="lazy" />
                                             </span>
@@ -271,7 +271,7 @@ export default function Footer11() {
                 <div className="footer-11__bottom">
                     <div className="footer-11__bottom-inner d-flex flex-wrap align-items-center justify-content-between gap-3">
                         <div className="d-flex flex-wrap align-items-center gap-3 gap-xxl-4">
-                            <span className="footer-11__copy">Klarus AI &copy; 2026</span>
+                            <span className="footer-11__copy">Talha Speaks AI &copy; 2026</span>
                             <span className="footer-11__tagline d-none d-sm-inline">
                                 Motion &amp; Video Creative Studio
                             </span>

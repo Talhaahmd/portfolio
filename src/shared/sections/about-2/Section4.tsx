@@ -3,13 +3,13 @@ import Marquee from "react-fast-marquee";
 // About 2 Section 4 - Moving gallery (carousel ticker left)
 
 const GALLERY_IMGS = [
-    { src: "/assets/imgs/pages/img-130.webp", alt: "Klarus AI" },
-    { src: "/assets/imgs/pages/img-131.webp", alt: "Klarus AI" },
-    { src: "/assets/imgs/pages/img-132.webp", alt: "Klarus AI" },
-    { src: "/assets/imgs/pages/img-133.webp", alt: "Klarus AI" },
-    { src: "/assets/imgs/pages/img-134.webp", alt: "Klarus AI" },
-    { src: "/assets/imgs/pages/img-135.webp", alt: "Klarus AI" },
-    { src: "/assets/imgs/pages/img-136.webp", alt: "Klarus AI" },
+    { src: "/assets/imgs/pages/img-130.webp", alt: "Talha Speaks AI" },
+    { src: "/assets/imgs/pages/img-131.webp", alt: "Talha Speaks AI" },
+    { src: "/assets/imgs/pages/img-132.webp", alt: "Talha Speaks AI" },
+    { src: "/assets/imgs/pages/img-133.webp", alt: "Talha Speaks AI" },
+    { src: "/assets/imgs/pages/img-134.webp", alt: "Talha Speaks AI" },
+    { src: "/assets/imgs/pages/img-135.webp", alt: "Talha Speaks AI" },
+    { src: "/assets/imgs/pages/img-136.webp", alt: "Talha Speaks AI" },
 ];
 
 export default function Section4() {

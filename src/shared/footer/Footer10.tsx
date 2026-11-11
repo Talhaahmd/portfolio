@@ -35,28 +35,28 @@ const SUBSCRIBE_ARROW_SVG = (
 
 const DECO_IMAGE_1 = {
     src: "/assets/imgs/pages/home-10/footer-10-deco-1.webp",
-    alt: "Klarus AI",
+    alt: "Talha Speaks AI",
     width: 420,
     height: 559,
 };
 
 const DECO_IMAGE_2 = {
     src: "/assets/imgs/pages/home-10/footer-10-deco-2.webp",
-    alt: "Klarus AI",
+    alt: "Talha Speaks AI",
     width: 420,
     height: 503,
 };
 
 const BG_IMAGE = {
     src: "/assets/imgs/pages/home-10/footer-10-bg-lines.webp",
-    alt: "Klarus AI",
+    alt: "Talha Speaks AI",
     width: 2096,
     height: 1180,
 };
 
 const NAV_ARROW_IMAGE = {
     src: "/assets/imgs/pages/home-8/footer-8-nav-arrow.svg",
-    alt: "Klarus AI",
+    alt: "Talha Speaks AI",
     width: 14,
     height: 13,
 };
@@ -235,7 +235,7 @@ export default function Footer10() {
 
                 <div className="footer-10__bottom">
                     <div className="footer-10__bottom-inner d-flex flex-wrap align-items-center justify-content-between gap-3">
-                        <span className="footer-10__copy">Klarus AI &copy; 2026</span>
+                        <span className="footer-10__copy">Talha Speaks AI &copy; 2026</span>
                         <span className="footer-10__since">[ Since 2012 ]</span>
                     </div>
                 </div>

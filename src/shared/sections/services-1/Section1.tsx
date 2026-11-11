@@ -1,4 +1,4 @@
-// Services 1 Section 1 - Hero (Klarus AI Studio + contact + banner)
+// Services 1 Section 1 - Hero (Talha Speaks AI Studio + contact + banner)
 
 export default function Section1() {
     return (
@@ -7,7 +7,7 @@ export default function Section1() {
                 <div className="row align-items-center mb-20">
                     <div className="col-lg-9">
                         <h1 className="section-title d-flex fw-600 fz-200 reveal-text mb-0">
-                            Klarus AI Studio<sup>®</sup>
+                            Talha Speaks AI Studio<sup>®</sup>
                         </h1>
                     </div>
                     <div className="col-lg-3 ms-auto text-lg-end">
@@ -29,7 +29,7 @@ export default function Section1() {
                     className="img-cover scale-up"
                     data-speed=".4"
                     src="/assets/imgs/pages/img-153.webp"
-                    alt="Klarus AI"
+                    alt="Talha Speaks AI"
                     width={1920}
                     height={800} loading="lazy" />
             </div>

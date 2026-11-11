@@ -5,7 +5,7 @@ import Section2 from "@/shared/sections/product-cart/Section2";
 export default function ProductCheckoutPage() {
   return (
     <>
-      <PageMeta title="Klarus AI - ProductCheckout" />
+      <PageMeta title="Talha Speaks AI - ProductCheckout" />
                 <Section1 />
                 <Section2 />
             

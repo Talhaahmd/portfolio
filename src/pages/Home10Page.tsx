@@ -10,7 +10,7 @@ import Section6 from "@/shared/sections/index-10/Section6";
 export default function Home10Page() {
   return (
     <>
-      <PageMeta title="Klarus AI - Home10" />
+      <PageMeta title="Talha Speaks AI - Home10" />
             <Section1 />
             <CursorTrailEffect />
             <Section2 />

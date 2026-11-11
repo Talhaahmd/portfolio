@@ -26,8 +26,8 @@ export default function Footer13() {
                 <div className="footer-13__top">
                     <div className="footer-13__brand at_fade_anim" data-fade-from="bottom" data-delay=".1">
                         <Link className="footer-13__logo" to="/">
-                            <img src="/assets/imgs/template/logo/favicon.svg" alt="Klarus AI" loading="lazy" />
-                            <span className="footer-13__logo-text">Klarus AI</span>
+                            <img src="/assets/imgs/template/logo/favicon.svg" alt="Talha Speaks AI" loading="lazy" />
+                            <span className="footer-13__logo-text">Talha Speaks AI</span>
                         </Link>
                         <p className="footer-13__intro mb-0">
                             We design buildings that age with grace, host human moments, and earn their place on the skyline. Studios in Oslo, New York, and Kyoto.
@@ -113,12 +113,12 @@ export default function Footer13() {
                 </ul>
 
                 <div className="footer-13__bigbrand">
-                    <p className="footer-13__bigbrand-text mb-0 text-scale-anim">Klarus AI<sup>&reg;</sup> Architecture</p>
+                    <p className="footer-13__bigbrand-text mb-0 text-scale-anim">Talha Speaks AI<sup>&reg;</sup> Architecture</p>
                 </div>
             </div>
 
             <div className="footer-13__legal">
-                <p className="footer-13__copy mb-0">&copy; 2026 Klarus AI. All rights reserved.</p>
+                <p className="footer-13__copy mb-0">&copy; 2026 Talha Speaks AI. All rights reserved.</p>
                 <ul className="footer-13__social list-unstyled mb-0">
                     <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
                     <li><a href="https://behance.net" target="_blank" rel="noopener">Behance</a></li>

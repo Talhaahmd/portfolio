@@ -78,7 +78,7 @@ export default function Section7() {
                     >
                         {rail1Images.map((src, i) => (
                             <div key={`r1-${i}`} className="about-me-slider-thumb at-item-anime marque">
-                                <img className="w-100 rounded-4" src={src} alt="Klarus AI" width={600} height={400} loading="lazy" />
+                                <img className="w-100 rounded-4" src={src} alt="Talha Speaks AI" width={600} height={400} loading="lazy" />
                             </div>
                         ))}
                     </SwiperDynamic>
@@ -100,7 +100,7 @@ export default function Section7() {
                     >
                         {rail2Images.map((src, i) => (
                             <div key={`r2-${i}`} className="about-me-slider-thumb at-item-anime-2 marque">
-                                <img className="w-100 rounded-4" src={src} alt="Klarus AI" width={600} height={400} loading="lazy" />
+                                <img className="w-100 rounded-4" src={src} alt="Talha Speaks AI" width={600} height={400} loading="lazy" />
                             </div>
                         ))}
                     </SwiperDynamic>
@@ -114,7 +114,7 @@ export default function Section7() {
                         </svg>
                     </div>
                     <p className="sec-7-home-8__desc mb-0">
-                        <span className="fw-600 reveal-text"><RevealText>Klarus AI is a digital agency building impactful AI solutions. We think like strategists and execute with clarity, creativity, and performance.</RevealText></span>
+                        <span className="fw-600 reveal-text"><RevealText>Talha Speaks AI is a digital agency building impactful AI solutions. We think like strategists and execute with clarity, creativity, and performance.</RevealText></span>
                     </p>
                 </div>
             </div>
