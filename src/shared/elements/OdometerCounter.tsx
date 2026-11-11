@@ -34,10 +34,6 @@ export default function OdometerCounter({ count, duration, className, prefix, su
       className={composedClassName}
       data-count={targetValue}
       data-duration={duration}
-      role="meter"
-      aria-valuemin={0}
-      aria-valuemax={targetValue}
-      aria-valuenow={currentValue}
     >
       {prefix ?? null}
       {displayContent}

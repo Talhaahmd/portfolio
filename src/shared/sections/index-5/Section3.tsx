@@ -244,7 +244,7 @@ export default function Section2() {
 
                         <div className="sec-2-home-7__cell sec-2-home-7__cell--stat sec-2-home-7__col-4">
 
-                            <h3 className="sec-2-home-7__stat-value mb-3">
+                            <div className="sec-2-home-7__stat-value mb-3 fw-bold">
 
                                 <OdometerCounter
                                     count={STAT_DATA[0].value}
@@ -252,7 +252,7 @@ export default function Section2() {
 
                                 {STAT_DATA[0].suffix}
 
-                            </h3>
+                            </div>
 
                             <p className="sec-2-home-7__stat-label mb-0 at_fade_anim">
                                 {STAT_DATA[0].label}
@@ -333,7 +333,7 @@ export default function Section2() {
 
                         <div className="sec-2-home-7__cell sec-2-home-7__cell--stat sec-2-home-7__col-5">
 
-                            <h3 className="sec-2-home-7__stat-value mb-3">
+                            <div className="sec-2-home-7__stat-value mb-3 fw-bold">
 
                                 <OdometerCounter
                                     count={STAT_DATA[1].value}
@@ -341,7 +341,7 @@ export default function Section2() {
 
                                 {STAT_DATA[1].suffix}
 
-                            </h3>
+                            </div>
 
                             <p className="sec-2-home-7__stat-label mb-0 at_fade_anim">
                                 {STAT_DATA[1].label}
@@ -364,7 +364,7 @@ export default function Section2() {
 
                         <div className="sec-2-home-7__cell sec-2-home-7__cell--stat sec-2-home-7__col-1">
 
-                            <h3 className="sec-2-home-7__stat-value mb-3">
+                            <div className="sec-2-home-7__stat-value mb-3 fw-bold">
 
                                 <OdometerCounter
                                     count={STAT_DATA[2].value}
@@ -372,7 +372,7 @@ export default function Section2() {
 
                                 {STAT_DATA[2].suffix}
 
-                            </h3>
+                            </div>
 
                             <p className="sec-2-home-7__stat-label mb-0 at_fade_anim">
                                 {STAT_DATA[2].label}

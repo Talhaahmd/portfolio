@@ -1,4 +1,5 @@
 import PageMeta from "@/seo/PageMeta";
+import RelatedLinks from "@/shared/elements/RelatedLinks";
 import { itemListSchema } from "@/seo/site";
 import ResourcesHero from "@/shared/sections/resources/ResourcesHero";
 import VideoSection from "@/shared/sections/resources/VideoSection";
@@ -28,6 +29,7 @@ export default function RoadmapPage() {
         ]}
       />
       <RoadmapResources />
+      <RelatedLinks />
     </>
   );
 }

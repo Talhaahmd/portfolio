@@ -108,7 +108,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
           </div>
 
           <div className="at-offcanvas-content d-none d-xl-block">
-            <h3 className="at-offcanvas-title">Hey there!</h3>
+            <div className="at-offcanvas-title fw-bold">Hey there!</div>
             <p className="fz-font-lg">
               I'm Talha, an AI creator. I teach Claude and AI automation on YouTube, build AI software, and share free resources to help you land remote work.
             </p>
@@ -119,7 +119,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
           </div>
 
           <div className="at-offcanvas-contact">
-            <h5 className="at-offcanvas-title sm">Get in touch</h5>
+            <div className="at-offcanvas-title sm fw-bold">Get in touch</div>
             <ul>
               <li>
                 <a className="fz-font-lg" href="mailto:muhammad.talha@klarus.io">
@@ -135,7 +135,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
           </div>
 
           <div className="at-offcanvas-social">
-            <h3 className="at-offcanvas-title sm">Follow Us</h3>
+            <div className="at-offcanvas-title sm fw-bold">Follow Us</div>
             <SocialGrid />
           </div>
         </div>

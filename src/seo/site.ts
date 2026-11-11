@@ -20,6 +20,18 @@ export function canonicalPath(pathname: string) {
   return pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname;
 }
 
+export function pageDates(path: string) {
+  try {
+    return __PAGE_DATES__[path];
+  } catch {
+    return undefined;
+  }
+}
+
+export function formatDate(iso: string) {
+  return new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+}
+
 export function absUrl(path: string) {
   return SITE_URL + (path === "/" ? "/" : path);
 }
@@ -47,7 +59,7 @@ export function buildMeta(input: PageMetaInput, pathname: string, extra: object[
     : [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
+          "@type": path === "/contact" ? ["WebPage", "ContactPage"] : "WebPage",
           "@id": `${url}#webpage`,
           url,
           name: fullTitle,
@@ -56,6 +68,9 @@ export function buildMeta(input: PageMetaInput, pathname: string, extra: object[
           isPartOf: { "@id": `${SITE_URL}/#website` },
           about: { "@id": `${SITE_URL}/#person` },
           primaryImageOfPage: { "@type": "ImageObject", url: image },
+          ...(pageDates(path) && !isHome
+            ? { datePublished: pageDates(path)!.published, dateModified: pageDates(path)!.modified, author: { "@id": `${SITE_URL}/#person` } }
+            : {}),
         },
         ...(crumbs.length ? [{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: crumbs }] : []),
         ...extra,

@@ -35,7 +35,7 @@ function Card({ item, onOpen }: { item: Item; onOpen: () => void }) {
             aria-label={`${item.title} by ${item.handle} — view prompt`}
         >
             <div className="mg-media">
-                <img src={item.thumbnail} alt={item.title} loading="lazy" />
+                <img src={item.thumbnail} alt={item.title} width={640} height={400} loading="lazy" decoding="async" />
                 <video ref={vid} muted loop playsInline preload="none" />
                 <span className="mg-hint">View prompt</span>
             </div>

@@ -59,9 +59,6 @@ export default function Footer5() {
 
                         <div className="col-xxl-3 col-md-6">
 
-                            <h4 className="mb-0 fw-medium text-decoration-underline">
-                            </h4>
-
                         </div>
 
 

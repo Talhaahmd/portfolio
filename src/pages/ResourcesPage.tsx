@@ -1,4 +1,5 @@
 import PageMeta from "@/seo/PageMeta";
+import RelatedLinks from "@/shared/elements/RelatedLinks";
 import ResourcesHero from "@/shared/sections/resources/ResourcesHero";
 import VideoSection from "@/shared/sections/resources/VideoSection";
 import MotionGallery from "@/shared/sections/resources/MotionGallery";
@@ -13,6 +14,7 @@ export default function ResourcesPage() {
       <ResourcesHero />
       <VideoSection />
       <MotionGallery />
+      <RelatedLinks />
     </>
   );
 }

@@ -208,9 +208,9 @@ function ResourceList({ items }: { items: Resource[] }) {
                                                 loading="lazy"
                                             />
                                         </div>
-                                        <h6 className="card-award-title mb-0">{r.title}</h6>
+                                        <h3 className="card-award-title mb-0 h6">{r.title}</h3>
                                     </div>
-                                    <h6 className="card-award-web-excellence mb-0">{r.description}</h6>
+                                    <p className="card-award-web-excellence mb-0 fw-bold">{r.description}</p>
                                     <div className="card-award-meta">
                                         <span className="card-award-url fz-font-lg">{r.label}</span>
                                     </div>
@@ -264,12 +264,12 @@ export default function RoadmapResources() {
                         <div className="award-description d-flex gap-5">
                             <div className="icon">{DIAMOND_SVG}</div>
                             <div className="content">
-                                <h5 className="revert-text mb-0 reveal-text">
+                                <h3 className="revert-text mb-0 reveal-text h5">
                                     <RevealText>
                                         Everything you need to go from learning to landing your first
                                         international remote role, in one place.
                                     </RevealText>
-                                </h5>
+                                </h3>
                             </div>
                         </div>
                     </div>

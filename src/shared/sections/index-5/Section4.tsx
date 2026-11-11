@@ -131,9 +131,9 @@ export default function Section4() {
                                                 </div>
                                             </div>
                                             <div className="card_case__studies-footer mt-10 bg-neutral-0 flex-column align-items-start gap-2">
-                                                <h5 className="card_case__studies-footer-title neutral-900 mb-0">
+                                                <h3 className="card_case__studies-footer-title neutral-900 mb-0 h5">
                                                     <Link to={r.href}>{r.title}</Link>
-                                                </h5>
+                                                </h3>
                                                 <p className="neutral-900 mb-0 fz-sm">{r.description}</p>
                                                 <Link to={r.href} className="card_case__studies-link neutral-900">
                                                     <span className="neutral-900"> {r.linkText}</span>
