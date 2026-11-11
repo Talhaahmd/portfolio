@@ -1,4 +1,4 @@
-export const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, "") || "https://talhaspeaksai.com";
+export const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, "") || "https://www.klarus.io";
 export const SITE_NAME = "Talha Speaks AI";
 export const PERSON_NAME = "Talha";
 export const DEFAULT_TITLE = "Talha Speaks AI | AI Creator, Automations & Claude";

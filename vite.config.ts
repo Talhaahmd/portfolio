@@ -36,7 +36,7 @@ function seoFiles(siteUrl: string): Plugin {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-  const siteUrl = (env.VITE_SITE_URL || "https://talhaspeaksai.com").replace(/\/$/, "");
+  const siteUrl = (env.VITE_SITE_URL || "https://www.klarus.io").replace(/\/$/, "");
   return {
     plugins: [react(), seoFiles(siteUrl)],
     resolve: {
