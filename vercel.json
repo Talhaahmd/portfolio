@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    { "source": "/index-5", "destination": "/", "permanent": true },
+    { "source": "/index-dark", "destination": "/", "permanent": true },
+    { "source": "/index-5-dark", "destination": "/", "permanent": true },
+    { "source": "/contact-1", "destination": "/contact", "permanent": true },
+    { "source": "/contact-2", "destination": "/contact", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

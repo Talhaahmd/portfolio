@@ -1,3 +1,4 @@
+import "./resources-mobile.css";
 import { Link } from "react-router-dom";
 import RevealText from "@/shared/effects/RevealText";
 
@@ -252,7 +253,7 @@ export default function RoadmapResources() {
             <div className="container">
                 <div className="row g-4 align-items-end">
                     <div className="col-12">
-                        <h1 className="fw-500 fz-ds-1 mb-0">Resources to download.</h1>
+                        <h2 className="fw-500 fz-ds-1 mb-0">Resources to download.</h2>
                     </div>
                 </div>
 

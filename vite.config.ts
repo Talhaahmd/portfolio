@@ -8,6 +8,7 @@ const SITEMAP_PATHS = [
   { path: "/resources", priority: "0.8" },
   { path: "/claude-skills", priority: "0.8" },
   { path: "/90-days-roadmap", priority: "0.8" },
+  { path: "/contact", priority: "0.6" },
 ];
 
 function seoFiles(siteUrl: string): Plugin {

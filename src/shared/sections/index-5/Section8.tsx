@@ -132,7 +132,7 @@ export default function Section7() {
                         <p className="sec-6-home-10__foot-text mb-0 reveal-text"> <RevealText>I build AI and SaaS products, drive growth through sales and marketing, and create automation systems that help businesses scale.</RevealText> </p>
                         <Link
                             className="sec-6-home-10__cta d-inline-flex align-items-center gap-3 mt-4 at_fade_anim"
-                            to="/contact-2"
+                            to="/contact"
                         >
                             <span>Let's Work Together</span>
                             <svg

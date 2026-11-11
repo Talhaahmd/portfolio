@@ -219,7 +219,7 @@ export default function Section5() {
                             >
                                 <Link
                                     className="at-btn-circle"
-                                    to="/contact-1"
+                                    to="/contact"
                                     onClick={(e) => {
                                         e.preventDefault();
                                         mainSwiperRef.current?.slidePrev();
@@ -233,7 +233,7 @@ export default function Section5() {
                                 </Link>
                                 <Link
                                     className="at-btn-circle"
-                                    to="/contact-1"
+                                    to="/contact"
                                     onClick={(e) => {
                                         e.preventDefault();
                                         mainSwiperRef.current?.slideNext();

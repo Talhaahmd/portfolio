@@ -87,6 +87,7 @@ export default function Section1() {
                             </div>
 
                             <div className="col-lg-3 col-md-6 mx-lg-auto z-index-2">
+                                <div className="mb-30"><SocialLinks /></div>
                                 <div className="icon mb-30">{DIAMOND_ICON}</div>
                                 <h4>I'm Talha</h4>
                                 <p className="fz-lg neutral-900 fw-600">
@@ -108,7 +109,6 @@ export default function Section1() {
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
                                 </div>
-                                <div className="mt-30"><SocialLinks /></div>
                             </div>
                         </div>
                     </div>

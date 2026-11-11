@@ -40,7 +40,6 @@ export default function CardAwardPreviewEffect() {
         preview = document.createElement("div");
         preview.className = "card-award-preview card-award-hover-preview";
         const previewImg = document.createElement("img");
-        previewImg.src = "";
         previewImg.alt = "";
         preview.appendChild(previewImg);
         document.body.appendChild(preview);

@@ -12,7 +12,7 @@ const RESOURCE_LINKS: Item[] = [
 
 const MENU_LINKS: Item[] = [
   { to: "/", label: "Home" },
-  { to: "/contact-2", label: "Contact" },
+  { to: "/contact", label: "Contact" },
 ];
 
 function LinkSwap({ label }: { label: string }) {

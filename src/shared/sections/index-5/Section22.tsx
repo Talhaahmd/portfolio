@@ -127,7 +127,7 @@ export default function Section2() {
                                                 </span>
                                                 <Link
                                                     className="at-btn bg-neutral-0 changeless text-dark py-2 px-3 fz-font-body"
-                                                    to="contact-2"
+                                                    to="/contact"
                                                 >
                                                     <span>
                                                         <span className="text-1">Let&apos;s build</span>
@@ -227,7 +227,7 @@ export default function Section2() {
                                                         color: "#000000",
                                                         border: "none",
                                                         borderRadius: "0",
-                                                        fontSize: "11px",
+                                                        fontSize: "13px",
                                                         fontWeight: 400,
                                                         lineHeight: 1.4,
                                                         textDecoration: "underline",

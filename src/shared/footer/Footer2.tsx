@@ -70,23 +70,20 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
                       <Link to="/">Home</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/contact-1">Contact</Link>
+                      <Link to="/contact">Contact</Link>
                     </li>
                   </ul>
                 </div>
                 <div className="alt-footer-link-item col-6">
                   <ul>
                     <li className="mb-15">
-                      <Link to="/product-archive">Shop</Link>
+                      <Link to="/resources">Motion Graphics</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/pricing">Pricing</Link>
+                      <Link to="/claude-skills">Claude Skills</Link>
                     </li>
                     <li className="mb-15">
-                      <Link to="/product-cart">Cart</Link>
-                    </li>
-                    <li className="mb-15">
-                      <Link to="/product-checkout">Checkout</Link>
+                      <Link to="/90-days-roadmap">90 Days Roadmap</Link>
                     </li>
                   </ul>
                 </div>

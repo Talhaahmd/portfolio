@@ -1,0 +1,8 @@
+/* Keep the MENU button reachable on mobile/tablet (the template only shows it after scrolling) */
+@media (max-width: 1199.98px) {
+  .hamburger-sticky-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
