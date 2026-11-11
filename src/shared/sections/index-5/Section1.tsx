@@ -91,7 +91,7 @@ export default function Section1() {
                                 <div className="icon mb-30">{DIAMOND_ICON}</div>
                                 <p className="h4 fw-bold">I'm Talha</p>
                                 <p className="fz-lg neutral-900 fw-600">
-                                    I'm Talha, an AI creator. I teach Claude and automation on YouTube, build AI software, and help SaaS companies scale.
+                                    I'm Talha, an AI engineer building intelligent products, automations, and scalable software, while sharing how you can do the same.
                                 </p>
                                 <div
                                     className="at-btn-group at-btn-group-transparent at_fade_anim"

@@ -110,7 +110,7 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
           <div className="at-offcanvas-content d-none d-xl-block">
             <div className="at-offcanvas-title fw-bold">Hey there!</div>
             <p className="fz-font-lg">
-              I'm Talha, an AI creator. I teach Claude and AI automation on YouTube, build AI software, and share free resources to help you land remote work.
+              I'm Talha, an AI engineer building intelligent products, automations, and scalable software, while sharing how you can do the same.
             </p>
           </div>
 

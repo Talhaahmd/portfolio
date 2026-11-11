@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import RevealText from "@/shared/effects/RevealText";
 import OdometerCounter from "@/shared/elements/OdometerCounter";
 
-{/* Home 7 Section 2 (We Power the World's Fastest Growing Startups) */ }
+{/* Home 7 Section 2 (I Have Powered the World's Fastest Growing Startups) */ }
 const FEATURE_DATA = [
     {
         icon: (
@@ -158,7 +158,7 @@ export default function Section2() {
 
                                 <h2 className="sec-2-home-7__title">
                                     <RevealText>
-                                        We Power the World's Fastest Growing Startups
+                                        I Have Powered the World's Fastest Growing Startups
                                     </RevealText>
                                 </h2>
 

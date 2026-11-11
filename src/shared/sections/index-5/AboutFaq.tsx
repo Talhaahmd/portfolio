@@ -1,29 +1,83 @@
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import SocialLinks from "@/shared/elements/SocialLinks";
 import "./AboutFaq.css";
 
-// Visible Q&A: also exported as FAQPage structured data (see Home5Page) so search engines
-// and AI assistants can answer "who is Talha Speaks AI?" directly.
-export const FAQS: { q: string; a: string }[] = [
+const ext = (href: string, label: string) => (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+        {label}
+    </a>
+);
+
+// Visible Q&A: `a` is the plain-text answer used for the FAQPage structured data (see Home5Page);
+// `body` is what is rendered on the page (same wording, with links).
+export const FAQS: { q: string; a: string; body: ReactNode }[] = [
     {
         q: "Who is Talha Speaks AI?",
-        a: "Talha Speaks AI is the brand of Talha, an AI creator based in Lahore, Pakistan. He teaches Claude, AI automation and practical AI skills on YouTube, builds AI software, and shares free resources for people who want to work with AI.",
+        a: "I'm Talha, an AI engineer and entrepreneur from Lahore, Pakistan. I build AI-powered products, intelligent automation systems, and scalable software while sharing what I build and learn along the way.",
+        body: (
+            <p>
+                I&apos;m Talha, an AI engineer and entrepreneur from Lahore, Pakistan. I build AI-powered products, intelligent automation systems, and scalable software while sharing what I build and learn along the way.
+            </p>
+        ),
+    },
+    {
+        q: "What does Talha do?",
+        a: "I work at the intersection of AI engineering, software development, and business growth. I build AI applications, develop automation systems, work with SaaS businesses, and create educational content around emerging AI technologies.",
+        body: (
+            <p>
+                I work at the intersection of AI engineering, software development, and business growth. I build AI applications, develop automation systems, work with SaaS businesses, and create educational content around emerging AI technologies.
+            </p>
+        ),
     },
     {
         q: "What does Talha teach?",
-        a: "Claude and Claude skills, AI automation workflows (including n8n), prompting, and how to use AI for marketing, sales and freelance client work. Every topic comes with free videos, prompts or templates.",
+        a: "I share practical tutorials on Claude, AI agents, Claude Skills, AI automation, software development, and using AI to build products and generate business opportunities.",
+        body: (
+            <p>
+                I share practical tutorials on Claude, AI agents, <Link to="/claude-skills">Claude Skills</Link>, AI automation, software development, and using AI to build products and generate business opportunities.
+            </p>
+        ),
     },
     {
-        q: "Where can I follow Talha Speaks AI?",
-        a: "On YouTube at @Talhaspeaksai, and on X and Instagram at @talhaspeaksai. Talha also shares career and AI content on LinkedIn.",
+        q: "Which companies has Talha worked with?",
+        a: "I've worked on AI, software development, automation, and digital growth projects for businesses across multiple industries and markets. My experience includes working with two Pakistani banks, Coca-Cola Pakistan, Puma Petroleums, Wusuq, and PetSmart. Beyond these, I've collaborated with startups, SaaS companies, and established businesses across North America, Europe, the Middle East, and Pakistan, helping them build digital products, implement AI solutions, automate workflows, and drive business growth.",
+        body: (
+            <>
+                <p>
+                    I&apos;ve worked on AI, software development, automation, and digital growth projects for businesses across multiple industries and markets. My experience includes working with two Pakistani banks, Coca-Cola Pakistan, Puma Petroleums, Wusuq, and PetSmart.
+                </p>
+                <p>
+                    Beyond these, I&apos;ve collaborated with startups, SaaS companies, and established businesses across North America, Europe, the Middle East, and Pakistan, helping them build digital products, implement AI solutions, automate workflows, and drive business growth.
+                </p>
+            </>
+        ),
     },
     {
-        q: "What free resources are available?",
-        a: "A 90 day roadmap to land international remote jobs, six Claude skills every freelancer should know, and a gallery of 83 AI motion graphics made with Claude, each with the exact prompt.",
+        q: "Where can I follow Talha?",
+        a: "You can find my work, tutorials, and insights across YouTube at @Talhaspeaksai, Instagram at @talhaspeaksai, and X at @talhaspeaksai. I also share professional insights and updates on LinkedIn.",
+        body: (
+            <p>
+                You can find my work, tutorials, and insights across YouTube at {ext("https://www.youtube.com/@Talhaspeaksai", "@Talhaspeaksai")}, Instagram at{" "}
+                {ext("https://www.instagram.com/talhaspeaksai/", "@talhaspeaksai")}, and X at {ext("https://x.com/talhaspeaksai", "@talhaspeaksai")}. I also share professional insights and updates on{" "}
+                {ext("https://www.linkedin.com/in/muhammad-talha50/", "LinkedIn")}.
+            </p>
+        ),
     },
     {
-        q: "How can I work with Talha or book a call?",
-        a: "Use the contact page to send a message or book an appointment, or email muhammad.talha@klarus.io.",
+        q: "Can I work with Talha?",
+        a: "I'm open to collaborating with SaaS companies, startups, and businesses looking to build AI-powered products, develop custom software, implement intelligent automation, or improve their operations with AI. For business inquiries, partnerships, or project discussions, visit the contact page or email muhammad.talha@klarus.io.",
+        body: (
+            <>
+                <p>
+                    I&apos;m open to collaborating with SaaS companies, startups, and businesses looking to build AI-powered products, develop custom software, implement intelligent automation, or improve their operations with AI.
+                </p>
+                <p>
+                    For business inquiries, partnerships, or project discussions, visit the <Link to="/contact">contact page</Link> or email{" "}
+                    <a href="mailto:muhammad.talha@klarus.io">muhammad.talha@klarus.io</a>.
+                </p>
+            </>
+        ),
     },
 ];
 
@@ -33,30 +87,13 @@ export default function AboutFaq() {
             <div className="container">
                 <p className="about-faq__eyebrow">About</p>
                 <h2 className="about-faq__title" id="about-faq-title">
-                    Who is Talha Speaks AI?
+                    About Talha Speaks AI
                 </h2>
-                <p className="about-faq__intro">
-                    I&apos;m Talha, an AI creator from Lahore, Pakistan. I make videos and free resources that teach Claude, AI automation and the skills that get you hired.
-                </p>
                 <div className="about-faq__list">
                     {FAQS.map((f, i) => (
                         <details className="about-faq__item" key={f.q} open={i === 0}>
                             <summary>{f.q}</summary>
-                            <p>
-                                {f.a}
-                                {i === 3 ? (
-                                    <>
-                                        {" "}
-                                        Start with the <Link to="/90-days-roadmap">90 day roadmap</Link>, the <Link to="/claude-skills">Claude skills guide</Link> or the{" "}
-                                        <Link to="/resources">motion graphics gallery</Link>.
-                                    </>
-                                ) : i === 4 ? (
-                                    <>
-                                        {" "}
-                                        Go to the <Link to="/contact">contact page</Link>.
-                                    </>
-                                ) : null}
-                            </p>
+                            {f.body}
                         </details>
                     ))}
                 </div>

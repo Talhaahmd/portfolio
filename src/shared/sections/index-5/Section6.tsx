@@ -30,7 +30,13 @@ const PLUS_ICON = (
 
 const JOURNEY_ITEMS = [
     {
-        date: "Jan 2025 – Present",
+        date: "Nov 2024 – Present",
+        title: "Accounts Associate - ",
+        company: "Klarus AI",
+        desc: "Managed client accounts, invoicing and financial records, and supported day-to-day operations for AI-powered solutions.",
+    },
+    {
+        date: "Jan 2025 – Nov 2026",
         title: "Customer Success Manager - ",
         company: "Integriti Pvt Ltd",
         desc: "Driving client retention strategies and overseeing onboarding processes to ensure seamless product adoption.",
@@ -40,12 +46,6 @@ const JOURNEY_ITEMS = [
         title: "Founder - ",
         company: "Talhaspeaksai",
         desc: "Building and scaling an AI-focused venture, overseeing product strategy, partnerships, and growth.",
-    },
-    {
-        date: "Nov 2024 – Dec 2025",
-        title: "Accounts Associate - ",
-        company: "Klarus AI",
-        desc: "Managed client accounts, invoicing and financial records, and supported day-to-day operations for AI-powered solutions.",
     },
     {
         date: "June 2024 – Sept 2024",

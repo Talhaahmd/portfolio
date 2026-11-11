@@ -64,7 +64,8 @@ export default function Footer5() {
 
                         <div className="col-xxl-3 col-lg-5 col-md-6 d-flex flex-column justify-content-between p-relative z-3">
                             <div>
-                                <p className="fw-600 mb-3">Follow Talha Speaks AI</p>
+                                <p className="fw-600 mb-2">Follow Talha Speaks AI</p>
+                                <p className="mb-3">Build with AI. Learn by doing. Turn ideas into products.</p>
                                 <SocialLinks />
                             </div>
                         </div>

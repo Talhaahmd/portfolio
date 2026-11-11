@@ -27,7 +27,7 @@ export default function MobileHero() {
                 />
             </div>
             <p className="mh__lead">
-                I&apos;m Talha, an AI creator. I teach Claude and automation on YouTube, build AI software, and help SaaS companies scale.
+                I&apos;m Talha, an AI engineer building intelligent products, automations, and scalable software, while sharing how you can do the same.
             </p>
             <div className="mh__cta">
                 <Link className="mh__btn" to="/90-days-roadmap">

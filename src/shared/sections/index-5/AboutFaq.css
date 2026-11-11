@@ -8,6 +8,6 @@
 .about-faq__item summary::-webkit-details-marker{display:none}
 .about-faq__item summary::after{content:"+";font-size:28px;font-weight:400;line-height:1;transition:transform .2s}
 .about-faq__item[open] summary::after{transform:rotate(45deg)}
-.about-faq__item p{margin:0 0 24px;max-width:760px;font-size:17px;line-height:1.55;opacity:.85}
+.about-faq__item p{margin:0 0 16px;max-width:760px;font-size:17px;line-height:1.55;opacity:.85}
 .about-faq__item a{text-decoration:underline;text-underline-offset:3px}
 @media (max-width:575.98px){.about-faq{padding:64px 0}.about-faq__intro{font-size:16px}.about-faq__item p{font-size:16px}}
