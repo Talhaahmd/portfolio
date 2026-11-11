@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Helvetica, Arial, sans-serif">
+<rect width="600" height="400" fill="#EDEDED"/><circle cx="540" cy="340" r="100" fill="#111111" opacity=".12"/>
+<rect x="110" y="60" width="380" height="280" rx="22" fill="#fff" stroke="#111" stroke-width="3"/>
+<g transform="translate(222 100) scale(6.3)"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" fill="#111111"/></g>
+<text x="300" y="320" font-size="20" font-weight="700" text-anchor="middle" fill="#111">@talhaspeaksai</text>
+</svg>

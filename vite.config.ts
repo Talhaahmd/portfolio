@@ -13,7 +13,7 @@ const SITEMAP_PATHS = [
 function seoFiles(siteUrl: string): Plugin {
   return {
     name: "seo-files",
-    transformIndexHtml: (html) => html.replaceAll("__SITE_URL__", siteUrl),
+    transformIndexHtml: { order: "pre", handler: (html) => html.replaceAll("__SITE_URL__", siteUrl) },
     generateBundle() {
       const today = new Date().toISOString().slice(0, 10);
       const urls = SITEMAP_PATHS.map(

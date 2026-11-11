@@ -1,3 +1,4 @@
+import SocialLinks from "@/shared/elements/SocialLinks";
 import { Link } from "react-router-dom";
 const ARROW_SVG = (
     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 9 10" fill="none">
@@ -19,17 +20,6 @@ const LOGO_SVG = (
         <path d="M30 20H40V40H30L20 30L30 20Z" fill="currentColor" />
     </svg>
 );
-
-const SOCIAL_LINKS = [
-    {
-        label: "LinkedIn",
-        href: "https://www.linkedin.com/in/muhammad-talha50/",
-    },
-    {
-        label: "Instagram",
-        href: "https://www.instagram.com/talhaspeaksai/",
-    },
-];
 
 export default function Section1({ classList }: { classList?: string }) {
     return (
@@ -57,7 +47,7 @@ export default function Section1({ classList }: { classList?: string }) {
                                     <li>{LOGO_SVG}</li>
                                     <li>
                                         <span className="fz-font-md fw-500 common-black">
-                                            I build AI software, share automation workflows, and help SaaS companies acquire users and scale.
+                                            I'm Talha, an AI creator. I teach Claude and automation on YouTube, build AI software, and help SaaS companies scale.
                                         </span>
                                     </li>
                                 </ul>
@@ -71,12 +61,7 @@ export default function Section1({ classList }: { classList?: string }) {
                             </div>
                             <div className="d-flex flex-wrap align-items-center justify-content-between gap-2">
                                 <div className="at-hero-social style-2">
-                                    {SOCIAL_LINKS.map(({ label, href }) => (
-                                        <Link key={label} to={href}>
-                                            {label}
-                                            {ARROW_SVG}
-                                        </Link>
-                                    ))}
+                                    <SocialLinks variant="labeled" />
                                 </div>
                             </div>
                         </div>

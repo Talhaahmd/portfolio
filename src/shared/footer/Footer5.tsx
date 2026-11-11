@@ -1,3 +1,4 @@
+import SocialLinks from "@/shared/elements/SocialLinks";
 import { Link } from "react-router-dom";
 
 // Footer 5 - Talha Speaks AI Nova (light style with grid background)
@@ -65,6 +66,10 @@ export default function Footer5() {
 
 
                         <div className="col-xxl-3 col-lg-5 col-md-6 d-flex flex-column justify-content-between p-relative z-3">
+                            <div>
+                                <p className="fw-600 mb-3">Follow Talha Speaks AI</p>
+                                <SocialLinks />
+                            </div>
                         </div>
 
 
@@ -76,7 +81,7 @@ export default function Footer5() {
 
                             <div className="col-12">
 
-                                <h1 className="d-flex align-items-end justify-content-center lh-1 fz-200 mb-0 text-nowrap">
+                                <div className="d-flex align-items-end justify-content-center lh-1 fz-200 mb-0 text-nowrap">
 
                                     I&apos;m{" "}
 
@@ -96,7 +101,7 @@ export default function Footer5() {
                                         ®
                                     </sup>
 
-                                </h1>
+                                </div>
 
                             </div>
 

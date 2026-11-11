@@ -1,3 +1,4 @@
+import SocialLinks from "@/shared/elements/SocialLinks";
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import Logo from "@/shared/Logo";
@@ -95,26 +96,7 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
             <div className="col-lg-3 col-md-6 flex-column justify-content-lg-end d-none d-md-flex">
               <p className="footer-2-follow-label text-white opacity-50 text-uppercase small mb-3">Follow Us</p>
               <div className="at-footer-widget at-footer-link">
-                <div className="at-hero-social">
-                  <a href="#" onClick={(e) => e.preventDefault()}>
-                    Twitter {SOCIAL_ARROW}
-                  </a>
-                  <a href="#" onClick={(e) => e.preventDefault()}>
-                    Facebook {SOCIAL_ARROW}
-                  </a>
-                  <a href="#" onClick={(e) => e.preventDefault()}>
-                    Instagram {SOCIAL_ARROW}
-                  </a>
-                  <a href="#" onClick={(e) => e.preventDefault()}>
-                    Linkedin {SOCIAL_ARROW}
-                  </a>
-                  <a href="#" onClick={(e) => e.preventDefault()}>
-                    Behance {SOCIAL_ARROW}
-                  </a>
-                  <a href="#" onClick={(e) => e.preventDefault()}>
-                    Dribbble {SOCIAL_ARROW}
-                  </a>
-                </div>
+                <SocialLinks variant="labeled" light />
               </div>
             </div>
           </div>
@@ -122,7 +104,7 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
           <div className="footer-2-border pt-40 pb-40">
             <div className="row align-items-end g-4">
               <div className="col-lg-10 col-md-8">
-                <span className="at-footer-copyright">The AI Folks © 2026</span>
+                <span className="at-footer-copyright">Talha Speaks AI © 2026</span>
                 <div className="at-title-anim overflow-hidden">
                   <h2 className="footer-2-connect-title text-white mb-0 at-title-text text-scale-anim">Let&apos;s Connect</h2>
                 </div>

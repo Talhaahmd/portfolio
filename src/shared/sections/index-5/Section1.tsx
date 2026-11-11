@@ -1,3 +1,4 @@
+import SocialLinks from "@/shared/elements/SocialLinks";
 import { Link } from "react-router-dom";
 // Home 5 Section 1 - Hero (Talha Speaks AI)
 
@@ -89,7 +90,7 @@ export default function Section1() {
                                 <div className="icon mb-30">{DIAMOND_ICON}</div>
                                 <h4>I'm Talha</h4>
                                 <p className="fz-lg neutral-900 fw-600">
-                                    I build AI software, share automation workflows, and help SaaS companies acquire users and scale.
+                                    I'm Talha, an AI creator. I teach Claude and automation on YouTube, build AI software, and help SaaS companies scale.
                                 </p>
                                 <div
                                     className="at-btn-group at-btn-group-transparent at_fade_anim"
@@ -107,6 +108,7 @@ export default function Section1() {
                                         {ARROW_CIRCLE_SVG}
                                     </Link>
                                 </div>
+                                <div className="mt-30"><SocialLinks /></div>
                             </div>
                         </div>
                     </div>

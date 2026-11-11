@@ -167,6 +167,24 @@ const RESOURCES: Resource[] = [
         img: "/assets/imgs/roadmap/linkedin.svg",
         imgLg: "/assets/imgs/roadmap/linkedin.svg",
     },
+    {
+        number: "14",
+        title: "Watch on YouTube",
+        description: "Subscribe to Talha Speaks AI on YouTube for Claude, automation and AI tutorials.",
+        href: "https://www.youtube.com/@Talhaspeaksai",
+        label: "YouTube",
+        img: "/assets/imgs/roadmap/youtube.svg",
+        imgLg: "/assets/imgs/roadmap/youtube.svg",
+    },
+    {
+        number: "15",
+        title: "Follow on X",
+        description: "Follow @talhaspeaksai on X for daily AI updates and threads.",
+        href: "https://x.com/talhaspeaksai",
+        label: "X",
+        img: "/assets/imgs/roadmap/x.svg",
+        imgLg: "/assets/imgs/roadmap/x.svg",
+    },
 ];
 
 function ResourceList({ items }: { items: Resource[] }) {

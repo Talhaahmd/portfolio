@@ -1,4 +1,5 @@
 // Resources page hero — same look as Home 5 hero (grid backdrop, tag, big title, portrait image)
+import SocialLinks from "@/shared/elements/SocialLinks";
 
 const DIAMOND_ICON = (
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 38 38" fill="none">
@@ -58,15 +59,7 @@ export default function ResourcesHero({
                             <p className="fz-lg neutral-900 mx-auto mb-40" style={{ maxWidth: 760, opacity: 0.8 }}>
                                 {description}
                             </p>
-                            <a
-                                className="d-inline-flex align-items-center gap-2 fw-600 neutral-900"
-                                href="https://www.instagram.com/talhaspeaksai/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                {DIAMOND_ICON}
-                                <span>@talhaspeaksai</span>
-                            </a>
+                            <div className="d-flex justify-content-center"><SocialLinks variant="labeled" /></div>
                         </div>
                     </div>
                 </div>
