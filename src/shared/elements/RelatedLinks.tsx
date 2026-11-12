@@ -5,6 +5,7 @@ import "./Breadcrumbs.css";
 const ALL = [
   { to: "/90-days-roadmap", title: "90 Days Roadmap", text: "A step-by-step plan and free downloads to land international remote jobs." },
   { to: "/claude-skills", title: "Claude Skills for Freelancers", text: "Six Claude skills for marketing, sales and client work, with setup steps." },
+  { to: "/ai-websites", title: "AI Websites", text: "239 free AI website designs with hover previews and filters." },
   { to: "/resources", title: "Claude Motion Graphics", text: "83 AI motion graphics made with Claude, each with the exact prompt." },
   { to: "/contact", title: "Contact and book a call", text: "Questions, collaborations or a project? Send a message or book a call." },
 ];

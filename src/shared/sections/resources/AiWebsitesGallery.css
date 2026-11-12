@@ -1,0 +1,58 @@
+.aw-section { padding: 20px 0 60px; }
+.aw-bar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 28px; }
+.aw-tabs, .aw-chips { display: flex; gap: 6px; padding: 5px; background: #f1f1f1; border-radius: 999px; }
+.aw-chips { overflow-x: auto; flex: 1 1 320px; scrollbar-width: none; }
+.aw-chips::-webkit-scrollbar { display: none; }
+.aw-pill { border: 0; background: transparent; color: #111; font: 600 14px/1 inherit; padding: 10px 16px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+.aw-pill:hover { background: rgba(0,0,0,.06); }
+.aw-pill.on { background: #111; color: #fff; }
+.aw-select { border: 1px solid rgba(0,0,0,.15); background: #fff; border-radius: 999px; padding: 10px 16px; font: 600 14px/1 inherit; cursor: pointer; }
+.aw-count { font-size: 14px; opacity: .65; margin: 0 0 18px; }
+.aw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+.aw-card { display: block; color: inherit; text-decoration: none; }
+.aw-media { position: relative; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg,#1c1c1c,#3a3a3a); }
+.aw-media img, .aw-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .25s; }
+.aw-media video { opacity: 0; }
+.aw-card:hover .aw-media video.on, .aw-card:focus-visible .aw-media video.on { opacity: 1; }
+.aw-media video.still { opacity: 1; }
+.aw-ph { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-weight: 600; opacity: .7; }
+.aw-hint { position: absolute; right: 12px; bottom: 12px; font-size: 12px; font-weight: 600; background: rgba(255,255,255,.92); color: #111; border-radius: 999px; padding: 5px 12px; opacity: 0; transform: translateY(4px); transition: .25s; }
+.aw-card:hover .aw-hint, .aw-card:focus-visible .aw-hint { opacity: 1; transform: none; }
+.aw-title { display: flex; align-items: baseline; gap: 8px; margin-top: 14px; }
+.aw-title strong { font-size: 18px; font-weight: 600; line-height: 1.3; }
+.aw-title span { font-size: 13px; opacity: .6; }
+.aw-pager { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px; margin: 56px 0 0; }
+.aw-pager button { min-width: 42px; height: 42px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(0,0,0,.15); background: #fff; font-weight: 600; cursor: pointer; }
+.aw-pager button.on { background: #111; color: #fff; border-color: #111; }
+.aw-pager button:disabled { opacity: .35; cursor: default; }
+.aw-empty { padding: 60px 0; text-align: center; opacity: .7; }
+.aw-credit { display: flex; justify-content: flex-end; padding: 40px 0 10px; font-size: 14px; }
+.aw-credit a { font-weight: 600; text-decoration: underline; }
+.aw-rm { padding: 40px 0 80px; }
+.aw-rm-box { background: #111; color: #fff; border-radius: 24px; padding: clamp(28px,5vw,56px); display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+.aw-rm-box h2 { color: #fff; margin: 0 0 10px; font-size: clamp(1.6rem,3vw,2.4rem); }
+.aw-rm-box p { margin: 0; opacity: .8; max-width: 640px; }
+.aw-rm-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.aw-rm-btns a { border-radius: 999px; padding: 12px 22px; font-weight: 600; text-decoration: none; background: #fff; color: #111; border: 1px solid #fff; }
+.aw-rm-btns a.ghost { background: transparent; color: #fff; }
+@media (max-width: 575px) { .aw-grid { grid-template-columns: 1fr; } }
+
+.aw-card { background: transparent; border: 0; padding: 0; text-align: left; cursor: pointer; width: 100%; }
+.aw-overlay { position: fixed; inset: 0; z-index: 99999; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; padding: 20px; }
+.aw-modal { background: #fff; color: #111; width: min(1100px,100%); max-height: calc(100vh - 40px); border-radius: 20px; display: flex; flex-direction: column; overflow: hidden; }
+.aw-mhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 22px 24px 14px; }
+.aw-mhead h3 { margin: 0; font-size: 24px; font-weight: 600; line-height: 1.25; }
+.aw-mhead span { font-size: 14px; opacity: .65; }
+.aw-close { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(0,0,0,.15); background: #fff; cursor: pointer; }
+.aw-close:hover { background: #111; color: #fff; }
+.aw-mbody { overflow-y: auto; padding: 0 24px 24px; }
+.aw-full { position: relative; border-radius: 14px; overflow: hidden; background: #111; display: grid; place-items: center; min-height: 200px; }
+.aw-full img, .aw-full video { width: 100%; max-height: 62vh; object-fit: contain; display: block; }
+.aw-full video { position: absolute; inset: 0; height: 100%; max-height: none; }
+.aw-mbtns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.aw-yt, .aw-copy { display: inline-flex; align-items: center; font-size: 15px; font-weight: 600; border-radius: 999px; padding: 11px 22px; text-decoration: none; cursor: pointer; }
+.aw-yt { background: #ff0000; border: 1px solid #ff0000; color: #fff; }
+.aw-yt:hover { background: #fff; color: #ff0000; }
+.aw-copy { background: #111; border: 1px solid #111; color: #fff; }
+.aw-note { font-size: 13px; opacity: .6; margin: 10px 0 0; }
+@media (max-width: 575px) { .aw-mhead, .aw-mbody { padding-left: 16px; padding-right: 16px; } }

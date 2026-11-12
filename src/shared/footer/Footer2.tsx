@@ -83,6 +83,9 @@ const Footer2 = forwardRef<HTMLElement, Record<string, never>>(function Footer2(
                       <Link to="/claude-skills">Claude Skills</Link>
                     </li>
                     <li className="mb-15">
+                      <Link to="/ai-websites">AI Websites</Link>
+                    </li>
+                    <li className="mb-15">
                       <Link to="/90-days-roadmap">90 Days Roadmap</Link>
                     </li>
                   </ul>
