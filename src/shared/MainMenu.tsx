@@ -8,6 +8,7 @@ const RESOURCE_LINKS: Item[] = [
   { to: "/resources", label: "Motion Graphics" },
   { to: "/claude-skills", label: "Claude Skills" },
   { to: "/ai-websites", label: "AI Websites" },
+  { to: "/lead-generation", label: "Lead Generation" },
   { to: "/90-days-roadmap", label: "90 Days Roadmap" },
 ];
 

@@ -10,6 +10,7 @@ const PAGE_SOURCES: Record<string, string> = {
   "/resources": "src/pages/ResourcesPage.tsx",
   "/claude-skills": "src/pages/ClaudeSkillsPage.tsx",
   "/ai-websites": "src/pages/AiWebsitesPage.tsx",
+  "/lead-generation": "src/pages/LeadGenerationPage.tsx",
   "/90-days-roadmap": "src/pages/RoadmapPage.tsx",
   "/contact": "src/pages/ContactPage.tsx",
 };
@@ -38,6 +39,7 @@ const SITEMAP_PATHS = [
   { path: "/resources", priority: "0.8" },
   { path: "/claude-skills", priority: "0.8" },
   { path: "/ai-websites", priority: "0.8" },
+  { path: "/lead-generation", priority: "0.8" },
   { path: "/90-days-roadmap", priority: "0.8" },
   { path: "/contact", priority: "0.6" },
 ];

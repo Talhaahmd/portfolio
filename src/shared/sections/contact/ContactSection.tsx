@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-import { useEffect as useEff } from "react";
 import SocialLinks from "@/shared/elements/SocialLinks";
 import RevealText from "@/shared/effects/RevealText";
+import "./ContactSection.css";
 
 // About 1 Section 4 - Contact Us / Get in touch
 
@@ -51,49 +50,10 @@ const OFFICES = [
     },
 ];
 
+const BOOKING_URL =
+    "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2qDvwRTaK2JAy9rVIQImaORQHDLWSAGMSmSAyMUo6ebDMFQmBd880K-kX1P2VQfzvHxq2q7Iie?gv=true";
+
 export default function ContactSection({ classList = "" }: { classList?: string }) {
-
-    useEff(() => {
-        // Inject Google Calendar stylesheet
-        if (!document.getElementById('gcal-css')) {
-            const link = document.createElement('link');
-            link.id = 'gcal-css';
-            link.rel = 'stylesheet';
-            link.href = 'https://calendar.google.com/calendar/scheduling-button-script.css';
-            document.head.appendChild(link);
-        }
-
-        // Inject Google Calendar script and init button on load
-        if (!document.getElementById('gcal-js')) {
-            const script = document.createElement('script');
-            script.id = 'gcal-js';
-            script.src = 'https://calendar.google.com/calendar/scheduling-button-script.js';
-            script.async = true;
-            script.onload = () => {
-                const target = document.getElementById('gcal-btn-target');
-                if (target && (window as any).calendar?.schedulingButton) {
-                    (window as any).calendar.schedulingButton.load({
-                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2qDvwRTaK2JAy9rVIQImaORQHDLWSAGMSmSAyMUo6ebDMFQmBd880K-kX1P2VQfzvHxq2q7Iie?gv=true',
-                        color: '#0277BD',
-                        label: 'Book an appointment',
-                        target,
-                    });
-                }
-            };
-            document.body.appendChild(script);
-        } else {
-            // Script already loaded — init immediately
-            const target = document.getElementById('gcal-btn-target');
-            if (target && (window as any).calendar?.schedulingButton) {
-                (window as any).calendar.schedulingButton.load({
-                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2qDvwRTaK2JAy9rVIQImaORQHDLWSAGMSmSAyMUo6ebDMFQmBd880K-kX1P2VQfzvHxq2q7Iie?gv=true',
-                    color: '#0277BD',
-                    label: 'Book an appointment',
-                    target,
-                });
-            }
-        }
-    }, []);
     return (
         <section className={`sec-4-about pt-120 pb-120 ${classList}`.trim()}>
             <div className="container">
@@ -122,53 +82,45 @@ export default function ContactSection({ classList = "" }: { classList?: string 
                     </div>
                 </div>
 
-                <div className="row">
-                    {/* Contact Info Column */}
-                    <div className="col-xxl-4 col-lg-5">
-                        <div className="row g-4">
-                            {OFFICES.map((office, i) => (
-                                <div key={i} className="col-lg-12 col-md-6">
-                                    <div className="d-flex gap-4">
-                                        <div className="icon">{office.icon}</div>
-                                        <div>
-                                            <h2 className="fw-600 h6">{office.title}</h2>
-                                            <div className="d-flex flex-wrap gap-md-5 gap-4">
-                                                <span className="fz-font-md neutral-500">
-                                                    {office.address}
-                                                    {office.city && (
-                                                        <>
-                                                            <br className="d-block" />
-                                                            {office.city}
-                                                        </>
-                                                    )}
-                                                    <br className="d-block" />
-                                                    Email:{" "}
-                                                    <span className="neutral-900">
-                                                        <Link to={office.emailHref}>{office.email}</Link>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </div>
+                <div className="contact-calendar-wrap">
+                        <div className="sec-4-about-calendar">
+                            <h2 className="fw-600 h5 mb-3">Book an appointment</h2>
+                            <iframe
+                                src={BOOKING_URL}
+                                title="Book an appointment with Talha"
+                                loading="lazy"
+                                className="sec-4-about-calendar__frame"
+                            />
+                            <p className="fz-font-md neutral-500 mt-3 mb-0">
+                                Can&apos;t see the calendar?{" "}
+                                <a href={BOOKING_URL} target="_blank" rel="noreferrer">
+                                    Open the booking page
+                                </a>{" "}
+                                or <a href="mailto:muhammad.talha@klarus.io">email me directly</a>.
+                            </p>
+                        </div>
+                </div>
+
+                <div className="contact-info">
+                    {OFFICES.map((office, i) => (
+                        <div key={i} className="contact-info__card">
+                            <div className="icon">{office.icon}</div>
+                            <div>
+                                <h2 className="fw-600 h6">{office.title}</h2>
+                                <div className="fz-font-md neutral-500">
+                                    <div>{office.address}</div>
+                                    <div>
+                                        Email:{" "}
+                                        <span className="neutral-900">
+                                            <a href={office.emailHref}>{office.email}</a>
+                                        </span>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-                        <div className="row">
-                            <div className="col-12">
-                                <div className="pt-50"><SocialLinks variant="labeled" /></div>
                             </div>
                         </div>
-                    </div>
-
-                    {/* Google Calendar Booking Column */}
-                    <div className="col-xxl-8 col-lg-7 ms-auto pt-lg-0 pt-30">
-                        <div className="sec-4-about-calendar">
-                            <div
-                                id="gcal-btn-target"
-                                className="sec-4-about-calendar__btn-wrap"
-                                aria-label="Book an appointment with Google Calendar"
-                            />
-                        </div>
+                    ))}
+                    <div className="contact-info__social">
+                        <SocialLinks variant="labeled" />
                     </div>
                 </div>
             </div>

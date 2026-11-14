@@ -5,6 +5,7 @@ import ContactPage from "@/pages/ContactPage";
 import ResourcesPage from "@/pages/ResourcesPage";
 import ClaudeSkillsPage from "@/pages/ClaudeSkillsPage";
 import AiWebsitesPage from "@/pages/AiWebsitesPage";
+import LeadGenerationPage from "@/pages/LeadGenerationPage";
 import RoadmapPage from "@/pages/RoadmapPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/claude-skills" element={<ClaudeSkillsPage />} />
         <Route path="/ai-websites" element={<AiWebsitesPage />} />
+        <Route path="/lead-generation" element={<LeadGenerationPage />} />
         <Route path="/90-days-roadmap" element={<RoadmapPage />} />
       </Route>
 

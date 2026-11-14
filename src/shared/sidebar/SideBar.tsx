@@ -38,14 +38,6 @@ const socialLinks = [
   { label: "X", href: SOCIALS.x, ariaLabel: "X", path: ICON_PATHS.x, viewBox: "0 0 24 24" },
   { label: "LinkedIn", href: SOCIALS.linkedin, ariaLabel: "LinkedIn", path: ICON_PATHS.linkedin, viewBox: "0 0 24 24" },
   { label: "Instagram", href: SOCIALS.instagram, ariaLabel: "Instagram", path: ICON_PATHS.instagram, viewBox: "0 0 24 24" },
-  {
-    label: "Upwork",
-    href: "https://www.upwork.com/freelancers/~017655f3515038fc66",
-    ariaLabel: "Upwork",
-    path: "M12.731 7.649c-.849 2.183-2.062 3.838-3.21 3.838-1.227 0-1.956-1.17-1.956-3.108 0-3.063 1.551-5.217 3.757-5.217 1.354 0 2.469.918 3.104 2.426l-1.695 2.061zm1.885-7.649C11.954 0 9.773 1.98 8.74 4.908 8.12 3.254 7.073 2.156 5.67 2.156c-.374 0-.76.066-1.155.197C5.263.93 5.91.344 6.83.163L6.495 0C3.204.386 1.075 3.254 1.075 7.38c0 2.829 1.383 4.647 3.604 4.647 1.66 0 3.026-1.065 3.887-3.02.425 1.93 1.555 3.02 3.109 3.02 1.82 0 3.327-1.386 4.325-3.964V16h2V0h-3.384z",
-    viewBox: "0 0 18 16",
-    h: 16,
-  },
 ] satisfies { label: string; href: string; ariaLabel: string; path: string; viewBox?: string; h?: number }[];
 
 function SocialGrid() {

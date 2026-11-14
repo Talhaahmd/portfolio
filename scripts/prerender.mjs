@@ -6,7 +6,7 @@ import path from "node:path";
 
 const dist = path.resolve("dist");
 const template = fs.readFileSync(path.join(dist, "index.html"), "utf8");
-const ROUTES = ["/", "/resources", "/claude-skills", "/ai-websites", "/90-days-roadmap", "/contact", "/404"];
+const ROUTES = ["/", "/resources", "/claude-skills", "/ai-websites", "/lead-generation", "/90-days-roadmap", "/contact", "/404"];
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 
